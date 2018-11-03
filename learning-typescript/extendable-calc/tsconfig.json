@@ -1,0 +1,12 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "alwaysStrict": true,
+    "strictNullChecks": true
+  },
+  "files": [
+    "Calculator.ts",
+    "pow.ts",
+    "main.ts"
+  ]
+}
