@@ -1,3 +1,0 @@
-{"message":"Logging initialized at debug level.","level":"debug","timestamp":"2018-11-07 23:35:13"}
-{"message":"Connected to server on port 8081.","level":"info","timestamp":"2018-11-07 23:35:13"}
-{"message":"Connected to \"testdb\".","level":"info","timestamp":"2018-11-07 23:35:14"}
