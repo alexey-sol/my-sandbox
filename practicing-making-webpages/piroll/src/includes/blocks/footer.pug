@@ -1,0 +1,34 @@
+include ../functions/fixTitle.pug
+include ../functions/getList.pug
+include ../mixins/list-item.pug
+
+-
+  const siteSectionsList1 = getList("siteSections1");
+  const siteSectionsList2 = getList("siteSections2");
+  const socialNetworksList = getList("socialNetworks");
+
+.footer
+  .footer__copyright
+    .footer__header Piroll Design, Inc.
+    ul.footer__list
+      .footer__item &copy; 2017 Piroll. All rights reserved.
+      .footer__item Designed by robirurk.
+  .footer__gap1
+  .footer__contacts
+    ul.footer__list
+      .footer__item hello@pirolltheme.com
+      .footer__item +44 987 065 908
+  .footer__gap2
+  .footer__site-sections
+    ul.footer__list
+      each item in siteSectionsList1
+        +list-item(item)
+    .footer__gap3
+    ul.footer__list
+      each item in siteSectionsList2
+        +list-item(item)
+  .footer__gap4
+  .footer__social-networks
+    ul.footer__list
+      each item in socialNetworksList
+        +list-item(item)

@@ -1,0 +1,7 @@
+-
+  function fixTitle(title) {
+    if (typeof title !== "string")
+      return console.error("fixTitle: argument \"title\" isn't string");
+  
+    return title[0].toUpperCase() + title.slice(1).toLowerCase();
+  }

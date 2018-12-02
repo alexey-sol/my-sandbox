@@ -1,0 +1,15 @@
+.nav-tab {
+  @include border-box;
+  @include reset;
+  @include non-selectable-text;
+  align-items: center;
+  display: flex;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 13px;
+}
+
+.nav-tab:last-of-type {
+  padding-right: 0;
+}

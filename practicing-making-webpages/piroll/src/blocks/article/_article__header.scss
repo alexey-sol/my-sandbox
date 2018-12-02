@@ -1,0 +1,9 @@
+.article__header {
+  @include border-box;
+  color: #171717;
+  font-family: "Montserrat", sans-serif;
+  font-size: 3.8em;
+  font-weight: bold;
+  padding: 10px;
+  text-align: center;
+}

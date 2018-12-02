@@ -1,0 +1,4 @@
+.header__image {
+  @include border-box;
+  content: url("../src/blocks/header/img/logo.png");
+}

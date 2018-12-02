@@ -1,0 +1,8 @@
+.nav-tab__link {
+  @include border-box;
+  color: inherit;
+  padding: 15px 0; // make the link area a bit larger
+  text-decoration: inherit;
+}
+// All the styles are taken from the parent. It allows to reset link styles
+// in this case.

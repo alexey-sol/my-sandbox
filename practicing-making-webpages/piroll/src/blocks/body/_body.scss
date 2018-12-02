@@ -1,0 +1,7 @@
+.body {
+  @include reset;
+  background-color: $background-color;
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100%;
+}

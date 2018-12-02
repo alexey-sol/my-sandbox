@@ -1,0 +1,8 @@
+.headline {
+  @include border-box;
+  @include reset;
+  background-color: $header-color;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}

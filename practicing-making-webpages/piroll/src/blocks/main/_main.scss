@@ -1,0 +1,9 @@
+.main {
+  @include border-box;
+  @include reset;
+  align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
+  // max-width: $grid-width;
+  // min-width: $grid-width;
+}

@@ -1,0 +1,8 @@
+@mixin reset {
+  font-size: 10px;
+  margin: 0;
+  padding: 0;
+}
+// Since BEM doesn't encourage using global resets, I've decided to make this
+// Sass-mixin which will be included in all the rules where resetting properties
+// is welcomed.

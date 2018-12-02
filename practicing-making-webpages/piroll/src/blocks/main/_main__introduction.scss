@@ -1,0 +1,8 @@
+.main__introduction {
+  @include border-box;
+  @include reset;
+  display: flex;
+  max-width: 570px;
+  min-width: 570px;
+  padding: 90px 15px;
+}

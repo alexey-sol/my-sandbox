@@ -1,0 +1,85 @@
+-
+  function getList(query) {
+    let classNamesList = "";
+    switch (query) {
+    
+      case "tabs":
+        classNamesList = ["nav-tab"];
+        return [{
+          classNamesList: [classNamesList[0], `${classNamesList[0]}_active`],
+          href: "home.html",
+          title: "HOME"
+        }, {
+          classNamesList: classNamesList, 
+          href: "about.html",
+          title: "ABOUT"
+        }, {
+          classNamesList: classNamesList,
+          href: "contact.html",
+          title: "CONTACT"
+        }];
+  
+      case "siteSections1":
+        classNamesList = ["footer-item", "footer__item"];
+        return [{
+          classNamesList: classNamesList,
+          href: "",
+          title: "Projects"
+        }, {
+          classNamesList: classNamesList,
+          href: "",
+          title: "About"
+        }, {
+          classNamesList: classNamesList,
+          href: "",
+          title: "Services"
+        }, {
+          classNamesList: classNamesList,
+          href: "",
+          title: "Carreer"
+        }];
+  
+      case "siteSections2":
+        classNamesList = ["footer-item", "footer__item"];
+        return [{
+          classNamesList: classNamesList,
+          href: "",
+          title: "News"
+        }, {
+          classNamesList: classNamesList,
+          href: "",
+          title: "Events"
+        }, {
+          classNamesList: classNamesList,
+          href: "",
+          title: "Contact"
+        }, {
+          classNamesList: classNamesList,
+          href: "",
+          title: "Legals"
+        }];
+  
+      case "socialNetworks":
+        classNamesList = ["footer-item", "footer__item"];
+        return [{
+          classNamesList: classNamesList,
+          href: "",
+          title: "Facebook"
+        }, {
+          classNamesList: classNamesList,
+          href: "",
+          title: "Twitter"
+        }, {
+          classNamesList: classNamesList,
+          href: "",
+          title: "Instagram"
+        }, {
+          classNamesList: classNamesList,
+          href: "",
+          title: "Dribbble"
+        }];
+  
+      default:
+        return [];
+    }
+  }

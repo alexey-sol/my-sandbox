@@ -1,0 +1,6 @@
+.article {
+  @include border-box;
+  @include reset;
+  display: flex;
+  flex-flow: column wrap;
+}

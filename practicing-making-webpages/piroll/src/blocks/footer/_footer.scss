@@ -1,0 +1,9 @@
+.footer {
+  @include border-box;
+  @include reset;
+  color: #bcbcbc;
+  display: flex;
+  max-width: $grid-width;
+  min-width: $grid-width;
+  padding: 85px 15px;
+}

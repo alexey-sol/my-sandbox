@@ -1,0 +1,7 @@
+.main__display {
+  @include border-box;
+  @include reset;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
