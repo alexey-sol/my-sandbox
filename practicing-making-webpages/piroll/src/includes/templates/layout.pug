@@ -1,7 +1,7 @@
 include ../functions/getList.pug
 include ../mixins/list-item.pug
 
-block tabListScript
+block providingLists
   - const tabList = getList("tabs", "home");
   //- By default, tab "Home" will be considered active. This block should be
   //- overriden for each particular page.
@@ -15,7 +15,7 @@ html.html
       block header
         .header
           .header__logo
-            a(class="header__image" href="home.html" title="Home")
+            a(class="header__icon-logo" href="home.html" title="Home")
           ul.header__nav-bar
             each tab in tabList
               +list-item(tab)

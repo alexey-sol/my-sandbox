@@ -1,12 +1,24 @@
 extends includes/templates/layout.pug
 
-block tabListScript
-  - const tabList = getList("tabs", "about");
+include includes/mixins/statistics-block-item.pug
 
+block providingLists
+  - 
+    const tabList = getList("tabs", "about");
+    const statisticsItemList = getList("statisticsItems");
+
+append head
+  title Piroll: About
 block main
-  .main__introduction
-    .article
-      .article__header UI/UX & Graphic Designer
-      .article__body
-        | I am a Graphic & Web Designer based in New York, specializing in
-        | User Interface Design and Development.
+  .main__content
+    .banner.banner_theme_dark.main__banner
+      .banner__content
+        .article
+          .article__header.article__header_font_white Amelia Woods
+          .article__body.article__body_font_white
+            | I am a Graphic & Web Designer based in New York, specializing in
+            | User Interface Design and Development.
+    .statistics-block.main__statistics-block
+      .statistics-block__content
+        each item in statisticsItemList
+          +statistics-block-item(item)

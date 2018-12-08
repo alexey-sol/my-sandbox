@@ -1,8 +1,6 @@
 .page {
   @include border-box;
   @include reset;
-  align-items: center; // center children horizontally
-  
   display: flex;
   flex-flow: column nowrap;
   height: 100%;

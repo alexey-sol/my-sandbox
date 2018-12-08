@@ -1,8 +1,9 @@
-.main__introduction {
+.banner__content {
   @include border-box;
   @include reset;
   display: flex;
+  flex-flow: column nowrap;
   max-width: 570px;
   min-width: 570px;
-  padding: 90px 15px;
+  padding: 105px 15px;
 }

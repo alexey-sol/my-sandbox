@@ -1,0 +1,10 @@
+.statistics-block__icon-briefcase {
+  @include border-box;
+  content: url("../src/blocks/statistics-block/img/icon-briefcase.png");
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  align-content: center;
+}

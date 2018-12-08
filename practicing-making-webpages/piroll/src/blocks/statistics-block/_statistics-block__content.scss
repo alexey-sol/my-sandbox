@@ -1,0 +1,7 @@
+.statistics-block__content {
+  @include border-box;
+  display: flex;
+  max-width: $grid-width;
+  min-width: $grid-width;
+  padding: 85px 15px;
+}

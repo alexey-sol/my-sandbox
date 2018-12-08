@@ -2,7 +2,6 @@
   @include border-box;
   @include reset;
   display: flex;
-  flex-flow: row wrap;
   height: $header-height;
   justify-content: space-between;
   max-width: $grid-width;

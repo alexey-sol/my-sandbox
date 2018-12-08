@@ -1,0 +1,9 @@
+.statistics-block__info {
+  @include border-box;
+  color: white;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  padding-left: 25px;
+  min-width: 265px;
+}
