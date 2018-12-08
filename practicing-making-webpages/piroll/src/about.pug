@@ -1,0 +1,12 @@
+extends includes/templates/layout.pug
+
+block tabListScript
+  - const tabList = getList("tabs", "about");
+
+block main
+  .main__introduction
+    .article
+      .article__header UI/UX & Graphic Designer
+      .article__body
+        | I am a Graphic & Web Designer based in New York, specializing in
+        | User Interface Design and Development.

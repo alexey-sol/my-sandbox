@@ -1,24 +1,33 @@
 -
-  function getList(query) {
-    let classNamesList = "";
-    switch (query) {
-    
+  function getList(listName, activePage = "") {
+    let classNamesList;
+    activePage = activePage.toLowerCase();
+    // "activePage" is optional parameter which is needed for nav. bar: it
+    // represents which tab should have "active" class modifier.
+
+    switch (listName) {
       case "tabs":
         classNamesList = ["nav-tab"];
         return [{
-          classNamesList: [classNamesList[0], `${classNamesList[0]}_active`],
           href: "home.html",
-          title: "HOME"
+          title: "HOME",
+          classNamesList: (activePage === "home") ?
+            [classNamesList[0], `${classNamesList[0]}_active`] :
+            classNamesList
         }, {
-          classNamesList: classNamesList, 
           href: "about.html",
-          title: "ABOUT"
+          title: "ABOUT",
+          classNamesList: (activePage === "about") ?
+            [classNamesList[0], `${classNamesList[0]}_active`] :
+            classNamesList
         }, {
-          classNamesList: classNamesList,
           href: "contact.html",
-          title: "CONTACT"
+          title: "CONTACT",
+          classNamesList: (activePage === "contact") ?
+            [classNamesList[0], `${classNamesList[0]}_active`] :
+            classNamesList
         }];
-  
+
       case "siteSections1":
         classNamesList = ["footer-item", "footer__item"];
         return [{

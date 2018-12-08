@@ -1,51 +1,37 @@
-include includes/functions/fixTitle.pug
-include includes/functions/getList.pug
-include includes/mixins/list-item.pug
+extends includes/templates/layout.pug
 
-- const tabList = getList("tabs");
+block tabListScript
+  - const tabList = getList("tabs", "home");
 
-doctype html
-html.html
-  include includes/blocks/head.pug
-  body.body
-    .headline 
-      .header
-        .header__logo
-          a(class="header__image" href="home.html" title="Home")
-        ul.header__nav-bar
-          each tab in tabList
-            +list-item(tab)
-    .page
-      .main
-        .main__introduction
-          .article
-            .article__header UI/UX & Graphic Designer
-            .article__body
-              | I am a Graphic & Web Designer based in New York, specializing in
-              | User Interface Design and Development.
-        .main__display
-          .portfolio
-            - let rowsCount = 0, columnsCount = 0;
+append head
+  title Piroll: Home
+block main
+  .main__introduction
+    .article
+      .article__header UI/UX & Graphic Designer
+      .article__body
+        | I am a Graphic & Web Designer based in New York, specializing in
+        | User Interface Design and Development.
+  .main__display
+    .portfolio
+      - let rowsCount = 0, columnsCount = 0;
 
-            while rowsCount < 3
-              - rowsCount++;
-              .portfolio__row
+      while rowsCount < 3
+        - rowsCount++;
+        .portfolio__row
 
-                while columnsCount < 4
-                  - columnsCount++;
+          while columnsCount < 4
+            - columnsCount++;
 
-                  if rowsCount == 2 && columnsCount == 2
-                    .portfolio-item.portfolio-item_distinct.portfolio__item
-                      a(class="portfolio-item__content" href="" title="")
-                        .portfolio-item__image.portfolio-item__image_distinct
-                        .portfolio-item__info 
-                  else
-                    .portfolio-item.portfolio__item
-                      a(class="portfolio-item__content" href="" title="")
-                        .portfolio-item__image
-                        .portfolio-item__info
+            if rowsCount == 2 && columnsCount == 2
+              .portfolio-item.portfolio-item_distinct.portfolio__item
+                a(class="portfolio-item__content" href="" title="")
+                  .portfolio-item__image.portfolio-item__image_distinct
+                  .portfolio-item__info 
+            else
+              .portfolio-item.portfolio__item
+                a(class="portfolio-item__content" href="" title="")
+                  .portfolio-item__image
+                  .portfolio-item__info
 
-                - columnsCount = 0;
-
-      .footline
-        include includes/blocks/footer.pug
+          - columnsCount = 0;

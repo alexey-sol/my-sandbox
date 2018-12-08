@@ -1,3 +1,4 @@
+include ../functions/fixTitle.pug
 mixin list-item(item)
   li(class= item.classNamesList)
     a(class=`${item.classNamesList[0]}__link` title= fixTitle(item.title)
