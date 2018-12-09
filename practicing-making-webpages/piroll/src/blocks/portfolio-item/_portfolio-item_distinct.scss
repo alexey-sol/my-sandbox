@@ -1,3 +1,11 @@
 .portfolio-item_distinct {
   background-color: #21bfb9 !important;
 }
+
+.portfolio-item_distinct .portfolio-item__image {
+  background-image: url("../src/blocks/portfolio-item/img/look.png"); 
+  background-position: 50% 53%;
+  background-repeat: no-repeat;
+}
+// Since there's also "info" section which takes space in the parent block, I 
+// decided to position the image manually.

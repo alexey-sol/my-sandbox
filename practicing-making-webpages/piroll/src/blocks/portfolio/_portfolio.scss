@@ -1,6 +1,7 @@
 .portfolio {
   @include border-box;
   @include reset;
+  align-items: center;
   display: flex;
   flex-flow: column wrap;
 }

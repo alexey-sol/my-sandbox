@@ -2,7 +2,7 @@
   @include border-box;
   @include reset;
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: column wrap;
   max-width: $grid-width / 2;
   min-width: $grid-width / 2;
   padding: 105px 30px;

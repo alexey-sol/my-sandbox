@@ -1,3 +1,9 @@
 .banner_theme_dark {
   background-color: #3e3e3e;
 }
+
+.banner_theme_dark .caption,
+.banner_theme_dark .paragraph {
+  color: white;
+}
+// BEM allows the use of selectors within one particular block.
