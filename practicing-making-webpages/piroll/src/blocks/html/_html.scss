@@ -3,3 +3,13 @@
 }
 // Class "html" for the HTML node? I suppose, there's nothing wrong, according 
 // to BEM methodolgy. At least, "body.body" is a pretty common thing.
+
+::-moz-selection {
+  background-color: #10c9c3;
+  color: white;
+}
+
+::selection {
+  background-color: #10c9c3;
+  color: white;
+}

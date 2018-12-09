@@ -1,10 +1,10 @@
-.banner__content {
+.order-block__content {
   @include border-box;
   @include reset;
   display: flex;
   flex-flow: column nowrap;
   max-width: $grid-width / 2;
   min-width: $grid-width / 2;
-  padding: 105px 30px;
+  padding: 105px 0;
   text-align: center;
 }

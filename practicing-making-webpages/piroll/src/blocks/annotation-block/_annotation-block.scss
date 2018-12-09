@@ -1,6 +1,6 @@
-.main {
+.annotation-block {
   @include border-box;
   @include reset;
   display: flex;
-  flex-flow: column wrap;
+  min-width: 100%;
 }

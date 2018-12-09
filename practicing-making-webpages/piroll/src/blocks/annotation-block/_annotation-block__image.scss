@@ -1,0 +1,6 @@
+.annotation-block__image {
+  @include border-box;
+  display: flex;
+  max-width: $grid-width / 2;
+  padding: 0 15px;
+}

@@ -1,0 +1,18 @@
+.button {
+  @include border-box;
+  @include reset;
+  background-color: #10c9c3;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  padding: 20px 50px;
+  transition: .5s ease;
+}
+
+.button:hover {
+  background-color: #252525;
+  transition: .5s ease;
+}

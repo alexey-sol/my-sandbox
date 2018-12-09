@@ -1,0 +1,17 @@
+.paragraph {
+  @include border-box;
+  @include reset;
+  color: #787878;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  line-height: 23px;
+  padding-bottom: 30px;
+}
+
+.paragraph:first-of-type {
+  padding-top: 0;
+}
+
+.paragraph:last-of-type {
+  padding-bottom: 0;
+}

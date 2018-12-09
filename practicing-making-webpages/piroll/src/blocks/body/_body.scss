@@ -1,4 +1,5 @@
 .body {
+  @include border-box;
   @include reset;
   background-color: $background-color;
   display: flex;

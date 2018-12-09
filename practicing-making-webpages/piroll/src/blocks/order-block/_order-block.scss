@@ -1,9 +1,8 @@
-.statistics-block {
+.order-block {
   @include border-box;
-  @include non-selectable-text;
   @include reset;
   align-items: center;
-  background-color: #10c9c3;
+  background-color: white;
   display: flex;
   flex-flow: column nowrap;
   min-width: 100%;
