@@ -1,0 +1,7 @@
+.map-block__content {
+  @include border-box;
+  height: 470px;
+  max-width: $grid-width;
+  min-width: $grid-width;
+  padding: 0 15px;
+}

@@ -1,7 +1,7 @@
-.display {
+.map-block {
   @include border-box;
   @include reset;
-  align-items: center;
   display: flex;
   justify-content: center;
+  padding-bottom: 100px;
 }

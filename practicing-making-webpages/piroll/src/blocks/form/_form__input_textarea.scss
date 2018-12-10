@@ -1,0 +1,8 @@
+.form__input_textarea {
+  height: 170px;
+  resize: none;
+}
+// I understand that textarea element isn't some sort of a descendant/subset
+// of input element, but since in this project, the only difference in styling
+// these elements is that textarea has a couple more CSS properties, I've 
+// decided to design this rule as a modifier for input.

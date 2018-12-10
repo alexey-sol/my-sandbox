@@ -1,0 +1,9 @@
+.form__row {
+  @include border-box;
+  display: flex;
+  flex: 1;
+}
+
+.form__row:not(:last-of-type) {
+  padding-bottom: 30px;
+}

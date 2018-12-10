@@ -1,6 +1,6 @@
-.annotation-block {
+.contact-block {
   @include border-box;
   @include reset;
   display: flex;
-  min-width: 100%;
+  justify-content: center;
 }
