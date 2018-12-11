@@ -1,8 +1,6 @@
-.headline {
+.project-block {
   @include border-box;
   @include reset;
-  background-color: $header-color;
   display: flex;
   justify-content: center;
-  min-width: 100%;
 }

@@ -1,7 +1,5 @@
 .map-block {
-  @include border-box;
-  @include reset;
+  @include stretched-block;
   display: flex;
-  justify-content: center;
   padding-bottom: 100px;
 }

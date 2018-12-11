@@ -1,0 +1,9 @@
+.pagination__step_back:before {
+  content: url("../src/blocks/pagination/img/step-back.png");
+  padding-right: 10px;
+  transition: .3s ease;
+}
+
+.pagination__step_back:hover {
+  filter: invert(50%);
+}

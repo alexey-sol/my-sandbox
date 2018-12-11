@@ -2,7 +2,7 @@
   @include border-box;
   border: 1px solid transparent;
   flex: 1;
-  font-family: "Montserrat", sans-serif;
+  font-family: "NunitoSans", sans-serif;
   font-size: 15px;
   padding: 15px 20px;
   transition: .3s ease;
@@ -19,6 +19,6 @@
 
 .form__input::placeholder {
   color: #787878;
-  font-family: "Montserrat", sans-serif;
+  font-family: "NunitoSans", sans-serif;
   font-size: 15px;
 }

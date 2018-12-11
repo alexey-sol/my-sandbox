@@ -1,0 +1,6 @@
+.pagination__content {
+  @include fixed-size-block__content(40px);
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}

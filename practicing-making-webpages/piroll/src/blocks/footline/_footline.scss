@@ -1,9 +1,9 @@
 .footline {
   @include border-box;
   @include reset;
+  align-items: center;
   background-color: $footer-color;
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
+  flex-flow: column nowrap;
   min-width: 100%;
 }

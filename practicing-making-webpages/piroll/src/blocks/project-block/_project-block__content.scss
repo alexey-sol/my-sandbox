@@ -1,0 +1,8 @@
+.project-block__content {
+  @include border-box;
+  display: flex;
+  justify-content: flex-end;
+  max-width: 50%;
+  min-width: 50%;
+  padding: 100px 0;
+}

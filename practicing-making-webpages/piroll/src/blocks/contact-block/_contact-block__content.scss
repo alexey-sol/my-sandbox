@@ -1,7 +1,4 @@
 .contact-block__content {
-  @include border-box;
+  @include fixed-size-block__content;
   display: flex;
-  max-width: $grid-width;
-  min-width: $grid-width;
-  padding: 100px 15px;
 }

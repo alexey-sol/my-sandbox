@@ -1,10 +1,7 @@
 .order-block {
-  @include border-box;
-  @include reset;
+  @include stretched-block;
   align-items: center;
   background-color: white;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
-  min-width: 100%;
 }

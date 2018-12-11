@@ -1,0 +1,12 @@
+.pagination__projects-index {
+  padding: 0 10px;
+  transition: .3s ease;
+}
+
+.pagination__projects-index:before {
+  content: url("../src/blocks/pagination/img/projects-index.png");
+}
+
+.pagination__projects-index:hover {
+  filter: invert(50%);
+}

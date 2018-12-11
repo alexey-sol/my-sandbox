@@ -1,0 +1,6 @@
+.project-block__list {
+  @include border-box;
+  @include reset;
+  list-style-type: none;
+  padding-top: 30px;
+}

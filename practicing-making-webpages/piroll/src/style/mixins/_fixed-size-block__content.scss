@@ -1,0 +1,9 @@
+@mixin fixed-size-block__content(
+  $vertical-padding: 100px, 
+  $horizontal-padding: 15px) 
+{
+  @include border-box;
+  max-width: $grid-width;
+  min-width: $grid-width;
+  padding: $vertical-padding $horizontal-padding;
+}

@@ -1,9 +1,8 @@
 .annotation-block__content {
   @include border-box;
-  background-color: #f5f5f5;
   display: flex;
   flex-flow: column wrap;
   max-width: $grid-width / 2;
-  padding: 125px 0 125px 90px;
+  padding: 130px 60px 130px 90px;
   text-align: left;
 }

@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat|Nunito+Sans");
-// font-family: 'Montserrat', sans-serif;
-// font-family: 'Nunito Sans', sans-serif;
 @import "variables";
 @import "mixins/border-box";
+@import "mixins/fixed-size-block__content";
 @import "mixins/icon-container";
 @import "mixins/non-selectable-text";
 @import "mixins/reset";
+@import "mixins/stretched-block";
 @import "../blocks/annotation-block/annotation-block";
 @import "../blocks/annotation-block/annotation-block__content";
 @import "../blocks/annotation-block/annotation-block__icon-container";
@@ -62,6 +62,12 @@
 @import "../blocks/order-block/order-block__button";
 @import "../blocks/order-block/order-block__content";
 @import "../blocks/page/page";
+@import "../blocks/pagination/pagination";
+@import "../blocks/pagination/pagination__content";
+@import "../blocks/pagination/pagination__projects-index";
+@import "../blocks/pagination/pagination__step";
+@import "../blocks/pagination/pagination__step_back";
+@import "../blocks/pagination/pagination__step_forward";
 @import "../blocks/paragraph/paragraph";
 @import "../blocks/paragraph/paragraph_large";
 @import "../blocks/portfolio/portfolio";
@@ -72,6 +78,13 @@
 @import "../blocks/portfolio-item/portfolio-item__content";
 @import "../blocks/portfolio-item/portfolio-item__image";
 @import "../blocks/portfolio-item/portfolio-item__info";
+@import "../blocks/project-block/project-block";
+@import "../blocks/project-block/project-block__content";
+@import "../blocks/project-block/project-block__image";
+@import "../blocks/project-block/project-block__image-container";
+@import "../blocks/project-block/project-block__info";
+@import "../blocks/project-block/project-block__item";
+@import "../blocks/project-block/project-block__list";
 @import "../blocks/statistics-block/statistics-block";
 @import "../blocks/statistics-block/statistics-block__content";
 @import "../blocks/statistics-block/statistics-block__description";
@@ -83,3 +96,4 @@
 @import "../blocks/statistics-block/statistics-block__info";
 @import "../blocks/statistics-block/statistics-block__item";
 @import "../blocks/statistics-block/statistics-block__numbers";
+@import "../blocks/strong/strong";

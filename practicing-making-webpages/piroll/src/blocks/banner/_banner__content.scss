@@ -1,10 +1,6 @@
 .banner__content {
-  @include border-box;
-  @include reset;
+  @include fixed-size-block__content(95px, 340px);
   display: flex;
   flex-flow: column wrap;
-  max-width: $grid-width / 2;
-  min-width: $grid-width / 2;
-  padding: 105px 30px;
   text-align: center;
 }

@@ -1,7 +1,4 @@
 .banner {
-  @include border-box;
-  @include reset;
+  @include stretched-block;
   display: flex;
-  justify-content: center;
-  min-width: 100%;
 }

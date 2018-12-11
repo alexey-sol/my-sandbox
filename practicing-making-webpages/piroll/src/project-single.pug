@@ -1,0 +1,38 @@
+extends includes/templates/layout.pug
+
+block providingLists
+  - const tabList = getList("tabs");
+
+append head
+  title Piroll: Project
+block main
+  .project-block
+    .project-block__content
+      .project-block__info
+        h1.caption.caption_large Light Breakfast
+        p.paragraph
+          | Light his can't a creeping. Be, bring blessed night. Replenish
+          | blessed creature good. Saw earth every creepeth lights day, divided
+          | abundantly form. In. Said given lights. Sixth the male. Upon their 
+          | multiply. Kind beast. Him tree upon.
+        p.paragraph
+          | Cattle. Dominion day herb she'd creeping divide darkness. Which. 
+          | Subdue had.
+        ul.project-block__list
+          li.project-block__item #[span.strong Client:] Emma Morris
+          li.project-block__item #[span.strong Date:] 25.06.2017
+          li.project-block__item #[span.strong Share:] Facebook, Twitter
+            | , Pinterest
+    .project-block__image-container
+      .project-block__image
+prepend footer
+  //- Attaching a new block prior to ".footer".
+  .pagination
+    .pagination__content
+      a(class="pagination__step pagination__step_back" href="" 
+        title="Previous project")
+          span PREVIOUS PROJECT
+      a(class="pagination__projects-index" href="" title="Projects index")
+      a(class="pagination__step pagination__step_forward" href=""
+        title="Next project")
+          span NEXT PROJECT

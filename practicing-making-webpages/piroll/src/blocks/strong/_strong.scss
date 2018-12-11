@@ -1,0 +1,6 @@
+.strong {
+  @include reset;
+  color: #171717;
+  display: inline;
+  font-weight: bold;
+}

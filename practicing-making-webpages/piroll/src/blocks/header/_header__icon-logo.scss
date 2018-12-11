@@ -1,4 +1,9 @@
 .header__icon-logo {
   @include border-box;
   content: url("../src/blocks/header/img/logo.png");
+  transition: .4s ease;
+}
+
+.header__icon-logo:hover {
+  filter: invert(50%);
 }
