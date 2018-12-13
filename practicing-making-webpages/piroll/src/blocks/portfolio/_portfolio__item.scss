@@ -1,14 +1,14 @@
 .portfolio__item {
-  @include border-box;
-  background-color: #dddddd;
+  background-color: $portfolio-item-bg;
+  box-sizing: border-box;
   display: flex;
   min-width: 340px;
 }
 
 .portfolio__row:nth-of-type(odd) .portfolio__item:nth-of-type(odd) {
-  background-color: #838383;
+  background-color: $portfolio-item-bg--additional;
 }
 
 .portfolio__row:nth-of-type(even) .portfolio__item:nth-of-type(even) {
-  background-color: #838383;
+  background-color: $portfolio-item-bg--additional;
 }

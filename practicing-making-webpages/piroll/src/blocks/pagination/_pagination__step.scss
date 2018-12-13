@@ -1,7 +1,7 @@
 .pagination__step {
-  @include border-box;
   @include reset;
-  color: #1d1d1d;
-  font-family: "Montserrat", sans-serif;
-  font-size: 12px;
+  box-sizing: border-box;
+  // color: #1d1d1d;
+  font-family: $font-family--caption;
+  font-size: $font-size--smallest;
 }

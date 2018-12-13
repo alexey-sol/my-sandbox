@@ -1,5 +1,5 @@
 .header__icon-logo {
-  @include border-box;
+  box-sizing: border-box;
   content: url("../src/blocks/header/img/logo.png");
   transition: .4s ease;
 }

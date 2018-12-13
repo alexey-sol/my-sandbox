@@ -1,11 +1,4 @@
 .portfolio-item__image {
-  @include border-box;
+  box-sizing: border-box;
   flex: 1;
 }
-
-
-
-
-
-// Probably, BEM won't approve such a practice but it's not that easy to paint
-// a table in a chessboard style without using "row & cell" bundle.

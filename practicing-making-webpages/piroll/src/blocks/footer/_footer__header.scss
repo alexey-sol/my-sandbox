@@ -1,8 +1,8 @@
 .footer__header {
-  @include border-box;
+  box-sizing: border-box;
   color: white;
   display: flex;
-  font-family: "Montserrat", sans-serif;
-  font-size: 18px;
+  font-family: $font-family--caption;
+  font-size: $font-size--medium;
   padding: 10px 0;
 }

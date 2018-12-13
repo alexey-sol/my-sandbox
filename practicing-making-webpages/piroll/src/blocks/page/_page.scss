@@ -1,6 +1,6 @@
 .page {
-  @include border-box;
   @include reset;
+  box-sizing: border-box;
   display: flex;
   flex-flow: column nowrap;
   height: 100%;

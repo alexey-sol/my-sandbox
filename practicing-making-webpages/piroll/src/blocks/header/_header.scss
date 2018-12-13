@@ -1,8 +1,8 @@
 .header {
-  @include border-box;
   @include reset;
+  box-sizing: border-box;
   display: flex;
-  height: $header-height;
+  height: 100px;
   justify-content: space-between;
   max-width: $grid-width;
   min-width: $grid-width;

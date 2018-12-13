@@ -1,5 +1,5 @@
 .portfolio-item {
-  @include border-box;
   @include reset;
+  box-sizing: border-box;
   display: flex;
 }

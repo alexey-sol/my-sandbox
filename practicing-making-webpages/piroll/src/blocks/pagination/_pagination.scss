@@ -1,5 +1,6 @@
 .pagination {
   @include stretched-block;
-  background-color: white;
+  color: $pagination-color;
+  background-color: $pagination-bg;
   display: flex;
 }

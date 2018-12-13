@@ -1,11 +1,11 @@
 .nav-tab {
-  @include border-box;
   @include reset;
   @include non-selectable-text;
   align-items: center;
+  box-sizing: border-box;
   display: flex;
-  font-family: "Montserrat", sans-serif;
-  font-size: 12px;
+  font-family: $font-family--caption;
+  font-size: $font-size--smallest;
   font-weight: bold;
   padding: 13px;
 }

@@ -1,4 +1,4 @@
 .footer__site-sections {
-  @include border-box;
+  box-sizing: border-box;
   display: flex;
 }

@@ -1,4 +1,4 @@
 .statistics-block__icon-heart {
-  @include border-box;
+  box-sizing: border-box;
   content: url("../src/blocks/statistics-block/img/icon-heart.png");
 }

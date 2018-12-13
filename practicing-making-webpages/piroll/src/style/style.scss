@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat|Nunito+Sans");
 @import "variables";
-@import "mixins/border-box";
 @import "mixins/fixed-size-block__content";
-@import "mixins/icon-container";
 @import "mixins/non-selectable-text";
 @import "mixins/reset";
 @import "mixins/stretched-block";
 @import "../blocks/annotation-block/annotation-block";
+@import "../blocks/annotation-block/annotation-block_alternative";
+@import "../blocks/annotation-block/annotation-block__button";
 @import "../blocks/annotation-block/annotation-block__content";
 @import "../blocks/annotation-block/annotation-block__icon-container";
 @import "../blocks/annotation-block/annotation-block__icon-signature";
@@ -50,6 +50,7 @@
 @import "../blocks/header/header__logo";
 @import "../blocks/header/header__nav-bar";
 @import "../blocks/headline/headline";
+@import "../blocks/headline/headline_alternative";
 @import "../blocks/html/html";
 @import "../blocks/main/main";
 @import "../blocks/map-block/map-block";

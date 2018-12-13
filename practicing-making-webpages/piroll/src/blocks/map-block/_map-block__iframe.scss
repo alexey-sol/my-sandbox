@@ -1,3 +1,3 @@
 .map-block__iframe {
-  @include border-box;
+  box-sizing: border-box;
 }

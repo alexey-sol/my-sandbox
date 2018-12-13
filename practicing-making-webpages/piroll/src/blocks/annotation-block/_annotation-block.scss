@@ -1,6 +1,6 @@
 .annotation-block {
-  @include border-box;
   @include reset;
+  box-sizing: border-box;
   display: flex;
   min-width: 100%;
 }

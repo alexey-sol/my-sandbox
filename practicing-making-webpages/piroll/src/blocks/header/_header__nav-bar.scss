@@ -1,6 +1,6 @@
 .header__nav-bar {
-  @include border-box;
   @include reset;
+  box-sizing: border-box;
   display: flex;
   flex-flow: row nowrap;
   list-style-type: none;

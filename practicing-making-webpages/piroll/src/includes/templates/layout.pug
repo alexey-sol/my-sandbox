@@ -14,8 +14,8 @@ html.html
     .headline 
       block header
         .header
-          .header__logo
-            a(class="header__icon-logo" href="home.html" title="Home")
+          a(class="header__logo" href="home.html" title="Home")
+            .header__icon-logo
           ul.header__nav-bar
             each tab in tabList
               +list-item(tab)

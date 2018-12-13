@@ -1,5 +1,5 @@
 .portfolio__row {
-  @include border-box;
+  box-sizing: border-box;
   display: flex;
   flex-basis: 300px;
   flex-flow: row nowrap;

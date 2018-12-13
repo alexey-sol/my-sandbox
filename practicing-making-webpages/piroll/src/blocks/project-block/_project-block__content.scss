@@ -1,5 +1,5 @@
 .project-block__content {
-  @include border-box;
+  box-sizing: border-box;
   display: flex;
   justify-content: flex-end;
   max-width: 50%;

@@ -1,6 +1,6 @@
 @mixin stretched-block {
-  @include border-box;
   @include reset;
+  box-sizing: border-box;
   justify-content: center;
   min-width: 100%;
 }

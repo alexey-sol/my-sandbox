@@ -1,3 +1,5 @@
 .statistics-block__icon-container {
-  @include icon-container;
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
 }

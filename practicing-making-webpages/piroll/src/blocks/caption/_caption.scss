@@ -1,8 +1,8 @@
 .caption {
-  @include border-box;
   @include reset;
-  color: #171717;
-  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+  color: $gray--darken;
+  font-family: $font-family--caption;
   font-size: 30px;
   padding-bottom: 30px;
 }

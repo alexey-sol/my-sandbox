@@ -1,17 +1,17 @@
 .button {
-  @include border-box;
   @include reset;
-  background-color: #10c9c3;
+  background-color: $button-main-bg;
   border: none;
-  color: white;
+  box-sizing: border-box;
+  color: $button-main-color;
   cursor: pointer;
   display: block;
-  font-family: "Montserrat", sans-serif;
-  font-size: 12px;
+  font-family: $font-family--caption;
+  font-size: $font-size--smallest;
   padding: 20px 30px;
   transition: .5s ease;
 }
 
 .button:hover {
-  background-color: #252525;
+  background-color: $button-main-bg--hover;
 }

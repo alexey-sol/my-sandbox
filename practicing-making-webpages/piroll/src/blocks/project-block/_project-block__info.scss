@@ -1,5 +1,5 @@
 .project-block__info {
-  @include border-box;
+  box-sizing: border-box;
   display: flex;
   flex-flow: column wrap;
   max-width: $grid-width / 2;

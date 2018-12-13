@@ -1,6 +1,5 @@
 .statistics-block__info {
-  @include border-box;
-  color: white;
+  box-sizing: border-box;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;

@@ -1,4 +1,4 @@
 .annotation-block__icon-signature {
-  @include border-box;
+  box-sizing: border-box;
   content: url("../src/blocks/annotation-block/img/signature.png");
 }

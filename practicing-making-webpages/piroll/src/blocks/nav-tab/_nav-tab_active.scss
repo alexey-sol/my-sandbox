@@ -1,4 +1,3 @@
 .nav-tab_active {
-  @include border-box;
-  color: #10c9c3;
+  color: $nav-tab-color--active;
 }

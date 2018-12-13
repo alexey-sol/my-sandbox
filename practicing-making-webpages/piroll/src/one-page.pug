@@ -1,0 +1,26 @@
+//- This particular page a bit screwed up my layout. For example, this is the
+//- only page which have a special background color for the headline. In my 
+//- implementation, it's set only in the layout, and there's no legal way to 
+//- change the color via "inheritor" (there was just no point in that - I
+//- thought so). Also, there's a different set of navigation tabs in this page.
+//- So I've decided to write all the page manually, without extending.
+
+extends includes/templates/layout.pug
+
+block providingLists
+  - const tabList = getList("tabs", "home");
+
+append head
+  title Piroll: Home
+block main
+  .annotation-block.annotation-block_alternative
+    .annotation-block__image-container
+      .annotation-block__image
+    .annotation-block__content
+      h1.caption.caption_large We Design and Develop
+      p.paragraph.paragraph_large
+        | We are a new design studio based in USA. We have over 20 years of
+        | combined experience, and know a thing or two about designing websites 
+        | and mobile apps.
+      .annotation-block__button
+        a(class="button button_wide" role="button" href="contact.html") CONTACT US

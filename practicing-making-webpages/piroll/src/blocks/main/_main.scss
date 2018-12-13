@@ -1,6 +1,6 @@
 .main {
-  @include border-box;
   @include reset;
+  box-sizing: border-box;
   display: flex;
   flex-flow: column wrap;
   min-width: 100%;

@@ -1,7 +1,7 @@
 .order-block {
   @include stretched-block;
   align-items: center;
-  background-color: white;
+  background-color: $order-block-bg;
   display: flex;
   flex-flow: column nowrap;
 }

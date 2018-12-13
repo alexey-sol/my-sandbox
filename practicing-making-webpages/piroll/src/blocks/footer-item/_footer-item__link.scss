@@ -1,5 +1,5 @@
 .footer-item__link {
-  @include border-box;
+  box-sizing: border-box;
   color: inherit;
   text-decoration: inherit;
 }

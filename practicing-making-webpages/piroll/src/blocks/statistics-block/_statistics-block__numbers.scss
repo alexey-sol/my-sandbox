@@ -1,6 +1,6 @@
 .statistics-block__numbers {
-  @include border-box;
-  font-family: "Montserrat", sans-serif;
-  font-size: 18px;
+  box-sizing: border-box;
+  font-family: $font-family--caption;
+  font-size: $font-size--medium;
   padding: 3px 0;
 }

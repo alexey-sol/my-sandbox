@@ -1,0 +1,14 @@
+.annotation-block_alternative {
+  background-color: $annotation-block-alt-bg;
+
+  .annotation-block__content {
+    background-color: inherit;
+    padding-bottom: 200px;
+    padding-top: 135px;
+  }
+
+  .annotation-block__image-container {
+    background-color: inherit;
+  }
+}
+

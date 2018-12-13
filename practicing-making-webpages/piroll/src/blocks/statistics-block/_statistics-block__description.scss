@@ -1,6 +1,6 @@
 .statistics-block__description {
-  @include border-box;
-  font-family: "Montserrat", sans-serif;
-  font-size: 12px;
+  box-sizing: border-box;
+  font-family: $font-family--caption;
+  font-size: $font-size--smallest;
   padding: 3px 0;
 }

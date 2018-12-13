@@ -1,7 +1,7 @@
 .footer {
-  @include border-box;
   @include reset;
-  color: #bcbcbc;
+  box-sizing: border-box;
+  color: $footer-color;
   display: flex;
   max-width: $grid-width;
   min-width: $grid-width;

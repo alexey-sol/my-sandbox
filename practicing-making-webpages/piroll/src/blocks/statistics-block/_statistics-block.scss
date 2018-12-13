@@ -2,7 +2,8 @@
   @include stretched-block;
   @include non-selectable-text;
   align-items: center;
-  background-color: #10c9c3;
+  background-color: $statistics-block-bg;
+  color: $statistics-block-color;
   display: flex;
   flex-flow: column nowrap;
 }

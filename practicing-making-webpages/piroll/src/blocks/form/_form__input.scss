@@ -1,9 +1,10 @@
 .form__input {
-  @include border-box;
   border: 1px solid transparent;
+  box-sizing: border-box;
+  color: $input-color;
   flex: 1;
-  font-family: "NunitoSans", sans-serif;
-  font-size: 15px;
+  font-family: $font-family--normal;
+  font-size: $font-size--smaller;
   padding: 15px 20px;
   transition: .3s ease;
 }
@@ -14,11 +15,11 @@
 // If there's a row of inputs in form__row, make gaps between them.
 
 .form__input:focus {
-  border: 1px solid #10c9c3;
+  border: 1px solid $input-border--focus;
 }
 
 .form__input::placeholder {
-  color: #787878;
-  font-family: "NunitoSans", sans-serif;
-  font-size: 15px;
+  color: $input-placeholder;
+  font-family: $font-family--normal;
+  font-size: $font-size--smaller;
 }

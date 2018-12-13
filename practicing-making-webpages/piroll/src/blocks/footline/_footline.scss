@@ -1,8 +1,8 @@
 .footline {
-  @include border-box;
   @include reset;
   align-items: center;
-  background-color: $footer-color;
+  background-color: $footline-bg;
+  box-sizing: border-box;
   display: flex;
   flex-flow: column nowrap;
   min-width: 100%;

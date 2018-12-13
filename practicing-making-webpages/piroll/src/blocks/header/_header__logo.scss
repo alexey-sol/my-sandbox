@@ -1,5 +1,5 @@
 .header__logo {
-  @include border-box;
   align-items: center;
+  box-sizing: border-box;
   display: flex;
 }
