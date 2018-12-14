@@ -1,7 +1,9 @@
 extends includes/templates/layout.pug
 
-block providingLists
-  - const tabList = getList("tabs", "home");
+block script
+  - 
+    const tabList = getList("tabs", "home");
+    const useAltHeadline = false;
 
 append head
   title Piroll: Home
@@ -22,15 +24,12 @@ block main
         while columnsCount < 4
           - columnsCount++;
 
-          if rowsCount == 2 && columnsCount == 2
-            .portfolio-item.portfolio-item_distinct.portfolio__item
-              a(class="portfolio-item__content" href="" title="")
-                .portfolio-item__image
-                .portfolio-item__info 
-          else
-            .portfolio-item.portfolio__item
-              a(class="portfolio-item__content" href="" title="")
-                .portfolio-item__image
-                .portfolio-item__info
+          div(class=(rowsCount == 2 && columnsCount == 2) ? 
+            "portfolio-item portfolio-item_distinct portfolio__item" 
+            : "portfolio-item portfolio__item")
+            
+            a(class="portfolio-item__content" href="" title="")
+              .portfolio-item__image
+              .portfolio-item__info
 
         - columnsCount = 0;

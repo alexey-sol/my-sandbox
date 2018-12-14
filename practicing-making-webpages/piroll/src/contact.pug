@@ -1,7 +1,9 @@
 extends includes/templates/layout.pug
 
-block providingLists
-  - const tabList = getList("tabs", "contact");
+block script
+  - 
+    const tabList = getList("tabs", "contact");
+    const useAltHeadline = false;
 
 append head
   title Piroll: Contact

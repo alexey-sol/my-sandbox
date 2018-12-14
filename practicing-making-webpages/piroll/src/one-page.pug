@@ -1,14 +1,9 @@
-//- This particular page a bit screwed up my layout. For example, this is the
-//- only page which have a special background color for the headline. In my 
-//- implementation, it's set only in the layout, and there's no legal way to 
-//- change the color via "inheritor" (there was just no point in that - I
-//- thought so). Also, there's a different set of navigation tabs in this page.
-//- So I've decided to write all the page manually, without extending.
-
 extends includes/templates/layout.pug
 
-block providingLists
-  - const tabList = getList("tabs", "home");
+block script
+  - 
+    const tabList = getList("tabs", "home");
+    const useAltHeadline = true;
 
 append head
   title Piroll: Home

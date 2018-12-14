@@ -1,8 +1,10 @@
 include ../functions/getList.pug
 include ../mixins/list-item.pug
 
-block providingLists
-  - const tabList = getList("tabs", "home");
+block script
+  - 
+    const tabList = getList("tabs", "home");
+    const useAltHeadline = false;
   //- By default, tab "Home" will be considered active. This block should be
   //- overriden for each particular page.
 
@@ -11,8 +13,8 @@ html.html
   block head
     include ../../blocks/head/head.pug
   body.body
-    .headline 
-      block header
+    block headline
+      div(class=useAltHeadline ? "headline headline_alternative" : "headline")
         .header
           a(class="header__logo" href="home.html" title="Home")
             .header__icon-logo

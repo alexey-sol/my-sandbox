@@ -2,10 +2,11 @@ extends includes/templates/layout.pug
 
 include includes/mixins/statistics-block-item.pug
 
-block providingLists
+block script
   - 
     const tabList = getList("tabs", "about");
     const statisticsItemList = getList("statisticsItems");
+    const useAltHeadline = false;
 
 append head
   title Piroll: About
