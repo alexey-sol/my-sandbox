@@ -1,8 +1,8 @@
-.portfolio-item_distinct {
-  background-color: $portfolio-item-bg--distinct !important;
+.portfolio-item_fill_light {
+  background-color: $portfolio-item-bg--fill-light !important;
 }
 
-.portfolio-item_distinct .portfolio-item__image {
+.portfolio-item_fill_light .portfolio-item__image {
   background-image: url("../src/blocks/portfolio-item/img/look.png"); 
   background-position: 50% 53%;
   background-repeat: no-repeat;

@@ -1,5 +1,6 @@
 .html {
   height: 100%;
+  overflow-y: scroll;
 }
 // Class "html" for the HTML node? I suppose, there's nothing wrong, according 
 // to BEM methodolgy. At least, "body.body" is a pretty common thing.

@@ -1,0 +1,8 @@
+.introduction-block {
+  @include stretched-block;
+  align-content: center;
+  background-color: $introduction-block-bg;
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: column wrap;
+}

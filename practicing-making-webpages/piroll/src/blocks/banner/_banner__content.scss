@@ -1,5 +1,6 @@
 .banner__content {
   @include fixed-size-block__content(95px, 340px);
+  align-items: center;
   display: flex;
   flex-flow: column wrap;
   text-align: center;

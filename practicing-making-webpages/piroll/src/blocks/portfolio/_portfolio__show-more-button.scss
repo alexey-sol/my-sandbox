@@ -1,0 +1,17 @@
+.portfolio__show-more-button {
+  @include reset;
+  background-color: $portfolio-button-bg;
+  border: none;
+  box-sizing: border-box;
+  color: $portfolio-button-color;
+  cursor: pointer;
+  font-family: $font-family--caption;
+  font-size: $font-size--smallest;
+  min-width: $grid-width;
+  padding: 45px 15px;
+  transition: .4s ease;
+}
+
+.portfolio__show-more-button:hover {
+  color: $portfolio-button-color--hover;
+}

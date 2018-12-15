@@ -28,6 +28,52 @@
             classNamesList
         }];
 
+      case "tabsExtended":
+        classNamesList = ["nav-tab"];
+        return [{
+          href: "home.html",
+          title: "HOME",
+          classNamesList: (activePage === "home") ?
+            [classNamesList[0], `${classNamesList[0]}_active`] :
+            classNamesList
+        }, {
+          href: "about.html",
+          title: "ABOUT",
+          classNamesList: (activePage === "about") ?
+            [classNamesList[0], `${classNamesList[0]}_active`] :
+            classNamesList
+        }, {
+          href: "work.html",
+          title: "WORK",
+          classNamesList: (activePage === "work") ?
+            [classNamesList[0], `${classNamesList[0]}_active`] :
+            classNamesList
+        }, {
+          href: "process.html",
+          title: "PROCESS",
+          classNamesList: (activePage === "process") ?
+            [classNamesList[0], `${classNamesList[0]}_active`] :
+            classNamesList
+        }, {
+          href: "services.html",
+          title: "SERVICES",
+          classNamesList: (activePage === "services") ?
+            [classNamesList[0], `${classNamesList[0]}_active`] :
+            classNamesList
+        }, {
+          href: "testimonials.html",
+          title: "TESTIMONIALS",
+          classNamesList: (activePage === "testimonials") ?
+            [classNamesList[0], `${classNamesList[0]}_active`] :
+            classNamesList
+        }, {
+          href: "contact.html",
+          title: "CONTACT",
+          classNamesList: (activePage === "contact") ?
+            [classNamesList[0], `${classNamesList[0]}_active`] :
+            classNamesList
+        }];
+
       case "siteSections1":
         classNamesList = ["footer-item", "footer__item"];
         return [{

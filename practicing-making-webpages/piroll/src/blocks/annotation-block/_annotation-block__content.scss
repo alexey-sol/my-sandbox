@@ -1,8 +1,6 @@
 .annotation-block__content {
-  box-sizing: border-box;
+  @include fixed-size-block__content;
   display: flex;
   flex-flow: column wrap;
-  max-width: $grid-width / 2;
-  padding: 130px 35px 130px 90px;
-  text-align: left;
+  text-align: center;
 }

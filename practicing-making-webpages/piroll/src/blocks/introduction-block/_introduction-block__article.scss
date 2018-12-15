@@ -1,0 +1,11 @@
+.introduction-block__article {
+  $article-horizontal-padding: 70px;
+  box-sizing: border-box;
+  display: flex;
+  padding: 0 15px;
+  flex-flow: column wrap;
+  max-width: $grid-width / 2 - $article-horizontal-padding;
+  min-width: $grid-width / 2 - $article-horizontal-padding;  
+}
+// I thought to specify this variable in the appropriate file but how could I
+// name it? "introduction-block-article-horizontal-padding"? Bah...
