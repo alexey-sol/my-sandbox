@@ -1,12 +1,12 @@
 {
   "compileOnSave": true,
   "compilerOptions": {
+    "target": "ES2015",
+    "module": "commonjs",
     "alwaysStrict": true,
-    "strictNullChecks": true
-  },
-  "files": [
-    "Calculator.ts",
-    "pow.ts",
-    "main.ts"
-  ]
+    "strict": true,
+    "strictNullChecks": true,
+    "outDir": "lib",
+    "rootDir": "src"
+  }
 }
