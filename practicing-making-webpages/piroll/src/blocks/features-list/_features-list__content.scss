@@ -1,0 +1,6 @@
+.features-list__content {
+  @include fixed-size-block__content(95px);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}

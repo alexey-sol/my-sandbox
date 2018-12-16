@@ -6,72 +6,39 @@
     // represents which tab should have "active" class modifier.
 
     switch (listName) {
-      case "tabs":
-        classNamesList = ["nav-tab"];
+      case "features":
         return [{
-          href: "home.html",
-          title: "HOME",
-          classNamesList: (activePage === "home") ?
-            [classNamesList[0], `${classNamesList[0]}_active`] :
-            classNamesList
+          icon: "diamond",
+          title: "ui / ux design",
+          description: "Be set fourth land god darkness make it wherein own"
         }, {
-          href: "about.html",
-          title: "ABOUT",
-          classNamesList: (activePage === "about") ?
-            [classNamesList[0], `${classNamesList[0]}_active`] :
-            classNamesList
+          icon: "arc",
+          title: "web development",
+          description: "A she'd them bring void moving third she'd kind fill"
         }, {
-          href: "contact.html",
-          title: "CONTACT",
-          classNamesList: (activePage === "contact") ?
-            [classNamesList[0], `${classNamesList[0]}_active`] :
-            classNamesList
-        }];
-
-      case "tabsExtended":
-        classNamesList = ["nav-tab"];
-        return [{
-          href: "home.html",
-          title: "HOME",
-          classNamesList: (activePage === "home") ?
-            [classNamesList[0], `${classNamesList[0]}_active`] :
-            classNamesList
+          icon: "phone",
+          title: "app / mobile",
+          description: "Dominion man second spirit he, earth they're creeping"
         }, {
-          href: "about.html",
-          title: "ABOUT",
-          classNamesList: (activePage === "about") ?
-            [classNamesList[0], `${classNamesList[0]}_active`] :
-            classNamesList
+          icon: "joy",
+          title: "game design",
+          description: "Morning his saying moveth it multiply appear life be"
         }, {
-          href: "work.html",
-          title: "WORK",
-          classNamesList: (activePage === "work") ?
-            [classNamesList[0], `${classNamesList[0]}_active`] :
-            classNamesList
+          icon: "plane",
+          title: "SEO / marketing",
+          description: "Give won't after land fill creeping meat you, may"
         }, {
-          href: "process.html",
-          title: "PROCESS",
-          classNamesList: (activePage === "process") ?
-            [classNamesList[0], `${classNamesList[0]}_active`] :
-            classNamesList
+          icon: "star",
+          title: "photography",
+          description: "Creepeth one seas cattle grass give moving saw give"
         }, {
-          href: "services.html",
-          title: "SERVICES",
-          classNamesList: (activePage === "services") ?
-            [classNamesList[0], `${classNamesList[0]}_active`] :
-            classNamesList
+          icon: "magic-wand",
+          title: "graphic design",
+          description: "Open, great whales air rule for, fourth life whales"
         }, {
-          href: "testimonials.html",
-          title: "TESTIMONIALS",
-          classNamesList: (activePage === "testimonials") ?
-            [classNamesList[0], `${classNamesList[0]}_active`] :
-            classNamesList
-        }, {
-          href: "contact.html",
-          title: "CONTACT",
-          classNamesList: (activePage === "contact") ?
-            [classNamesList[0], `${classNamesList[0]}_active`] :
-            classNamesList
+          icon: "paint-bucket",
+          title: "illustrations",
+          description: "Whales likeness hath, man kind for them air two won't"
         }];
 
       case "siteSections1":
@@ -152,6 +119,91 @@
           icon: "heart",
           numbers: 735
         }];
+
+      case "tabs":
+        classNamesList = ["nav-tab"];
+        return [{
+          href: "home.html",
+          title: "HOME",
+          classNamesList: (activePage === "home") ?
+            [classNamesList[0], `${classNamesList[0]}_active`] :
+            classNamesList
+        }, {
+          href: "about.html",
+          title: "ABOUT",
+          classNamesList: (activePage === "about") ?
+            [classNamesList[0], `${classNamesList[0]}_active`] :
+            classNamesList
+        }, {
+          href: "contact.html",
+          title: "CONTACT",
+          classNamesList: (activePage === "contact") ?
+            [classNamesList[0], `${classNamesList[0]}_active`] :
+            classNamesList
+        }];
+
+      case "tabsExtended":
+        classNamesList = ["nav-tab"];
+        return [{
+          href: "home.html",
+          title: "HOME",
+          classNamesList: (activePage === "home") ?
+            [classNamesList[0], `${classNamesList[0]}_active`] :
+            classNamesList
+        }, {
+          href: "about.html",
+          title: "ABOUT",
+          classNamesList: (activePage === "about") ?
+            [classNamesList[0], `${classNamesList[0]}_active`] :
+            classNamesList
+        }, {
+          href: "work.html",
+          title: "WORK",
+          classNamesList: (activePage === "work") ?
+            [classNamesList[0], `${classNamesList[0]}_active`] :
+            classNamesList
+        }, {
+          href: "process.html",
+          title: "PROCESS",
+          classNamesList: (activePage === "process") ?
+            [classNamesList[0], `${classNamesList[0]}_active`] :
+            classNamesList
+        }, {
+          href: "services.html",
+          title: "SERVICES",
+          classNamesList: (activePage === "services") ?
+            [classNamesList[0], `${classNamesList[0]}_active`] :
+            classNamesList
+        }, {
+          href: "testimonials.html",
+          title: "TESTIMONIALS",
+          classNamesList: (activePage === "testimonials") ?
+            [classNamesList[0], `${classNamesList[0]}_active`] :
+            classNamesList
+        }, {
+          href: "contact.html",
+          title: "CONTACT",
+          classNamesList: (activePage === "contact") ?
+            [classNamesList[0], `${classNamesList[0]}_active`] :
+            classNamesList
+        }];
+
+      case "testimonials":
+        return [{
+          cite: "Cite 1",
+          author: "Author 1",
+          itemNo: 1
+        }, {
+          cite: `Outstanding job and exceeded all expectations. It was a 
+            pleasure to work with them on a sizable first project and am 
+            looking forward to start the next one asap.`,
+          author: "Michael Hopkins",
+          itemNo: 2
+        }, {
+          cite: "Cite 3",
+          author: "Author 3",
+          itemNo: 3
+        }]
   
       default:
         return [];

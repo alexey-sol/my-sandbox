@@ -1,0 +1,8 @@
+.features-list__row {
+  box-sizing: border-box;
+  display: flex;
+}
+
+.features-list__row:not(:first-of-type) {
+  padding-top: 55px;
+}

@@ -1,11 +1,15 @@
 extends includes/templates/layout.pug
 
 include includes/mixins/statistics-block-item.pug
+include includes/mixins/features-list-item.pug
+include includes/mixins/testimonial-item.pug
 
 block script
   - 
     const tabList = getList("tabsExtended", "home");
     const statisticsItemList = getList("statisticsItems");
+    const featuresList = getList("features");
+    const testimonialsList = getList("testimonials");
     const useAltHeadline = true;
 
 append head
@@ -83,10 +87,28 @@ block main
         - columnsCount = 0;
     .portfolio__row
       button(class="portfolio__show-more-button" type="submit") LOAD MORE WORK
-  .huh
-
-
+  .banner.banner_theme_light
+    .banner__content
       h1.caption Our Work Process
       p.paragraph
         | Was years it seasons was there form he in in them together over that,
         | third sixth gathered female creeping bearing behold years.
+      .video-container
+        .video-container__stub
+  .features-list
+    .features-list__content
+      - let count = 0;
+      .features-list__row
+        //- Process the 1st half of the items.
+        while count < 4
+          +features-list-item(featuresList[ count ])
+          - count++;
+      .features-list__row
+        //- Process the rest.
+        while count < 8
+          +features-list-item(featuresList[ count ])
+          - count++;
+  .testimonials-block
+    .testimonials-block__content
+      each item in testimonialsList
+        +testimonial-item(testimonialsList[ item ])

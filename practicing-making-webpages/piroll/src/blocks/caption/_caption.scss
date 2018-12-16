@@ -1,7 +1,7 @@
 .caption {
   @include reset;
   box-sizing: border-box;
-  color: $gray--darken;
+  color: $caption-color;
   font-family: $font-family--caption;
   font-size: 30px;
   padding-bottom: 30px;
