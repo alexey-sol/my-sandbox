@@ -1,12 +1,4 @@
 namespace Interface {
-  // "Input" describes an object which is passed to "calculate" method as an
-  // argument.
-  export interface Input {
-    readonly a: number;
-    readonly b: number;
-    readonly operator: string;
-  }
-
   // "Method" describes a function which is passed to "addMethod" method as
   // an argument.
   export interface Method {
@@ -20,7 +12,6 @@ namespace Interface {
   }
 }
 
-import Input = Interface.Input;
 import Method = Interface.Method;
 import Functionality = Interface.Functionality;
 
@@ -30,7 +21,7 @@ import Functionality = Interface.Functionality;
 
 // "CalculatorInterface" describes an instance of the "Calculator".
 export interface CalculatorInterface {
-  calculate(input: Input): number;
+  calculate(input: string): number;
   addMethod(operation: string, method: Method): void;
 }
 
@@ -40,16 +31,19 @@ export class Calculator implements CalculatorInterface {
     "-": (a: number, b: number): number => a - b
   }
 
-  public calculate(input: Input): number {
-    const a = input.a,
-          b = input.b,
-          operator = input.operator;
+  public calculate(input: string): number {
+    type StringArray = Array<string>; // or it might be: string[]
+
+    const split: StringArray = input.split(" ");
+    const a: number = +split[0],
+          b: number = +split[2],
+          operator: string = split[1];
     // It's rather a rough solution, but it is enough for this exercise.
     
-    if (operator === "" || isNaN(a) || isNaN(b))
+    if (!this.functionality[ operator ] || isNaN(a) || isNaN(b))
       return NaN;
 
-    return this.functionality[ operator ]( a, b);
+    return this.functionality[ operator ]( a, b );
   }
 
   public addMethod(operation: string, method: Method): void {
