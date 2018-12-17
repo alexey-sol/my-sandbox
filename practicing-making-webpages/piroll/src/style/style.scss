@@ -21,8 +21,12 @@
 @import "../blocks/body/body";
 @import "../blocks/button/button";
 @import "../blocks/button/button_wide";
+
 @import "../blocks/caption/caption";
-@import "../blocks/caption/caption_large";
+@import "../blocks/caption/caption_largest";
+@import "../blocks/caption/caption_medium";
+@import "../blocks/caption/caption_smallest";
+
 @import "../blocks/contact-block/contact-block";
 @import "../blocks/contact-block/contact-block__content";
 @import "../blocks/contact-block/contact-block__form";
@@ -102,8 +106,10 @@
 @import "../blocks/pagination/pagination__step";
 @import "../blocks/pagination/pagination__step_back";
 @import "../blocks/pagination/pagination__step_forward";
+
 @import "../blocks/paragraph/paragraph";
-@import "../blocks/paragraph/paragraph_large";
+@import "../blocks/paragraph/paragraph_medium";
+
 @import "../blocks/portfolio/portfolio";
 @import "../blocks/portfolio/portfolio__item";
 @import "../blocks/portfolio/portfolio__row";
@@ -139,3 +145,34 @@
 @import "../blocks/testimonials-block/testimonials-block__content";
 @import "../blocks/video-container/video-container";
 @import "../blocks/video-container/video-container__stub";
+
+
+
+@import "../blocks/array/array";
+@import "../blocks/array/array__column";
+@import "../blocks/array/array__icon";
+@import "../blocks/array/array__item";
+
+
+@import "../blocks/article/article";
+@import "../blocks/article/article_text_center";
+@import "../blocks/article/article__button";
+@import "../blocks/article/article__icon";
+
+@import "../blocks/icon/icon";
+@import "../blocks/icon/icon_briefcase";
+@import "../blocks/icon/icon_clock";
+@import "../blocks/icon/icon_heart";
+@import "../blocks/icon/icon_signature";
+@import "../blocks/icon/icon_star";
+
+@import "../blocks/page-strip/page-strip";
+@import "../blocks/page-strip/page-strip_theme_mineshaft";
+@import "../blocks/page-strip/page-strip_theme_turquoise";
+@import "../blocks/page-strip/page-strip_theme_wild-sand";
+
+@import "../blocks/section/section";
+@import "../blocks/section/section_content_left";
+@import "../blocks/section/section_content_right";
+@import "../blocks/section/section_half";
+@import "../blocks/section/section__image";

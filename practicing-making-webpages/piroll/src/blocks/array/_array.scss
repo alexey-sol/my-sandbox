@@ -1,0 +1,11 @@
+.array {
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  min-width: 100%;
+}
+
+.array:not(:first-of-type) {
+  padding-top: 50px;
+}

@@ -1,0 +1,9 @@
+.page-strip_theme_mineshaft {
+  background-color: $banner-dark-bg;
+
+  & .caption,
+  & .paragraph {
+    color: $banner-dark-color;
+  }
+}
+// BEM allows the use of selectors within one particular block.

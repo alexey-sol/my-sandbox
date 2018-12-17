@@ -5,13 +5,8 @@
   font-family: $font-family--normal;
   font-size: $font-size--small;
   line-height: $line-height--medium;
+}
+
+.paragraph:not(:last-of-type) {
   padding-bottom: 30px;
-}
-
-.paragraph:first-of-type {
-  padding-top: 0;
-}
-
-.paragraph:last-of-type {
-  padding-bottom: 0;
 }

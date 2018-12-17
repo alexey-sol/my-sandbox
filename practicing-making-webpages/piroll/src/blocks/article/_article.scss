@@ -1,0 +1,8 @@
+.article {
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: column wrap;
+  max-width: $grid-width / 2;
+  min-width: $grid-width / 2;
+  padding: 0 15px;
+}

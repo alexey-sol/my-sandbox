@@ -1,0 +1,8 @@
+.page-strip_theme_turquoise {
+  background-color: $color-main;
+
+  & .caption,
+  & .paragraph {
+    color: white;
+  }
+}

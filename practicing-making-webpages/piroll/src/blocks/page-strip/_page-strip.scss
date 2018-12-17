@@ -1,0 +1,7 @@
+.page-strip {
+  @include reset;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  min-width: 100%;
+}

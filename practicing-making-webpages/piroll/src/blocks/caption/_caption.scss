@@ -4,5 +4,8 @@
   color: $caption-color;
   font-family: $font-family--caption;
   font-size: 30px;
-  padding-bottom: 30px;
+}
+
+.caption + .paragraph {
+  padding-top: 30px;
 }

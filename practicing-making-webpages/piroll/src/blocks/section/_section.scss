@@ -1,0 +1,9 @@
+.section {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: column wrap;
+  max-width: $grid-width;
+  min-width: $grid-width;
+  padding: 100px 15px;
+}

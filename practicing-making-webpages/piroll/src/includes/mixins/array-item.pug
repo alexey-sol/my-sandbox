@@ -1,0 +1,7 @@
+mixin array-item(item)
+  .array__item
+    div(class=`icon icon_${ item.icon } array__icon`)
+
+    .array__column
+      h1.caption.caption_medium= item.numbers
+      .caption.caption_smallest= item.description
