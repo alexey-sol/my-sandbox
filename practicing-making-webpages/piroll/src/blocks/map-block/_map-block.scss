@@ -1,5 +1,6 @@
 .map-block {
-  @include stretched-block;
+  box-sizing: border-box;
   display: flex;
-  padding-bottom: 100px;
+  flex-direction: column;
+  width: 100%;
 }

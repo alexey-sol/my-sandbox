@@ -9,34 +9,38 @@ append head
   title Piroll: Contact
   script(src="src/blocks/map-block/map-block.js")
 block main
-  .contact-block
-    .contact-block__content
-      .contact-block__info
-        h1.caption Contact Info:
-        p.paragraph
-          | To give give beginning divide, cattle. Give moving won't, there the
-          | abundantly she'd she'd brought air upon. Light hath subdue. Life days
-          | creature upon first heaven gathering dry.
-        ul.contact-block__list
-          li.contact-block__item #[span.strong Address:] 10111 Santa Monica 
-            | Boulevard, LA
-          li.contact-block__item #[span.strong Phone:] +44 987 065 908
-          li.contact-block__item #[span.strong Email:] info@Example.com
-          li.contact-block__item #[span.strong Fax:] +44 987 065 909
-      form(class="form contact-block__form" action="")
-        .form__row
-          input(class="form__input" name="name" placeholder="Your Name" 
-            type="text")
-          input(class="form__input" name="email" placeholder="Your Email" 
-            type="text")
-        .form__row
-          input(class="form__input" name="title" placeholder="Your Title" 
-            type="text")
-        .form__row
-          textarea(class="form__input form__input_textarea" name="comment" 
-            placeholder="Your Comment")
-        .form__row
-          button(class="button" type="submit") SEND MESSAGE
-  .map-block
-    .map-block__content
-      include blocks/map-block/map-block__iframe.pug
+  .page-strip.page-strip_theme_wild-sand
+    .section
+      .contact-block
+        .contact-block__info
+          h1.caption Contact Info:
+          p.paragraph
+            | To give give beginning divide, cattle. Give moving won't, there the
+            | abundantly she'd she'd brought air upon. Light hath subdue. Life days
+            | creature upon first heaven gathering dry.
+          ul.contact-block__list
+            li.contact-block__item #[span.strong Address:] 10111 Santa Monica 
+              | Boulevard, LA
+            li.contact-block__item #[span.strong Phone:] +44 987 065 908
+            li.contact-block__item #[span.strong Email:] info@Example.com
+            li.contact-block__item #[span.strong Fax:] +44 987 065 909
+        form(class="form contact-block__form" action="")
+          .form__row
+            input(class="form__input" name="name" placeholder="Your Name" 
+              type="text")
+            input(class="form__input" name="email" placeholder="Your Email" 
+              type="text")
+          .form__row
+            input(class="form__input" name="title" placeholder="Your Title" 
+              type="text")
+          .form__row
+            textarea(class="form__input form__input_textarea" name="comment" 
+              placeholder="Your Comment")
+          .form__row
+            button(class="button" type="submit") SEND MESSAGE
+  .page-strip.page-strip_theme_wild-sand
+    .section.section_padding_none
+      .map-block
+        include blocks/map-block/map-block__content.pug
+        .map-block__gap
+      

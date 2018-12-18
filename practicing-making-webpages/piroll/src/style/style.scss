@@ -30,11 +30,11 @@
 @import "../blocks/caption/caption_smallest";
 
 @import "../blocks/contact-block/contact-block";
-@import "../blocks/contact-block/contact-block__content";
 @import "../blocks/contact-block/contact-block__form";
 @import "../blocks/contact-block/contact-block__info";
 @import "../blocks/contact-block/contact-block__item";
 @import "../blocks/contact-block/contact-block__list";
+
 @import "../blocks/features-list/features-list";
 @import "../blocks/features-list/features-list__content";
 @import "../blocks/features-list/features-list__description";
@@ -92,9 +92,11 @@
 @import "../blocks/introduction-block/introduction-block__text-container_align_left";
 @import "../blocks/introduction-block/introduction-block__text-container_align_right";
 @import "../blocks/main/main";
+
 @import "../blocks/map-block/map-block";
 @import "../blocks/map-block/map-block__content";
-@import "../blocks/map-block/map-block__iframe";
+@import "../blocks/map-block/map-block__gap";
+
 @import "../blocks/nav-tab/nav-tab";
 @import "../blocks/nav-tab/nav-tab_active";
 @import "../blocks/nav-tab/nav-tab__link";
@@ -157,6 +159,8 @@
 @import "../blocks/article/article_text_center";
 @import "../blocks/article/article__button";
 @import "../blocks/article/article__icon";
+@import "../blocks/article/article__item";
+@import "../blocks/article/article__list";
 
 @import "../blocks/icon/icon";
 @import "../blocks/icon/icon_briefcase";
@@ -175,3 +179,5 @@
 @import "../blocks/section/section_content_right";
 @import "../blocks/section/section_half";
 @import "../blocks/section/section_image_about-me";
+@import "../blocks/section/section_image_project-single";
+@import "../blocks/section/section_padding_none";

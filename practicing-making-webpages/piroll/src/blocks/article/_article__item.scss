@@ -1,0 +1,7 @@
+.article__item {
+  @include reset;
+  box-sizing: border-box;
+  font-family: $font-family--normal;
+  font-size: $font-size--small;
+  line-height: $line-height--large;
+}
