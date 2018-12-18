@@ -1,0 +1,21 @@
+.portfolio-item__description {
+  bottom: 0;
+  box-sizing: border-box;
+  color: $portfolio-item-color;
+  font-family: $font-family--normal;
+  font-size: $font-size--medium;
+  height: $font-size--medium + $line-height--medium;
+  line-height: $line-height--medium;
+  overflow: hidden;
+  padding: 10px;
+  position: absolute;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}
+
+// Property "position" here is due to that freaking cyan block with the eye in
+// it. The eye is an excess element so it breaks flex layout. This is why I
+// decided to stick "description" elements to the bottom of their blocks in
+// this way.

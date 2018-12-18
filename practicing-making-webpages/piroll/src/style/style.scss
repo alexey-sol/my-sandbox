@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat|Nunito+Sans");
 @import "variables";
+@import "mixins/fill-even-row";
+@import "mixins/fill-odd-row";
 @import "mixins/fixed-size-block__content";
 @import "mixins/non-selectable-text";
 @import "mixins/reset";
@@ -115,11 +117,8 @@
 @import "../blocks/portfolio/portfolio__row";
 @import "../blocks/portfolio/portfolio__show-more-button";
 @import "../blocks/portfolio-item/portfolio-item";
-@import "../blocks/portfolio-item/portfolio-item_fill_dark";
-@import "../blocks/portfolio-item/portfolio-item_fill_light";
-@import "../blocks/portfolio-item/portfolio-item__content";
-@import "../blocks/portfolio-item/portfolio-item__image";
-@import "../blocks/portfolio-item/portfolio-item__info";
+@import "../blocks/portfolio-item/portfolio-item_distinct";
+@import "../blocks/portfolio-item/portfolio-item__description";
 @import "../blocks/project-block/project-block";
 @import "../blocks/project-block/project-block__content";
 @import "../blocks/project-block/project-block__image";
@@ -175,4 +174,4 @@
 @import "../blocks/section/section_content_left";
 @import "../blocks/section/section_content_right";
 @import "../blocks/section/section_half";
-@import "../blocks/section/section__image";
+@import "../blocks/section/section_image_about-me";
