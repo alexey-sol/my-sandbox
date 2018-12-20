@@ -1,29 +1,29 @@
 extends includes/templates/layout.pug
 
-include includes/mixins/array-item.pug
+include includes/mixins/statistics-item.pug
 
 block script
   - 
     const tabList = getList("tabs", "about");
-    const statisticsItemList = getList("statisticsItems");
+    const statisticsItemList = getList("statistics");
     const useAltHeadline = false;
 
 append head
   title Piroll: About
 block main
-  .page-strip.page-strip_theme_mineshaft
+  .line.line_theme_mine-shaft
     .section
       .article.article_text_center
         h1.caption.caption_largest Amelia Woods
         p.paragraph.paragraph_medium
           | I am a Graphic & Web Designer based in New York, specializing in
           | User Interface Design and Development.
-  .page-strip.page-strip_theme_turquoise
+  .line.line_theme_turquoise
     .section
       .array
         each item in statisticsItemList
-          +array-item(item)
-  .page-strip.page-strip_theme_wild-sand
+          +statistics-item(item)
+  .line.line_theme_wild-sand
     .section.section_half.section_image_about-me
     .section.section_half.section_content_left
       .article
@@ -36,7 +36,7 @@ block main
           | So the above May stars cattle fruitful face shall. Tree it,
           | winged. Every signs male firmament us. Morning him.
         .icon.icon_signature.article__icon
-  .page-strip 
+  .line 
     .section
       .article.article_text_center
         h1.caption Need a Project?

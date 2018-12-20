@@ -1,10 +1,10 @@
-.portfolio-item_distinct {
+.portfolio-item_fill_light {
   align-items: center;
   background-color: $portfolio-item-bg--fill-light;
   justify-content: center;
 }
 
-.portfolio-item_distinct:before {
+.portfolio-item_fill_light:before {
   content: url("../src/blocks/portfolio-item/img/look.png");
 }
 // Since there's also "info" section which takes space in the parent block, I 

@@ -8,14 +8,14 @@ block script
 append head
   title Piroll: Home
 block main
-  .page-strip.page-strip_theme_wild-sand
+  .line.line_theme_wild-sand
     .section
       .article.article_text_center
       h1.caption.caption_largest UI/UX & Graphic Designer
       p.paragraph.paragraph_medium
         | I am a Graphic & Web Designer based in New York, specializing in
         | User Interface Design and Development.
-  .page-strip
+  .line
     .portfolio
       - let rowsCount = 0, columnsCount = 0, overallCount = 0;
 
@@ -29,9 +29,9 @@ block main
               overallCount++;
 
             a(href="" title="" class=(rowsCount == 2 && columnsCount == 2) ?
-            `portfolio-item portfolio-item_image_work-${overallCount} 
-            portfolio-item_distinct`
-            : `portfolio-item portfolio-item_image_work-${overallCount}`)
+            `portfolio-item portfolio-item_image_work-${ overallCount } 
+            portfolio-item_fill_light`
+            : `portfolio-item portfolio-item_image_work-${ overallCount }`)
  
               .portfolio-item__description
               //- It's empty for the time being.

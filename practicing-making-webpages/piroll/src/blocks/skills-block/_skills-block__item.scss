@@ -1,0 +1,11 @@
+.skills-block__item {
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: column nowrap;
+  max-width: 100%;
+  min-width: 100%;
+}
+
+.skills-block__item:not(:first-of-type) {
+  padding-top: 35px;
+}

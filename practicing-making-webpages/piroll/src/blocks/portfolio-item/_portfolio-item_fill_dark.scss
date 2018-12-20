@@ -1,0 +1,9 @@
+.portfolio-item_fill_dark {
+  align-items: center;
+  background-color: $portfolio-item-bg--fill-dark;
+  justify-content: center;
+}
+
+.portfolio-item_fill_dark:before {
+  content: url("../src/blocks/portfolio-item/img/look.png");
+}

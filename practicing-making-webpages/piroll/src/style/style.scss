@@ -119,7 +119,8 @@
 @import "../blocks/portfolio/portfolio__row";
 @import "../blocks/portfolio/portfolio__show-more-button";
 @import "../blocks/portfolio-item/portfolio-item";
-@import "../blocks/portfolio-item/portfolio-item_distinct";
+@import "../blocks/portfolio-item/portfolio-item_fill_dark";
+@import "../blocks/portfolio-item/portfolio-item_fill_light";
 @import "../blocks/portfolio-item/portfolio-item__description";
 @import "../blocks/project-block/project-block";
 @import "../blocks/project-block/project-block__content";
@@ -163,21 +164,41 @@
 @import "../blocks/article/article__list";
 
 @import "../blocks/icon/icon";
-@import "../blocks/icon/icon_briefcase";
-@import "../blocks/icon/icon_clock";
-@import "../blocks/icon/icon_heart";
+@import "../blocks/icon/icon_features-arc";
+@import "../blocks/icon/icon_features-diamond";
+@import "../blocks/icon/icon_features-joy";
+@import "../blocks/icon/icon_features-magic-wand";
+@import "../blocks/icon/icon_features-paint-bucket";
+@import "../blocks/icon/icon_features-phone";
+@import "../blocks/icon/icon_features-plane";
+@import "../blocks/icon/icon_features-star";
 @import "../blocks/icon/icon_signature";
-@import "../blocks/icon/icon_star";
+@import "../blocks/icon/icon_stat-briefcase";
+@import "../blocks/icon/icon_stat-clock";
+@import "../blocks/icon/icon_stat-heart";
+@import "../blocks/icon/icon_stat-star";
 
-@import "../blocks/page-strip/page-strip";
-@import "../blocks/page-strip/page-strip_theme_mineshaft";
-@import "../blocks/page-strip/page-strip_theme_turquoise";
-@import "../blocks/page-strip/page-strip_theme_wild-sand";
+@import "../blocks/line/line";
+@import "../blocks/line/line_theme_mercury";
+@import "../blocks/line/line_theme_mine-shaft";
+@import "../blocks/line/line_theme_turquoise";
+@import "../blocks/line/line_theme_wild-sand";
 
 @import "../blocks/section/section";
 @import "../blocks/section/section_content_left";
 @import "../blocks/section/section_content_right";
 @import "../blocks/section/section_half";
 @import "../blocks/section/section_image_about-me";
+@import "../blocks/section/section_image_about-us";
+@import "../blocks/section/section_image_professional-skills";
 @import "../blocks/section/section_image_project-single";
 @import "../blocks/section/section_padding_none";
+
+@import "../blocks/skills-block/skills-block";
+@import "../blocks/skills-block/skills-block__bar";
+@import "../blocks/skills-block/skills-block__description";
+@import "../blocks/skills-block/skills-block__indicator";
+@import "../blocks/skills-block/skills-block__indicator_marketing";
+@import "../blocks/skills-block/skills-block__indicator_ui-ux";
+@import "../blocks/skills-block/skills-block__indicator_web-dev";
+@import "../blocks/skills-block/skills-block__item";

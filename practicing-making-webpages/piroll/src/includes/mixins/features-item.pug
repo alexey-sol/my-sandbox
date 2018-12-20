@@ -1,0 +1,5 @@
+mixin features-item(item)
+  .array__column
+    div(class=`icon icon_features-${ item.icon } array__icon`)
+    h1.caption.caption_smallest= item.title.toUpperCase()
+    h1.paragraph= item.description

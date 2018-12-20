@@ -1,13 +1,13 @@
 extends includes/templates/layout.pug
 
-include includes/mixins/statistics-block-item.pug
-include includes/mixins/features-list-item.pug
-include includes/mixins/testimonial-item.pug
+include includes/mixins/statistics-item.pug
+include includes/mixins/features-item.pug
+include includes/mixins/testimonials-item.pug
 
 block script
   - 
     const tabList = getList("tabsExtended", "home");
-    const statisticsItemList = getList("statisticsItems");
+    const statisticsItemList = getList("statistics");
     const featuresList = getList("features");
     const testimonialsList = getList("testimonials");
     const useAltHeadline = true;
@@ -15,100 +15,102 @@ block script
 append head
   title Piroll: Home
 block main
-  .introduction-block.introduction-block_alternative
-    .introduction-block__image-container
-      .annotation-block__image
-    div(class=`introduction-block__text-container
-    introduction-block__text-container_align_left`)
-      .introduction-block__article
-        h1.caption.caption_large We Design and Develop
-        p.paragraph.paragraph_large
+  .line.line_theme_mercury
+    .section.section_half.section_image_about-us
+    .section.section_half.section_content_left
+      .article
+        h1.caption.caption_largest We Design and Develop
+        p.paragraph.paragraph_medium
           | We are a new design studio based in USA. We have over 20 years of
-          | combined experience, and know a thing or two about designing websites
-          | and mobile apps.
-        .annotation-block__button
+          | combined experience, and know a thing or two about designing
+          | websites and mobile apps.
+        .article__button
           a(class="button button_wide" role="button" href="contact.html") CONTACT US
-  .introduction-block
-    .banner
-      .banner__content.banner__content_wide
+  .line
+    .section
+      .article
         h1.caption About Us
         p.paragraph
-          | Divide have don't man wherein air fourth. Own itself make have night
-          | won't make. A you under Seed appear which good give. Own give air
-          | without fowl moveth dry first heaven fruit, dominion she'd won't very
-          | all.
-        .annotation-block__icon-container
-          .annotation-block__icon-signature
-  .introduction-block.introduction-block_alternative
-    div(class=`introduction-block__text-container
-    introduction-block__text-container_alternative
-    introduction-block__text-container_align_right`)
-      .introduction-block__article
+          | Divide have don't man wherein air fourth. Own itself make have
+          | night won't make. A you under Seed appear which good give. Own give
+          | air without fowl moveth dry first heaven fruit, dominion she'd
+          | won't very all.
+        .icon.icon_signature.article__icon
+  .line.line_theme_wild-sand
+    .section.section_half.section_image_professional-skills
+    .section.section_half
+      .article
         h1.caption Professional Skills
-        .introduction-block__skill-item
-          .introduction-block__description UI/UX DESIGN    75%
-          .introduction-block__skill-meter
-            div(class=`introduction-block__indicator
-            introduction-block__indicator_ui-ux`)
-        .introduction-block__skill-item
-          .introduction-block__description WEB DEVELOPMENT    90%
-          .introduction-block__skill-meter
-            div(class=`introduction-block__indicator
-            introduction-block__indicator_web-dev`)
-        .introduction-block__skill-item
-          .introduction-block__description MARKETING    65%
-          .introduction-block__skill-meter
-            div(class=`introduction-block__indicator
-            introduction-block__indicator_marketing`)
-    .introduction-block__image-container
-      .annotation-block__image
-  .statistics-block
-    .statistics-block__content
-      each item in statisticsItemList
-        +statistics-block-item(item)
-  .portfolio
-    - let rowsCount = 0, columnsCount = 0;
+        .skills-block
+          .skills-block__item
+            .skills-block__description UI/UX DESIGN    75%
+            .skills-block__bar
+              div(class=`skills-block__indicator
+              skills-block__indicator_ui-ux`)
+          .skills-block__item
+            .skills-block__description WEB DEVELOPMENT    90%
+            .skills-block__bar
+              div(class=`skills-block__indicator
+              skills-block__indicator_web-dev`)
+          .skills-block__item
+            .skills-block__description MARKETING    65%
+            .skills-block__bar
+              div(class=`skills-block__indicator
+              skills-block__indicator_marketing`)
+  .line.line_theme_turquoise
+    .section
+      .array
+        each item in statisticsItemList
+          +statistics-item(item)
+  .line.line_theme_wild-sand
+    .portfolio
+      - let rowsCount = 0, columnsCount = 0, overallCount = 0;
 
-    while rowsCount < 2
-      - rowsCount++;
-      .portfolio__row
+      while rowsCount < 2
+        - rowsCount++;
+        .portfolio__row
 
-        while columnsCount < 4
-          - columnsCount++;
+          while columnsCount < 4
+            - 
+              columnsCount++;
+              overallCount++;
 
-          div(class=(rowsCount == 2 && columnsCount == 2) ? 
-            "portfolio-item portfolio-item_fill_dark portfolio__item" 
-            : "portfolio-item portfolio__item")
-            
-            a(class="portfolio-item__content" href="" title="")
-              .portfolio-item__image
-              .portfolio-item__info
+            a(href="" title="" class=(rowsCount == 2 && columnsCount == 2) ?
+            `portfolio-item portfolio-item_image_work-${ overallCount } 
+            portfolio-item_fill_dark`
+            : `portfolio-item portfolio-item_image_work-${ overallCount }`)
+ 
+              .portfolio-item__description
+              //- It's empty for the time being.
 
-        - columnsCount = 0;
-    .portfolio__row
-      button(class="portfolio__show-more-button" type="submit") LOAD MORE WORK
-  .banner.banner_theme_light
-    .banner__content
+          - columnsCount = 0;
+        .portfolio__row
+          button(class="portfolio__show-more-button" type="submit") LOAD MORE WORK
+  .line
+    .section
       h1.caption Our Work Process
       p.paragraph
         | Was years it seasons was there form he in in them together over that,
         | third sixth gathered female creeping bearing behold years.
       .video-container
         .video-container__stub
-  .features-list
-    .features-list__content
+  .line.line_theme_wild-sand
+    .section
       - let count = 0;
-      .features-list__row
+
+      .array
         //- Process the 1st half of the items.
         while count < 4
-          +features-list-item(featuresList[ count ])
+          +features-item(featuresList[ count ])
           - count++;
-      .features-list__row
+
+      .array
         //- Process the rest.
         while count < 8
-          +features-list-item(featuresList[ count ])
+          +features-item(featuresList[ count ])
           - count++;
-  .testimonials-block
-    .testimonials-block__content
-      each item in testimonialsList
-        +testimonial-item(testimonialsList[ item ])
+
+  //- .testimonials-block
+  //-   .testimonials-block__content
+  //-     each item in testimonialsList
+  //-       +testimonials-item(testimonialsList[ item ])
