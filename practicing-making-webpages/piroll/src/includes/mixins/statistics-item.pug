@@ -1,7 +1,7 @@
 mixin statistics-item(item)
   .array__item
     div(class=`icon icon_stat-${ item.icon } array__icon`)
-
+    .array__gap
     .array__column
       h1.caption.caption_medium= item.numbers
       .caption.caption_smallest= item.description

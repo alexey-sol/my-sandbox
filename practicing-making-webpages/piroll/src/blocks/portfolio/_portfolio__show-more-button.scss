@@ -1,6 +1,6 @@
 .portfolio__show-more-button {
   @include reset;
-  // background-color: $portfolio-button-bg;
+  background-color: inherit;
   border: none;
   box-sizing: border-box;
   color: $portfolio-button-color;

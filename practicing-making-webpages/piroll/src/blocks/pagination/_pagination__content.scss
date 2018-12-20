@@ -1,6 +1,9 @@
 .pagination__content {
-  @include fixed-size-block__content(40px);
   align-items: center;
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
+  max-width: $grid-width;
+  min-width: $grid-width;
+  padding: 40px 15px;
 }

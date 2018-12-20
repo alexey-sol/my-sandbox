@@ -1,9 +1,0 @@
-.statistics-block {
-  @include stretched-block;
-  @include non-selectable-text;
-  align-items: center;
-  background-color: $statistics-block-bg;
-  color: $statistics-block-color;
-  display: flex;
-  flex-flow: column nowrap;
-}

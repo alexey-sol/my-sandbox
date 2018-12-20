@@ -1,6 +1,8 @@
 .pagination {
-  @include stretched-block;
+  box-sizing: border-box;
   color: $pagination-color;
   background-color: $pagination-bg;
   display: flex;
+  justify-content: center;
+  min-width: 100%;
 }
