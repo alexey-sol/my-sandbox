@@ -1,9 +1,9 @@
 .line_theme_mine-shaft {
-  background-color: $banner-dark-bg;
+  background-color: $line-bg--theme-mine-shaft;
 
   & .caption,
   & .paragraph {
-    color: $banner-dark-color;
+    color: $line-color--theme-mine-shaft;
   }
 }
 // BEM allows the use of selectors within one particular block.

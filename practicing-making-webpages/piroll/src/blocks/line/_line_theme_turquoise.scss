@@ -1,8 +1,8 @@
 .line_theme_turquoise {
-  background-color: $color-main;
+  background-color: $line-bg--theme-turquoise;
 
   & .caption,
   & .paragraph {
-    color: white;
+    color: $line-color--theme-turquoise;
   }
 }

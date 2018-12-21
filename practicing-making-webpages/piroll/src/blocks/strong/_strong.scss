@@ -1,6 +1,6 @@
 .strong {
   @include reset;
-  color: $gray--darken;
+  color: $strong-color;
   display: inline;
   font-weight: bold;
 }
