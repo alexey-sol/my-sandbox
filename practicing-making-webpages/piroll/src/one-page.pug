@@ -1,8 +1,9 @@
 extends includes/templates/layout.pug
 
-include includes/mixins/statistics-item.pug
-include includes/mixins/features-item.pug
-include includes/mixins/testimonials-item.pug
+include blocks/array/pug-mixins/features-item.pug
+include blocks/array/pug-mixins/statistics-item.pug
+include blocks/tab/pug-mixins/tab-content.pug
+include blocks/tab/pug-mixins/tab-pagination.pug
 
 block script
   - 
@@ -110,8 +111,9 @@ block main
         while count < 8
           +features-item(featuresList[ count ])
           - count++;
-
-  //- .testimonials-block
-  //-   .testimonials-block__content
-  //-     each item in testimonialsList
-  //-       +testimonials-item(testimonialsList[ item ])
+  .line.line_theme_turquoise
+    .section.section_padding_none
+      .tab
+        each item in testimonialsList
+          +tab-content(item)
+        +tab-pagination(testimonialsList.length)

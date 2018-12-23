@@ -1,0 +1,14 @@
+.blockquote {
+  @include reset;
+  box-sizing: border-box;
+  font-family: $font-family--caption;
+  font-size: $font-size--large;
+}
+
+.blockquote:after {
+  content: open-quote;
+}
+
+.blockquote:before {
+  content: close-quote;
+}

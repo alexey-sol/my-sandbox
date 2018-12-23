@@ -1,5 +1,6 @@
 (() => {
   "use strict";
+  
   // The script is supposed to change the style of the map, making it black and 
   // white. The style array is taken from:
   // https://snazzymaps.com/style/151/ultra-light-with-labels

@@ -1,5 +1,5 @@
 include ../functions/fixTitle.pug
 mixin list-item(item)
   li(class= item.classNamesList)
-    a(class="footer__link" title= fixTitle(item.title)
+    a(class="link" title= fixTitle(item.title)
       href= item.href)= item.title

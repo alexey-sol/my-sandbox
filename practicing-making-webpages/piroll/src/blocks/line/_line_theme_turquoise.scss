@@ -1,6 +1,7 @@
 .line_theme_turquoise {
   background-color: $line-bg--theme-turquoise;
 
+  & .blockquote,
   & .caption,
   & .paragraph {
     color: $line-color--theme-turquoise;

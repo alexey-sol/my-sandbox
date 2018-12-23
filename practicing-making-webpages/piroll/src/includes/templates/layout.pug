@@ -12,6 +12,7 @@ doctype html
 html.html
   block head
     include ../../blocks/head/head.pug
+    //- Scripts should be loaded via "head.pug".
   body.body
     block headline
       div(class=useAltHeadline ? "headline headline_theme_mercury" : "headline")

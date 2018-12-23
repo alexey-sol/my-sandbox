@@ -33,6 +33,7 @@
 @import "../blocks/caption/caption_largest";
 @import "../blocks/caption/caption_medium";
 @import "../blocks/caption/caption_smallest";
+@import "../blocks/blockquote/blockquote";
 @import "../blocks/contact-block/contact-block";
 @import "../blocks/contact-block/contact-block__form";
 @import "../blocks/footer/footer";
@@ -44,7 +45,6 @@
 @import "../blocks/footer/footer__gap3";
 @import "../blocks/footer/footer__gap4";
 @import "../blocks/footer/footer__item";
-@import "../blocks/footer/footer__link";
 @import "../blocks/footer/footer__list";
 @import "../blocks/footer/footer__site-sections";
 @import "../blocks/footer/footer__social-networks";
@@ -79,6 +79,7 @@
 @import "../blocks/line/line_theme_mine-shaft";
 @import "../blocks/line/line_theme_turquoise";
 @import "../blocks/line/line_theme_wild-sand";
+@import "../blocks/link/link";
 @import "../blocks/main/main";
 @import "../blocks/map-block/map-block";
 @import "../blocks/map-block/map-block__content";
@@ -120,5 +121,12 @@
 @import "../blocks/skills-block/skills-block__indicator_web-dev";
 @import "../blocks/skills-block/skills-block__item";
 @import "../blocks/strong/strong";
+@import "../blocks/tab/tab";
+@import "../blocks/tab/tab__blockquote";
+@import "../blocks/tab/tab__content";
+@import "../blocks/tab/tab__content_active";
+@import "../blocks/tab/tab__dot";
+@import "../blocks/tab/tab__dot_active";
+@import "../blocks/tab/tab__pagination";
 @import "../blocks/video-container/video-container";
 @import "../blocks/video-container/video-container__stub";

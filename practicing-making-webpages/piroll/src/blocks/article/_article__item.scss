@@ -1,7 +1,7 @@
 .article__item {
   @include reset;
   box-sizing: border-box;
-  color: $gray--dark;
+  color: $article-item-color;
   font-family: $font-family--normal;
   font-size: $font-size--small;
   line-height: $line-height--large;
