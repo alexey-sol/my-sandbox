@@ -3,8 +3,6 @@
 // class. Say, we have super-class A and its sub-class B. So, if we replace all
 // the uses of class B with class A, the program shouldn't change. After all,
 // class B only *extends* class A.
-// The example is based on: 
-// https://springframework.guru/principles-of-object-oriented-design/liskov-substitution-principle/
 
 class TransportationDevice {
   constructor(public name: string, public speed: number) {
