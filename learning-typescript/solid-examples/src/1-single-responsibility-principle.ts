@@ -21,7 +21,7 @@ class OrdersReport {
   protected repo: OrdersRepository;
   protected formatter: OrdersOutputInterface;
 
-  constructor(repo: OrdersRepository, formatter: OrdersOutputInterface) {
+  constructor(repo: OrdersRepositoryInterface, formatter: OrdersOutputInterface) {
     this.repo = repo; // an instance of OrdersRepository
     this.formatter = formatter; // an instance of HtmlOutput
   }
@@ -48,8 +48,12 @@ class HtmlOutput implements OrdersOutputInterface {
   }
 }
 
+interface OrdersRepositoryInterface {
+  getOrdersWithDate(startDate: Date, endDate: Date): OrdersInterface[];
+}
+
 // A class responsible for extracting data from DB.
-class OrdersRepository {
+class OrdersRepository implements OrdersRepositoryInterface {
   public getOrdersWithDate(startDate: Date, endDate: Date) {
     return Db.orders.filter(order =>
       order.createdAt >= startDate && order.createdAt <= endDate
@@ -67,7 +71,4 @@ const orders = ordersReport.getOrdersInfo(
   new Date(2018, 11, 0), 
   new Date(2018, 11, 20)
 );
-
-
-
 
