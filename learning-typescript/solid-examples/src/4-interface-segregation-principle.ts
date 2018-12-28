@@ -3,19 +3,19 @@
 // users better.
 
 // Interfaces representing ISmartDevice.
-interface IPrinter {
+interface PrinterInterface {
   print(): void;
 }
 
-interface IFax {
+interface FaxInterface {
   fax(): void;
 }
 
-interface IScanner {
+interface ScannerInterface {
   scan(): void;
 }
 
-class AllInOnePrinter implements IPrinter, IFax, IScanner {
+class AllInOnePrinter implements PrinterInterface, FaxInterface, ScannerInterface {
   print(): void { /* ... */ }
   fax(): void { /* ... */ }
   scan(): void { /* ... */ }
@@ -25,6 +25,6 @@ class AllInOnePrinter implements IPrinter, IFax, IScanner {
 // If there was one interface with many methods, such a device would have many
 // inapplicable methods.
 
-class EconomicPrinter implements IPrinter {
+class EconomicPrinter implements PrinterInterface {
   print(): void { /* ... */ }
 }
