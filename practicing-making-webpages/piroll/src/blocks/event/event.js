@@ -1,57 +1,36 @@
-// It's been made according to the following implemenatation of the pub/sub
-// pattern: https://gist.github.com/learncodeacademy/777349747d8382bfb722
+// "Basic Javascript PubSub Pattern" example [1] was pretty useful.
 
 class Event {
   constructor() {
-    this._events = {};
+    this.events = new Map();
   }
 
-  // Returns all the events.
-  get events() {
-    return this._events;
+  // Adds "fn" named function to the set of the relative event.
+  on(eventName, fn) {
+    if (!fn.name)
+      return console.error(`"fn" argument must be named function.`);
+
+    const event = this.events[eventName] = this.events[eventName] || new Set();
+    event.add(fn);
+    // The cool thing about sets, they don't keep duplicate items.
   }
 
-  // Calls all the functions of the relative events, passing on "payload" data
-  // to those functions.
-  emit(eventName, payload) {
-    const event = this.events[eventName];
-
-    if (event)
-      event.forEach(fn => fn(payload));
-  }
-
-  // Removes "fn" named function from the list of the relative event.
+  // Removes "fn" function from the set of the relative event and returns
+  // "true" (if the function's not been found, returns "false").
   off(eventName, fn) {
     const event = this.events[eventName];
 
-    if (event) {
-      this._events[eventName] = 
-        event.filter(eventFn => eventFn.name !== fn.name);
-    }
+    return (event && event.has(fn)) ?
+      event.delete(fn) : false;
   }
 
-  // Puts "fn" named function in the list of the relative event.
-  on(eventName, fn) {
-    if (!fn.name)
-      return console.error(
-        `Function passed on to "on" method, must be named.`
-      );
+  // Calls all the functions of the relative event providing them with "data".
+  emit(eventName, data) {
+    const event = this.events[eventName];
 
-    const event = this.events[eventName] || [];
-
-    if (!isPresentedIn(fn, event)) {
-      this._events[eventName] = event;
-      this._events[eventName].push(fn);
-    }
-
-    function isPresentedIn(fn, event) {
-      let isPresented = false; 
-      event.forEach(eventFn => {
-        isPresented = (eventFn.name === fn.name) ? true : isPresented;
-        // Is condition false? Preserve the old value, then.
-      });
-      
-      return isPresented;
-    }
+    if (event)
+      event.forEach(eventFn => eventFn(data));
   }
 }
+
+// [1]: https://gist.github.com/learncodeacademy/777349747d8382bfb722
