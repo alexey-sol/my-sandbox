@@ -17,7 +17,7 @@ html.html
     block headline
       div(class=useAltHeadline ? "headline headline_theme_mercury" : "headline")
         .header
-          a(class="header__logo" href="home.html" title="Home")
+          a(class="header__logo" href="one-page.html" title="One page")
             .header__icon-logo
           ul.header__nav-bar
             each tab in tabList
@@ -28,6 +28,3 @@ html.html
       .footline
         block footer
           include ../../blocks/footer/footer.pug
-
-//- Template Inheritance in Pug:
-//- https://pugjs.org/language/inheritance.html

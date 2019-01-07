@@ -6,9 +6,9 @@
 }
 
 .blockquote:after {
-  content: open-quote;
+  content: close-quote;
 }
 
 .blockquote:before {
-  content: close-quote;
+  content: open-quote;
 }

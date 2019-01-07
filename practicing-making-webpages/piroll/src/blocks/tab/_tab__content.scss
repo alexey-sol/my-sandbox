@@ -1,4 +1,15 @@
 .tab__content {
+  animation-name: elem-emergence;
+  animation-duration: .4s;
   box-sizing: border-box;
   display: none;
+  flex-flow: column nowrap;
+  padding: 0 190px;
+  position: absolute;
+  text-align: center;
+}
+
+@keyframes elem-emergence {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }

@@ -6,8 +6,8 @@ class Event {
     this.events = new Map();
   }
 
-  // Adds "fn" named function to the set of the relative event.
   // on(eventName: string, fn: Function): void;
+  // Adds "fn" named function to the set of the relative event.
   on(eventName, fn) {
     if (!fn.name)
       return console.error(`"fn" argument must be named function`);
@@ -17,9 +17,9 @@ class Event {
     // The cool thing about sets, they don't keep duplicate items.
   }
 
+  // off(eventName: string, fn: Function): boolean; 
   // Removes "fn" function from the set of the relative event and returns
   // "true" (if the function's not been found, returns "false").
-  // off(eventName: string, fn: Function): boolean; 
   off(eventName, fn) {
     const event = this.events[eventName];
 
@@ -27,8 +27,8 @@ class Event {
       event.delete(fn) : false;
   }
 
-  // Calls all the functions of the relative event providing them with "data".
   // emit(eventName: string, data: any): void;
+  // Calls all the functions of the relative event providing them with "data".
   emit(eventName, data) {
     const event = this.events[eventName];
 

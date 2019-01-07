@@ -1,4 +1,5 @@
 .tab__dot_active {
-  border: none;
+  border: 0 solid $tab-dot-bg; // [1]
   opacity: 1;
 }
+// [1]: if we specifed "none", the border would become black during fading.

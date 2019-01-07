@@ -1,0 +1,6 @@
+mixin clients-item(quantity)
+  - let count = 1;
+  while count <= quantity
+    .array__column
+      div(class=`icon icon_client-${count} array__icon`)
+      - count++;

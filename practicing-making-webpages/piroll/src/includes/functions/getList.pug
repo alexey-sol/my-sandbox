@@ -123,7 +123,7 @@
       case "tabs":
         classNamesList = ["nav-tab"];
         return [{
-          href: "home.html",
+          href: "index.html",
           title: "HOME",
           classNamesList: (activePage === "home") ?
             [classNamesList[0], `${classNamesList[0]}_active`] :
@@ -145,7 +145,7 @@
       case "tabsExtended":
         classNamesList = ["nav-tab"];
         return [{
-          href: "home.html",
+          href: "index.html",
           title: "HOME",
           classNamesList: (activePage === "home") ?
             [classNamesList[0], `${classNamesList[0]}_active`] :
@@ -157,25 +157,25 @@
             [classNamesList[0], `${classNamesList[0]}_active`] :
             classNamesList
         }, {
-          href: "work.html",
+          href: "project-single.html",
           title: "WORK",
           classNamesList: (activePage === "work") ?
             [classNamesList[0], `${classNamesList[0]}_active`] :
             classNamesList
         }, {
-          href: "process.html",
+          href: "",
           title: "PROCESS",
           classNamesList: (activePage === "process") ?
             [classNamesList[0], `${classNamesList[0]}_active`] :
             classNamesList
         }, {
-          href: "services.html",
+          href: "",
           title: "SERVICES",
           classNamesList: (activePage === "services") ?
             [classNamesList[0], `${classNamesList[0]}_active`] :
             classNamesList
         }, {
-          href: "testimonials.html",
+          href: "",
           title: "TESTIMONIALS",
           classNamesList: (activePage === "testimonials") ?
             [classNamesList[0], `${classNamesList[0]}_active`] :
@@ -191,15 +191,15 @@
       case "testimonials":
         return [{
           blockquote: "Cite 1",
-          author: "Author 1"
+          author: "AUTHOR 1"
         }, {
           blockquote: `Outstanding job and exceeded all expectations. It
             was a pleasure to work with them on a sizable first project
             and am looking forward to start the next one asap.`,
-          author: "Michael Hopkins"
+          author: "MICHAEL HOPKINS"
         }, {
           blockquote: "Cite 3",
-          author: "Author 3"
+          author: "AUTHOR 3"
         }]
   
       default:

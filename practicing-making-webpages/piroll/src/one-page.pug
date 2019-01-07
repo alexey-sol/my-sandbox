@@ -1,5 +1,6 @@
 extends includes/templates/layout.pug
 
+include blocks/array/pug-mixins/clients-item.pug
 include blocks/array/pug-mixins/features-item.pug
 include blocks/array/pug-mixins/statistics-item.pug
 include blocks/tab/pug-mixins/tab-content.pug
@@ -117,3 +118,29 @@ block main
         each item in testimonialsList
           +tab-content(item)
         +tab-pagination(testimonialsList.length)
+  .line
+    .section
+      .array
+        +clients-item(5)
+  .line.line_theme_wild-sand
+    .section
+      .article.article_content_center.article_type_banner
+        h1.caption Need a Project?
+        p.paragraph
+          | Let us know what you're looking for in an agency. We'll take a
+          | look and see if this could be the start of something beautiful.
+      .section__gap.section__gap_horizontal
+      form(class="form contact-block__form" action="")
+        .form__row
+          input(class="form__input" name="name" placeholder="Your Name" 
+            type="text")
+          input(class="form__input" name="email" placeholder="Your Email" 
+            type="text")
+        .form__row
+          input(class="form__input" name="title" placeholder="Your Title" 
+            type="text")
+        .form__row
+          textarea(class="form__input form__input_textarea" name="comment" 
+            placeholder="Your Comment")
+        .form__row.form__row_content_center
+          button(class="button" type="submit") SEND MESSAGE
