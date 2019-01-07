@@ -1,6 +1,6 @@
 // Open-Closed Principle.
 // Software entities (such as classes, modules, functions) should be extendable
-// without modifying.
+// without modifying: be open for extensions, closed for modifications.
 
 interface AreaInterface {
   calculateArea(): number;
