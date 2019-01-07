@@ -2,10 +2,5 @@ mixin tab-pagination(quantity)
   .tab__pagination
     - count = 0;
     while count < quantity
-      .tab__dot
+      div(class=`tab__dot`)
       - count++;
-    //- - let count = 0;
-    //- while count < quantity
-    //-   div(class=(+item.index == count) ? "tab__dot tab__dot_active"
-    //-     : "tab__dot")
-    //-   - count++;

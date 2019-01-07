@@ -1,14 +1,16 @@
 // "Basic Javascript PubSub Pattern" example [1] was pretty useful.
 
+// Event(): Event;
 class Event {
   constructor() {
     this.events = new Map();
   }
 
   // Adds "fn" named function to the set of the relative event.
+  // on(eventName: string, fn: Function): void;
   on(eventName, fn) {
     if (!fn.name)
-      return console.error(`"fn" argument must be named function.`);
+      return console.error(`"fn" argument must be named function`);
 
     const event = this.events[eventName] = this.events[eventName] || new Set();
     event.add(fn);
@@ -17,6 +19,7 @@ class Event {
 
   // Removes "fn" function from the set of the relative event and returns
   // "true" (if the function's not been found, returns "false").
+  // off(eventName: string, fn: Function): boolean; 
   off(eventName, fn) {
     const event = this.events[eventName];
 
@@ -25,6 +28,7 @@ class Event {
   }
 
   // Calls all the functions of the relative event providing them with "data".
+  // emit(eventName: string, data: any): void;
   emit(eventName, data) {
     const event = this.events[eventName];
 
