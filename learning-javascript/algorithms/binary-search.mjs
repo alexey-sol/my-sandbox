@@ -1,10 +1,9 @@
-
 // node --experimental-modules binary-search.mjs
-import { generateListOfNumbers } from "./utils";
+import { generateArrayOfNumbers } from "./utils";
 
-// lookWithBinarySearch(numbersList: number[], item: number): number;
-const lookWithBinarySearch = (numbersList, item) => {
-  let steps = 0;
+// binarySearch(numbersList: number[], item: number): number;
+const binarySearch = (numbersList, item) => {
+  let steps = 0; // indicates the number of guesses; a simple count
 
   let low = 0, // finding the "extreme points"
       high = numbersList.length - 1,
@@ -38,11 +37,11 @@ const lookWithBinarySearch = (numbersList, item) => {
 
 // Test 1.
 
-const list1 = generateListOfNumbers(1, 10); // 10 numbers list
+const list1 = generateArrayOfNumbers(1, 10); // 10 numbers list
 const stepsAtMost1 = Math.ceil(
   Math.log2(list1.length)
-); // how many steps must be undertaken in the worst case scenario
-const result1 = lookWithBinarySearch(list1, 7); // find number 7
+); // how many steps must be undertaken in the worst case scenario; O(log n)
+const result1 = binarySearch(list1, 7); // find number 7
 
 console.log(
   `1) ${result1.steps} of ${stepsAtMost1} steps. Index: ${result1.index}.`
@@ -50,9 +49,9 @@ console.log(
 
 // Test 2.
 
-const list2 = generateListOfNumbers(1, 1000); // 1000 numbers list
+const list2 = generateArrayOfNumbers(1, 1000); // 1000 numbers list
 const stepsAtMost2 = Math.ceil( Math.log2(list2.length) );
-const result2 = lookWithBinarySearch(list2, 501); // find number 501
+const result2 = binarySearch(list2, 501); // find number 501
 
 console.log(
   `2) ${result2.steps} of ${stepsAtMost2} steps. Index: ${result2.index}.`
@@ -60,7 +59,7 @@ console.log(
 
 // Test 3.
 
-const result3 = lookWithBinarySearch(list2, 1001); // find 1001 among 1000
+const result3 = binarySearch(list2, 1001); // find 1001 among 1000
 console.log(
   `3) ${result3.steps} of ${stepsAtMost2} steps. Index: ${result3.index}.`
 ); // 9 of 10 steps. Index: null.
