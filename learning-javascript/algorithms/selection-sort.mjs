@@ -10,7 +10,7 @@ const selectionSort = (array) => {
         len = array.length;
 
   for (let i = 0; i < len; i++) {
-    const smallestIndex = findSmallestNumber(array), // n
+    const smallestIndex = findSmallestNumber(array),
           cutNumber = array.splice(smallestIndex, 1)[0];
 
     sortedArray.push(cutNumber);
@@ -19,5 +19,5 @@ const selectionSort = (array) => {
   return sortedArray;
 }
 
-let randomNumbersArray = generateArrayOfNumbers(1, 10, true);
+const randomNumbersArray = generateArrayOfNumbers(1, 10, true);
 console.log(selectionSort(randomNumbersArray));
