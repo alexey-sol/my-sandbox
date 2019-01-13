@@ -1,7 +1,8 @@
 // node --experimental-modules quicksort.mjs
 import { getRandomInteger, generateArrayOfNumbers } from "./utils";
 
-const quicksort = (array) => {console.log("step");
+// quicksort(number[]): number[];
+const quicksort = (array) => {
   // It's the base case. Does the array contain 0 or 1 element? Return it as
   // is. 
   if (array.length <= 1)
