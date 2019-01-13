@@ -31,6 +31,7 @@ export const getRandomInteger = (min, max) =>
   Math.floor(Math.random() * (max - min)) + min;
 
 export class Node {
+  // constructor Node(value: any, next: Node | null, prev: Node | null): Node;
   constructor(value, next, prev) {
     this.value = value;
     this.next = next;
@@ -38,8 +39,12 @@ export class Node {
   }
 }
 
-export class LinkedNode {
-  constructor() {
+// "LinkedList" is created on the basis of "The Little Guide of Linked List in
+// JavaScript" [1].
+export class LinkedList {
+  // constructor LinkedList(Node: Node): LinkedList;
+  constructor(Node) {
+    this.Node = Node;
     this.head = null;
     this.tail = null;
   }
@@ -47,7 +52,7 @@ export class LinkedNode {
   // addToHead(value: any): void;
   // Creates a new node and adds it to the beginning of the list.
   addToHead(value) {
-    const node = new Node(value, this.head, null);
+    const node = new this.Node(value, this.head, null);
 
     if (this.head) // is there something? Put the node in the very beginning
       this.head.prev = node;
@@ -57,8 +62,10 @@ export class LinkedNode {
     this.head = node;
   }
 
+  // addToTail(value: any): void;
+  // Creates a new node and adds it to the ending of the list.
   addToTail(value) {
-    const node = new Node(value, null, this.tail);
+    const node = new this.Node(value, null, this.tail);
 
     if (this.tail)
       this.tail.next = node;
@@ -68,10 +75,60 @@ export class LinkedNode {
     this.tail = node;
   }
 
-  // remove
-}
+  // removeHead(): any;
+  // Removes the head of the list and fixes that list accordingly. Returns the
+  // value of the removed node.
+  removeHead() {
+    if (!this.head)
+      return null;
 
-// Linked list is implemented on the basis of "The Little Guide of Linked List
-// in JavaScript" [1].
+    const value = this.head.value;
+    this.head = this.head.next;
+
+    if (this.head) // maybe it was the only node in the list
+      this.head.prev = null;
+    else
+      this.tail = null;
+
+    return value;
+  }
+
+  // removeTail(): any;
+  // Removes the tail of the list and fixes that list accordingly. Returns the
+  // value of the removed node.
+  removeTail() {
+    if (!this.tail)
+      return tail;
+
+    const value = this.tail.value;
+    this.tail = this.tail.prev;
+
+    if (this.tail)
+      this.tail.next = null;
+    else
+      this.head = null;
+
+    return value;
+  }
+
+  // search(value: any): Node | null;
+  // Goes through the list and searches for the "value". If it finds the value,
+  // returns the relative node; otherwise returns null.
+  search(value) {
+    if (!this.head)
+      return null;
+
+    let currentNode = this.head;
+
+    while (currentNode) {
+      if (currentNode.value === value)
+        return currentNode;
+
+      currentNode = currentNode.next;
+    }
+
+    return null;
+  }
+}
 
 // [1]: https://hackernoon.com/the-little-guide-of-linked-list-in-javascript-9daf89b63b54
