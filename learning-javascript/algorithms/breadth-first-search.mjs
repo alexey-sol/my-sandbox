@@ -8,7 +8,7 @@ import { Node, LinkedList } from "./utils";
 // usage of the linked list is pretty close to a queue from the original [1].
 
 const graph = {
-  "you": ["Araq", "Auza"],
+  "mee": ["Araq", "Auza"], // that's me
   // The 1st-degree connections:
   "Araq": ["Daggoth", "Gorn"],
   "Auza": ["Kagg"],
@@ -22,6 +22,8 @@ const graph = {
 };
 
 // breadthFirstSearch(name: string, graph: IGraph): boolean; // [2]
+// Tells if there's a path from A to B. If there is, it finds the shortest way
+// from A to B.
 const breadthFirstSearch = (name, graph) => {
   const searchList = new LinkedList(Node);
   searchList.addToHead(name);
@@ -31,7 +33,8 @@ const breadthFirstSearch = (name, graph) => {
     // If the certain person isn't who we search for, then we add all his/her
     // friends to the end of the "searchList". The person himself is removed
     // from the list in both cases. The "searchList" follows FIFO rule: every
-    // time we pull out the 1st item, and add the new item to the end.
+    // time we pull out the 1st item, and add the new item to the end of the
+    // list.
 
     const personName = searchList.removeHead(); // pop the 1st person
     const isSearched = searched.find(name =>
@@ -67,11 +70,11 @@ const breadthFirstSearch = (name, graph) => {
 
 console.log(
   "Is there a mango seller in my environment? -",
-  breadthFirstSearch("you", graph)
+  breadthFirstSearch("mee", graph)
 );
 
 // [1]:
-/* The original implementation from "Grokking Algorithms":
+/* # The original implementation from "Grokking Algorithms":
 
   from collections import deque
 
@@ -86,7 +89,7 @@ console.log(
   graph["jonny"] = []
 
   def
-   person_is_seller(name):
+    person_is_seller(name):
       return name[-1] == "m"
 
   def search(name):

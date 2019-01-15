@@ -30,6 +30,27 @@ export const findSmallestNumber = (array) => {
 export const getRandomInteger = (min, max) =>
   Math.floor(Math.random() * (max - min)) + min;
 
+// addAll(a: Set, b: Set): Set;
+// Returns a set which represents a union of the received sets "a" and "b".
+// The functions "addAll", "removeAll", and "retainAll" were borrowed from the
+// "ECMAScript 6 sets: union, intersection, difference" [1].
+export const addAll = (a, b) => 
+  new Set([...a, ...b]);
+
+// removeAll(a: Set, b: Set): Set;
+// Returns a set which represents a difference of the received sets "a" and
+// "b".
+export const removeAll = (a, b) =>
+  new Set( [...a].filter(item =>
+    !b.has(item)) );
+  
+// retainAll(a: Set, b: Set): Set;
+// Returns a set which represents an intersection of the received sets "a" and
+// "b".
+export const retainAll = (a, b) =>
+  new Set( [...a].filter(item =>
+    b.has(item)) );
+
 export class Node {
   // constructor Node(value: any, next: Node | null, prev: Node | null): Node;
   constructor(value, next, prev) {
@@ -40,7 +61,7 @@ export class Node {
 }
 
 // "LinkedList" is created on the basis of "The Little Guide of Linked List in
-// JavaScript" [1].
+// JavaScript" [2].
 export class LinkedList {
   // constructor LinkedList(Node: Node): LinkedList;
   constructor(Node) {
@@ -131,4 +152,5 @@ export class LinkedList {
   }
 }
 
-// [1]: https://hackernoon.com/the-little-guide-of-linked-list-in-javascript-9daf89b63b54
+// [1]: http://2ality.com/2015/01/es6-set-operations.html
+// [2]: https://hackernoon.com/the-little-guide-of-linked-list-in-javascript-9daf89b63b54
