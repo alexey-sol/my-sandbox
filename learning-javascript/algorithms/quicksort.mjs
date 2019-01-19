@@ -1,8 +1,8 @@
 // node --experimental-modules quicksort.mjs
-import { getRandomInteger, generateArrayOfNumbers } from "./utils";
+import { getRandomInteger } from "./utils";
 
 // quicksort(number[]): number[];
-const quicksort = (array) => {
+export default function quicksort(array) {
   // It's the base case. Does the array contain 0 or 1 element? Return it as
   // is. 
   if (array.length <= 1)
@@ -31,7 +31,4 @@ const quicksort = (array) => {
     ];
     // There's one issue with this function. It omits duplicate elements.
   }
-}
-
-const randomNumbersArray = generateArrayOfNumbers(1, 10, true);
-console.log(quicksort(randomNumbersArray));
+};

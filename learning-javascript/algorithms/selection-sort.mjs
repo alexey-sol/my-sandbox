@@ -1,8 +1,8 @@
 // node --experimental-modules selection-sort.mjs
-import { findSmallestNumber, generateArrayOfNumbers } from "./utils";
+import { findSmallestNumber } from "./utils";
 
 // selectionSort(array: number[]): number[];
-const selectionSort = (array) => {
+export default function selectionSort(array) {
   // It's a simple algorithm which loops through the given array "len" times,
   // so its speed is O(n * n). Also this function "ruins" the input array.
 
@@ -17,7 +17,4 @@ const selectionSort = (array) => {
   }
 
   return sortedArray;
-}
-
-const randomNumbersArray = generateArrayOfNumbers(1, 10, true);
-console.log(selectionSort(randomNumbersArray));
+};

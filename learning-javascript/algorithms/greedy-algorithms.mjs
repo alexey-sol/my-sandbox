@@ -11,7 +11,7 @@ import { removeAll, retainAll } from "./utils";
 // that the remaining ones still could cover the whole list.
 
 // getBestStations(statesToCover: Set, station: IStations): Set; // [1]
-const getBestStations = (statesToCover, stations) => {
+export default function getBestStations(statesToCover, stations) {
   const finalStations = new Set(); // the stations we chose
 
   while (statesToCover.size) {
@@ -37,21 +37,6 @@ const getBestStations = (statesToCover, stations) => {
 
   return finalStations;
 };
-
-// The states we need to cover:
-const statesToCover = new Set(["mt", "wa", "or", "id", "nv", "ut", "ca", "az"]);
-
-// Stations and the states they cover:
-const stations = {
-  "kone": new Set(["id", "nv", "ut"]),
-  "ktwo": new Set(["wa", "id", "mt"]),
-  "kthree": new Set(["or", "nv", "ca"]),
-  "kfour": new Set(["nv", "ut"]),
-  "kfive": new Set(["ca", "az"])
-};
-
-console.log(getBestStations(statesToCover, stations));
-// Spoiler! The result is: "kone", "ktwo", "kthree", "kfive".
 
 // It's a JS version of the example given in the chapter "Approximation
 // algorithms" from Grokking Algorithms.

@@ -7,24 +7,10 @@ import { Node, LinkedList } from "./utils";
 // the random access. So it's pointless to use an array here. Besides, below
 // usage of the linked list is pretty close to a queue from the original [1].
 
-const graph = {
-  "mee": ["Araq", "Auza"], // that's me
-  // The 1st-degree connections:
-  "Araq": ["Daggoth", "Gorn"],
-  "Auza": ["Kagg"],
-  // The 2nd-degree connections:
-  "Daggoth": ["Kaloth"],
-  "Gorn": [],
-  "Kagg": ["Nargil the Mango Seller"],
-  // The 3rd-degree connections:
-  "Kaloth": [],
-  "Nargil the Mango Seller": []
-};
-
 // breadthFirstSearch(name: string, graph: IGraph): boolean; // [2]
-// Tells if there's a path from A to B. If there is, it finds the shortest way
-// from A to B.
-const breadthFirstSearch = (name, graph) => {
+// Searched for "name" in "graph" which is an object consisting of arrays of
+// strings (names).
+export default function breadthFirstSearch(name, graph) {
   const searchList = new LinkedList(Node);
   searchList.addToHead(name);
   const searched = []; // persons we've already checked
@@ -41,11 +27,11 @@ const breadthFirstSearch = (name, graph) => {
       (name === personName) ? true : false);
 
     if (!isSearched) { // did we check this person? If we did, ignore him/her
-      if (isSeller(personName)) {
+      if (isSeller(personName)) { // we've found a mango seller!
         console.log(`${personName} is who we've searched for!`);
         return true;
 
-      } else {
+      } else { // oh well, add all the neighbours of the person to the list
         addToList( searchList, graph[personName] );
         searched.push(personName);
       }
@@ -67,11 +53,6 @@ const breadthFirstSearch = (name, graph) => {
     array.forEach(value => linkedList.addToTail(value));
   }
 };
-
-console.log(
-  "Is there a mango seller in my environment? -",
-  breadthFirstSearch("mee", graph)
-);
 
 // [1]:
 /* # The original implementation from "Grokking Algorithms":

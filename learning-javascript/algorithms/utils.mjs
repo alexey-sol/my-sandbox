@@ -1,4 +1,5 @@
-// generateArrayOfNumbers(start?: number, end?: number): number[];
+// generateArrayOfNumbers(start?: number, end?: number, useRandomNumbers?:
+// boolean): number[];
 export const generateArrayOfNumbers = (start = 1, end = 10, useRandomNumbers =
 false) => {
   const result = [];

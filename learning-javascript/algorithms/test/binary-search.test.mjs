@@ -17,6 +17,9 @@ describe("binary-search", () => {
       it(`should find number ${numToFind} and return index ${indexToReturn
       } in max ${stepsAtMost} steps (for ${list.length} numbers array)`, () => {
         const result = binarySearch(list, numToFind);
+        expect(result).to.be.a("object");
+        expect(result).to.have.property("index");
+        expect(result).to.have.property("steps");
         expect(result.index).to.be.equal(indexToReturn);
         expect(result.steps).to.be.at.most(stepsAtMost);
       });
@@ -31,6 +34,9 @@ describe("binary-search", () => {
   it(`should find number 501 and return index 500 in 1 step (for ${list2.length
   } numbers array)`, () => {
     const result = binarySearch(list2, 501);
+    expect(result).to.be.a("object");
+    expect(result).to.have.property("index");
+    expect(result).to.have.property("steps");
     expect(result.index).to.be.equal(500);
     expect(result.steps).to.be.at.most(1);
   });
@@ -38,6 +44,9 @@ describe("binary-search", () => {
   it(`should not find number 1001 in ${list2.length} numbers array in max ${
   stepsAtMost2} steps`, () => {
     const result = binarySearch(list2, 1001);
+    expect(result).to.be.a("object");
+    expect(result).to.have.property("index");
+    expect(result).to.have.property("steps");
     expect(result.index).to.be.equal(null);
     expect(result.steps).to.be.at.most(stepsAtMost2);
   });

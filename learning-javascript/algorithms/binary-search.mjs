@@ -32,7 +32,7 @@ export default function binarySearch(numbersArray, item) {
     index: null,
     steps: steps
   };
-}
+};
 
 // The point of this search is: with every guess, we eliminate half the numbers
 // by guessing the middle one (lying between the range of "low" and "high"; the
