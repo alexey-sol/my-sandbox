@@ -38,11 +38,8 @@ const getBestStations = (statesToCover, stations) => {
   return finalStations;
 };
 
-// We have here a loop inside of a loop, so the runtime of this algorithm is
-// O(n * n).
-
 // The states we need to cover:
-let statesToCover = new Set(["mt", "wa", "or", "id", "nv", "ut", "ca", "az"]);
+const statesToCover = new Set(["mt", "wa", "or", "id", "nv", "ut", "ca", "az"]);
 
 // Stations and the states they cover:
 const stations = {
@@ -55,7 +52,6 @@ const stations = {
 
 console.log(getBestStations(statesToCover, stations));
 // Spoiler! The result is: "kone", "ktwo", "kthree", "kfive".
-console.log(statesToCover);
 
 // It's a JS version of the example given in the chapter "Approximation
 // algorithms" from Grokking Algorithms.
