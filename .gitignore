@@ -5,3 +5,4 @@
 bundle.*
 node_modules
 learning-typescript/**/*.js
+learning-typescript/**/*.mjs
