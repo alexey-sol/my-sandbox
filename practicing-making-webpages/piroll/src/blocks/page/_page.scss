@@ -4,8 +4,8 @@
   display: flex;
   flex-flow: column nowrap;
   height: 100%;
-  justify-content: space-between; 
+  justify-content: space-between;
 }
 // "space-between" helps to keep the footer (which is the last child of this 
-// block) pinned to the bottom of the page. However, to make this gimmick work,
+// block) pinned to the bottom of the page. However, to make this thing work,
 // html, body, and *this* node must have height equal to 100%.

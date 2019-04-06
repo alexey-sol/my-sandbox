@@ -337,7 +337,7 @@
   background-color: #141414;
   box-sizing: border-box;
   display: flex;
-  flex-flow: column nowrap;
+  justify-content: center;
   min-width: 100%;
 }
 
