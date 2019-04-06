@@ -1,0 +1,2 @@
+# Practicing making webpages
+The demo of the work is [here](https://letscerebrate.github.io/my-sandbox/practicing-making-webpages/piroll/dist/). It's made according to [Piroll free PSD template](https://drive.google.com/drive/folders/14uwTcZKo4z8wJS8Bt8IkMtwKYPt4Z_yV), by means of Pug and Sass. The source code is contained in `src` directory (`dist` contains compiled files for the demo).
