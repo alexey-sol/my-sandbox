@@ -1,9 +1,10 @@
-.portfolio-item_fill_dark {
+.portfolio-item_fill_dark:hover {
   align-items: center;
   background-color: $portfolio-item-bg--fill-dark;
   justify-content: center;
-}
+  transition: .1s ease;
 
-.portfolio-item_fill_dark:before {
-  content: url("../../src/blocks/portfolio-item/img/look.png");
+  &:before {
+    content: url("../../src/blocks/portfolio-item/img/look.png");
+  }
 }

@@ -28,11 +28,12 @@ block main
               columnsCount++;
               overallCount++;
 
-            a(href="" title="" class=(rowsCount == 2 && columnsCount == 2) ?
-            `portfolio-item portfolio-item_image_work-${ overallCount } 
-            portfolio-item_fill_light`
-            : `portfolio-item portfolio-item_image_work-${ overallCount }`)
- 
+            a(
+              href="./project-single.html"
+              title=""
+              class=`portfolio-item portfolio-item_image_work-${ overallCount } 
+                portfolio-item_fill_light`
+            )
               .portfolio-item__description
               //- It's empty for the time being.
 

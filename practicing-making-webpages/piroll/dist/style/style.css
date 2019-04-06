@@ -864,23 +864,23 @@
   background-color: #dddddd;
 }
 
-.portfolio-item_fill_dark {
+.portfolio-item_fill_dark:hover {
   align-items: center;
   background-color: #252525;
   justify-content: center;
+  transition: 0.1s ease;
 }
-
-.portfolio-item_fill_dark:before {
+.portfolio-item_fill_dark:hover:before {
   content: url("../../src/blocks/portfolio-item/img/look.png");
 }
 
-.portfolio-item_fill_light {
+.portfolio-item_fill_light:hover {
   align-items: center;
   background-color: #10c9c3;
   justify-content: center;
+  transition: 0.1s ease;
 }
-
-.portfolio-item_fill_light:before {
+.portfolio-item_fill_light:hover:before {
   content: url("../../src/blocks/portfolio-item/img/look.png");
 }
 
