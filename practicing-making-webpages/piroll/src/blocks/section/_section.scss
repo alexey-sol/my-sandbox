@@ -2,7 +2,7 @@
   align-items: center;
   box-sizing: border-box;
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
   max-width: $grid-width;
   min-width: $grid-width;
   padding: 95px 15px;

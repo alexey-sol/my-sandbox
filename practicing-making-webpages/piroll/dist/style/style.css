@@ -49,10 +49,10 @@
 .article {
   box-sizing: border-box;
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
   max-width: 600px;
   min-width: 600px;
-  padding: 0 15px;
+  padding: 0;
 }
 
 .article_flexible {
@@ -91,6 +91,7 @@
 
 .article_type_skillometer {
   padding-bottom: 70px;
+  padding-left: 15px;
   padding-top: 70px;
   padding-right: 80px;
 }
@@ -119,6 +120,7 @@
   color: inherit;
   font-style: normal;
   margin: 0;
+  outline: none;
   padding: 0;
   text-decoration: none;
   box-sizing: border-box;
@@ -132,6 +134,7 @@
   color: inherit;
   font-style: normal;
   margin: 0;
+  outline: none;
   padding: 0;
   text-decoration: none;
   box-sizing: border-box;
@@ -147,19 +150,22 @@
   color: inherit;
   font-style: normal;
   margin: 0;
+  outline: none;
   padding: 0;
   text-decoration: none;
   background-color: white;
   box-sizing: border-box;
   display: flex;
-  flex-flow: column nowrap;
-  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100%;
 }
 
 .button {
   color: inherit;
   font-style: normal;
   margin: 0;
+  outline: none;
   padding: 0;
   text-decoration: none;
   background-color: #10c9c3;
@@ -187,6 +193,7 @@
   color: inherit;
   font-style: normal;
   margin: 0;
+  outline: none;
   padding: 0;
   text-decoration: none;
   box-sizing: border-box;
@@ -215,6 +222,7 @@
   color: inherit;
   font-style: normal;
   margin: 0;
+  outline: none;
   padding: 0;
   text-decoration: none;
   box-sizing: border-box;
@@ -245,6 +253,7 @@
   color: inherit;
   font-style: normal;
   margin: 0;
+  outline: none;
   padding: 0;
   text-decoration: none;
   box-sizing: border-box;
@@ -310,6 +319,7 @@
   color: inherit;
   font-style: normal;
   margin: 0;
+  outline: none;
   padding: 0;
   text-decoration: none;
   box-sizing: border-box;
@@ -331,12 +341,14 @@
   color: inherit;
   font-style: normal;
   margin: 0;
+  outline: none;
   padding: 0;
   text-decoration: none;
   align-items: center;
   background-color: #141414;
   box-sizing: border-box;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   min-width: 100%;
 }
@@ -345,6 +357,7 @@
   color: inherit;
   font-style: normal;
   margin: 0;
+  outline: none;
   padding: 0;
   text-decoration: none;
   box-sizing: border-box;
@@ -353,14 +366,20 @@
 }
 
 .form__input {
+  color: inherit;
+  font-style: normal;
+  margin: 0;
+  outline: none;
+  padding: 0;
+  text-decoration: none;
   border: 1px solid transparent;
   box-sizing: border-box;
   color: #787878;
-  flex: 1;
   font-family: "Nunito Sans", sans-serif;
   font-size: 15px;
   padding: 15px 20px;
   transition: 0.3s ease;
+  width: 100%;
 }
 
 .form__input:not(:first-of-type) {
@@ -385,7 +404,6 @@
 .form__row {
   box-sizing: border-box;
   display: flex;
-  flex: 1;
 }
 
 .form__row:not(:last-of-type) {
@@ -400,6 +418,7 @@
   color: inherit;
   font-style: normal;
   margin: 0;
+  outline: none;
   padding: 0;
   text-decoration: none;
   box-sizing: border-box;
@@ -411,26 +430,18 @@
   padding: 0 15px;
 }
 
-.header__icon-logo {
-  box-sizing: border-box;
-  content: url("../../src/blocks/header/img/logo.png");
-  transition: 0.4s ease;
-}
-
-.header__icon-logo:hover {
-  filter: invert(50%);
-}
-
 .header__logo {
   align-items: center;
   box-sizing: border-box;
   display: flex;
+  justify-content: center;
 }
 
 .header__nav-bar {
   color: inherit;
   font-style: normal;
   margin: 0;
+  outline: none;
   padding: 0;
   text-decoration: none;
   box-sizing: border-box;
@@ -443,6 +454,7 @@
   color: inherit;
   font-style: normal;
   margin: 0;
+  outline: none;
   padding: 0;
   text-decoration: none;
   background-color: white;
@@ -528,6 +540,14 @@
   content: url("../../src/blocks/icon/img/features-star.png");
 }
 
+.icon_logo:before {
+  content: url("../../src/blocks/icon/img/logo.png");
+}
+.icon_logo:hover {
+  filter: invert(50%);
+  transition: 0.1s ease;
+}
+
 .icon_signature:before {
   content: url("../../src/blocks/icon/img/signature.png");
 }
@@ -552,6 +572,7 @@
   color: inherit;
   font-style: normal;
   margin: 0;
+  outline: none;
   padding: 0;
   text-decoration: none;
   box-sizing: border-box;
@@ -586,6 +607,7 @@
   color: inherit;
   font-style: normal;
   margin: 0;
+  outline: none;
   padding: 0;
   text-decoration: none;
   box-sizing: border-box;
@@ -595,11 +617,12 @@
   color: inherit;
   font-style: normal;
   margin: 0;
+  outline: none;
   padding: 0;
   text-decoration: none;
   box-sizing: border-box;
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
   min-width: 100%;
 }
 
@@ -625,6 +648,7 @@
   color: inherit;
   font-style: normal;
   margin: 0;
+  outline: none;
   padding: 0;
   text-decoration: none;
   -webkit-user-select: none;
@@ -659,13 +683,12 @@
   color: inherit;
   font-style: normal;
   margin: 0;
+  outline: none;
   padding: 0;
   text-decoration: none;
   box-sizing: border-box;
   display: flex;
   flex-flow: column nowrap;
-  height: 100%;
-  justify-content: space-between;
 }
 
 .pagination {
@@ -704,6 +727,7 @@
   color: inherit;
   font-style: normal;
   margin: 0;
+  outline: none;
   padding: 0;
   text-decoration: none;
   box-sizing: border-box;
@@ -735,6 +759,7 @@
   color: inherit;
   font-style: normal;
   margin: 0;
+  outline: none;
   padding: 0;
   text-decoration: none;
   box-sizing: border-box;
@@ -756,12 +781,13 @@
   color: inherit;
   font-style: normal;
   margin: 0;
+  outline: none;
   padding: 0;
   text-decoration: none;
   align-items: center;
   box-sizing: border-box;
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column;
 }
 
 .portfolio__row {
@@ -782,6 +808,7 @@
   color: inherit;
   font-style: normal;
   margin: 0;
+  outline: none;
   padding: 0;
   text-decoration: none;
   background-color: inherit;
@@ -804,6 +831,7 @@
   color: inherit;
   font-style: normal;
   margin: 0;
+  outline: none;
   padding: 0;
   text-decoration: none;
   align-items: flex-end;
@@ -904,7 +932,7 @@
   align-items: center;
   box-sizing: border-box;
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
   max-width: 1200px;
   min-width: 1200px;
   padding: 95px 15px;
@@ -1015,6 +1043,7 @@
   color: inherit;
   font-style: normal;
   margin: 0;
+  outline: none;
   padding: 0;
   text-decoration: none;
   color: #171717;

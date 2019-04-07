@@ -1,0 +1,11 @@
+.icon_logo {
+  &:before {
+    content: url("../../src/blocks/icon/img/logo.png");
+  }
+
+  &:hover {
+    filter: invert(50%);
+    transition: .1s ease;
+  }
+}
+

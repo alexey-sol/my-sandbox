@@ -4,6 +4,7 @@
   background-color: $footline-bg;
   box-sizing: border-box;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   min-width: 100%;
 }

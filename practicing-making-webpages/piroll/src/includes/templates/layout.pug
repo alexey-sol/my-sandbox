@@ -9,22 +9,22 @@ block script
   //- overriden for each particular page.
 
 doctype html
-html.html
+html(lang="en" class="html")
   block head
     include ../../blocks/head/head.pug
     //- Scripts should be loaded via "head.pug".
   body.body
-    block headline
-      div(class=useAltHeadline ? "headline headline_theme_mercury" : "headline")
-        .header
-          a(class="header__logo" href="one-page.html" title="One page")
-            .header__icon-logo
-          ul.header__nav-bar
-            each tab in tabList
-              +list-item(tab)
     .page
+      block headline
+        div(class=useAltHeadline ? "headline headline_theme_mercury" : "headline")
+          .header
+            div(class="header__logo")
+              a(class="icon icon_logo"  href="one-page.html" title="One page")
+            ul.header__nav-bar
+              each tab in tabList
+                +list-item(tab)
       .main
         block main
-      .footline
-        block footer
-          include ../../blocks/footer/footer.pug
+    .footline
+      block footer
+        include ../../blocks/footer/footer.pug
