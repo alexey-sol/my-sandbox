@@ -1,6 +1,6 @@
 .portfolio-item_fill_light:hover {
   align-items: center;
-  background-color: $portfolio-item-bg--fill-light;
+  background-color: $portfolio-item-bg--fill-light !important;
   justify-content: center;
   transition: .1s ease;
 

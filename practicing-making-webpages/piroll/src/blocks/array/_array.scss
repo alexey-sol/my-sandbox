@@ -2,11 +2,8 @@
   box-sizing: border-box;
   cursor: default;
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
+  flex-flow: row wrap;
+  justify-content: space-around;
   min-width: 100%;
-}
-
-.array:not(:first-of-type) {
-  padding-top: 50px;
+  padding: 50px 0;
 }

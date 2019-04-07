@@ -1,15 +1,74 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat|Nunito+Sans");
+@media (max-width: 1380px) {
+  .portfolio-item {
+    background-color: #dddddd !important;
+  }
+}
+@media (max-width: 1200px) {
+  .article_type_business-card,
+.footer,
+.header,
+.pagination__content,
+.portfolio__show-more-button,
+.section {
+    max-width: 100% !important;
+    min-width: 100% !important;
+  }
+
+  .footer__gap1 {
+    max-width: 30px !important;
+    min-width: 30px !important;
+  }
+
+  .section_half {
+    max-width: 50% !important;
+    min-width: 50% !important;
+  }
+}
+@media (max-width: 993px) {
+  .article {
+    align-items: center !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    text-align: center !important;
+  }
+
+  .contact-block,
+.footer,
+.line {
+    align-items: center !important;
+    flex-direction: column !important;
+  }
+
+  .footer__gap1,
+.footer__gap2,
+.footer__gap3,
+.footer__gap4,
+.footer__contacts,
+.footer__site-sections,
+.footer__social-networks,
+.section_image_project-single,
+.section_image_about-me,
+.section_image_about-us,
+.section_image_professional-skills {
+    display: none !important;
+  }
+
+  .section {
+    align-items: center !important;
+  }
+  .section .article {
+    width: 100% !important;
+  }
+}
 .array {
   box-sizing: border-box;
   cursor: default;
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
+  flex-flow: row wrap;
+  justify-content: space-around;
   min-width: 100%;
-}
-
-.array:not(:first-of-type) {
-  padding-top: 50px;
+  padding: 50px 0;
 }
 
 .array__caption {
@@ -24,6 +83,7 @@
   justify-content: space-between;
   max-width: 240px;
   min-width: 200px;
+  padding: 45px 0;
 }
 
 .array__gap {
@@ -51,7 +111,6 @@
   display: flex;
   flex-flow: column nowrap;
   max-width: 600px;
-  min-width: 600px;
   padding: 0;
 }
 
@@ -85,6 +144,7 @@
 }
 
 .article_type_project {
+  padding-left: 15px;
   padding-right: 140px;
   text-align: left;
 }
@@ -94,6 +154,7 @@
   padding-left: 15px;
   padding-top: 70px;
   padding-right: 80px;
+  width: 600px;
 }
 
 .article__button {
@@ -787,21 +848,12 @@
   align-items: center;
   box-sizing: border-box;
   display: flex;
-  flex-flow: column;
+  flex-flow: row wrap;
+  justify-content: center;
+  max-width: 1360px;
 }
-
-.portfolio__row {
-  box-sizing: border-box;
-  display: flex;
-  flex-flow: row nowrap;
-}
-
-.portfolio__row:nth-of-type(odd) .portfolio__item:nth-of-type(odd) {
-  background-color: #838383;
-}
-
-.portfolio__row:nth-of-type(even) .portfolio__item:nth-of-type(even) {
-  background-color: #838383;
+.portfolio .portfolio-item:nth-child(-2n+4), .portfolio .portfolio-item:nth-child(4) ~ .portfolio-item:nth-child(-2n+7), .portfolio .portfolio-item:nth-child(8) ~ .portfolio-item:nth-child(-2n+12) {
+  background-color: #dddddd;
 }
 
 .portfolio__show-more-button {
@@ -835,7 +887,7 @@
   padding: 0;
   text-decoration: none;
   align-items: flex-end;
-  background-color: #dddddd;
+  background-color: #838383;
   box-sizing: border-box;
   color: #141414;
   display: flex;
@@ -844,57 +896,9 @@
   width: 340px;
 }
 
-.portfolio-item_image_work-1 {
-  background-color: #838383;
-}
-
-.portfolio-item_image_work-2 {
-  background-color: #dddddd;
-}
-
-.portfolio-item_image_work-3 {
-  background-color: #838383;
-}
-
-.portfolio-item_image_work-4 {
-  background-color: #dddddd;
-}
-
-.portfolio-item_image_work-5 {
-  background-color: #dddddd;
-}
-
-.portfolio-item_image_work-6 {
-  background-color: #838383;
-}
-
-.portfolio-item_image_work-7 {
-  background-color: #dddddd;
-}
-
-.portfolio-item_image_work-8 {
-  background-color: #838383;
-}
-
-.portfolio-item_image_work-9 {
-  background-color: #838383;
-}
-
-.portfolio-item_image_work-10 {
-  background-color: #dddddd;
-}
-
-.portfolio-item_image_work-11 {
-  background-color: #838383;
-}
-
-.portfolio-item_image_work-12 {
-  background-color: #dddddd;
-}
-
 .portfolio-item_fill_dark:hover {
   align-items: center;
-  background-color: #252525;
+  background-color: #252525 !important;
   justify-content: center;
   transition: 0.1s ease;
 }
@@ -904,7 +908,7 @@
 
 .portfolio-item_fill_light:hover {
   align-items: center;
-  background-color: #10c9c3;
+  background-color: #10c9c3 !important;
   justify-content: center;
   transition: 0.1s ease;
 }
@@ -979,7 +983,7 @@
 }
 
 .section__gap {
-  height: 100%;
+  height: 50px;
   width: 100px;
 }
 
@@ -1058,6 +1062,7 @@
   display: flex;
   flex-flow: column nowrap;
   height: 500px;
+  justify-content: center;
   position: relative;
   width: 100%;
   padding: 170px 0;

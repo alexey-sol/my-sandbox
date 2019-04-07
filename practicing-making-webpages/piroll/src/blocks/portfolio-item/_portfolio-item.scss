@@ -1,19 +1,11 @@
 .portfolio-item {
   @include reset;
   align-items: flex-end;
-  background-color: $portfolio-item-bg;
+  background-color: $portfolio-item-bg--even;
   box-sizing: border-box;
   color: $portfolio-item-color;
   display: flex;
   height: 300px;
   position: relative;
-  width: 340px;
+  width: $portfolio-item-width;
 }
-
-// The following is a rough method to paint the portfolio in the chess style.
-// In the real project, portfolio items with modifiers "$_image_work_#" would
-// have relative images.
-
-@include fill-odd-row(1, 4);
-@include fill-even-row(5, 8);
-@include fill-odd-row(9, 12);

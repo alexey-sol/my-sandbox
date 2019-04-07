@@ -1,7 +1,7 @@
 // Sizes.
 
 $grid-width: 1200px;
-// the actual width of grid is 1170 but there will also be padding equal to 30
+$portfolio-item-width: 340px;
 
 $font-family--caption: "Montserrat", sans-serif;
 $font-family--normal: "Nunito Sans", sans-serif;
@@ -54,8 +54,8 @@ $nav-tab-color--active: $color-main;
 $pagination-bg: white;
 $pagination-color: $gray--darken;
 $paragraph-color: $gray--dark;
-$portfolio-item-bg: #dddddd;
-$portfolio-item-bg--additional: #838383;
+$portfolio-item-bg--odd: #dddddd;
+$portfolio-item-bg--even: #838383;
 $portfolio-item-bg--fill-dark: #252525;
 $portfolio-item-bg--fill-light: $color-main;
 $portfolio-item-color: $gray--darkest;

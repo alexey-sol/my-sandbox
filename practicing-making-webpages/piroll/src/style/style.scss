@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat|Nunito+Sans");
 @import "variables";
-@import "mixins/fill-even-row";
-@import "mixins/fill-odd-row";
+@import "media";
 @import "mixins/non-selectable-text";
 @import "mixins/reset";
 @import "../blocks/array/array";
@@ -103,7 +102,6 @@
 @import "../blocks/paragraph/paragraph";
 @import "../blocks/paragraph/paragraph_medium";
 @import "../blocks/portfolio/portfolio";
-@import "../blocks/portfolio/portfolio__row";
 @import "../blocks/portfolio/portfolio__show-more-button";
 @import "../blocks/portfolio-item/portfolio-item";
 @import "../blocks/portfolio-item/portfolio-item_fill_dark";

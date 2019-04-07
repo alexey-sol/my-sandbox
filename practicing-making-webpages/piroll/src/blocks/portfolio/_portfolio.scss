@@ -3,5 +3,13 @@
   align-items: center;
   box-sizing: border-box;
   display: flex;
-  flex-flow: column;
+  flex-flow: row wrap;
+  justify-content: center;
+  max-width: $portfolio-item-width * 4;
+
+  & .portfolio-item:nth-child(-2n+4),
+  & .portfolio-item:nth-child(4) ~ .portfolio-item:nth-child(-2n+7),
+  & .portfolio-item:nth-child(8) ~ .portfolio-item:nth-child(-2n+12) {
+    background-color: $portfolio-item-bg--odd;
+  } 
 }

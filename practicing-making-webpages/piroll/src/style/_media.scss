@@ -1,0 +1,70 @@
+// If there's no room for 4 items in the row, get rid of a checkboard style.
+// Otherwise cells will be painted incorrectly.
+@media (max-width: $portfolio-item-width * 4 + 20) {
+  .portfolio-item {
+    background-color: $portfolio-item-bg--odd !important;
+  }
+}
+
+// If the user's screen width is less than the grid width.
+@media (max-width: $grid-width) {
+  .article_type_business-card,
+  .footer,
+  .header,
+  .pagination__content,
+  .portfolio__show-more-button,
+  .section {
+    max-width: 100% !important;
+    min-width: 100% !important;
+  }
+
+  .footer__gap1 {
+    max-width: 30px !important;
+    min-width: 30px !important;
+  }
+
+  .section_half {
+    max-width: 50% !important;
+    min-width: 50% !important;
+  }
+}
+
+// For the devices which are less than "large" (according to Bootstrap
+// terminology).
+@media (max-width: 993px) {
+  .article {
+    align-items: center !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    text-align: center !important;
+  }
+
+  .contact-block,
+  .footer,
+  .line {
+    align-items: center !important;
+    flex-direction: column !important;
+  }
+
+  .footer__gap1,
+  .footer__gap2,
+  .footer__gap3,
+  .footer__gap4,
+  .footer__contacts,
+  .footer__site-sections,
+  .footer__social-networks,
+  .section_image_project-single,
+  .section_image_about-me,
+  .section_image_about-us,
+  .section_image_professional-skills {
+    display: none !important;
+  }
+
+  .section {
+    align-items: center !important;
+
+    & .article {
+      width: 100% !important;
+    }
+  }
+}
