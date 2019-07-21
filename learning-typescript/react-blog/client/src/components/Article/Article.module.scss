@@ -1,0 +1,7 @@
+@import "Style";
+
+.Article {
+  @include reset;
+  box-sizing: border-box;
+  padding: 30px 0;
+}

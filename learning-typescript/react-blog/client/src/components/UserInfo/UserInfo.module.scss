@@ -1,0 +1,22 @@
+@import "Style";
+
+.Name {
+  box-sizing: border-box;
+  font-family: $font-family--normal;
+  font-size: $font-size--medium;
+  line-height: $line-height--largest;
+  padding-left: 12px;
+}
+
+.UserInfo {
+  box-sizing: border-box;
+  display: flex;
+}
+
+.UserPicture {
+  animation-duration: .4s;
+  animation-name: fading-in;
+  box-sizing: border-box;
+  height: $user-picture-size--small;
+  width: $user-picture-size--small;
+}

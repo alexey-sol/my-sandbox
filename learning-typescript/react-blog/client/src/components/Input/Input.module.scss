@@ -1,0 +1,41 @@
+@import "Style";
+
+.Container {
+  background-color: $input-bg;
+  border: 1px solid $input-border;
+  box-sizing: border-box;
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  transition: .1s ease;
+
+  &:hover {
+    border-color: $input-border--focus;
+  }
+}
+
+.ContainerFocused {
+  border-color: $input-border--focus;
+}
+
+.Input {
+  @include reset;
+  background-color: $input-bg;
+  border: none;
+  box-sizing: border-box;
+  color: $input-color;
+  font-family: $font-family--normal;
+  font-size: $font-size--small;
+  margin-left: 4px; // leave the space for error indicator
+  padding: 1px 10px;
+  width: 100%;
+
+  &:focus {
+    border-color: transparent;
+  }
+}
+
+.Invalid {
+  background-color: $input--nok;
+  border: 1px solid $input--nok;
+}

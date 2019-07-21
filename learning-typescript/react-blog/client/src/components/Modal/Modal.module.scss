@@ -1,0 +1,86 @@
+@import "Style";
+
+.AltBackground {
+  background-color: $modal-bg--alt !important;
+}
+
+.CloseButton {
+  @include reset;
+  border: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  &:hover svg {
+    fill: $icon-fill--hover;
+  }
+
+  .IconClose {
+    box-sizing: border-box;
+    fill: $icon-fill;
+    margin: 14px 14px 0 0;
+    transition: .2s ease;
+  }
+
+  .IconClose:hover {
+    fill: $icon-fill--hover;
+  }
+}
+
+.Container {
+  align-items: center;
+  background-color: $modal-container-bg;
+  bottom: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: $z-index--uppermost;
+}
+
+.Content {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+}
+
+.FadingIn {
+  animation-duration: .2s;
+  animation-name: fading-in;
+}
+
+.FadingOut {
+  animation-duration: .2s;
+  animation-name: fading-out;
+  opacity: 0 !important;
+}
+
+.Fullscreen {
+  border: none !important;
+  border-radius: 0 !important;
+  height: 100% !important;
+  width: 100% !important;
+}
+
+.Modal {
+  background-color: $modal-bg;
+  border: 1px solid $modal-border;
+  border-radius: 0 10px 0 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding: 14px;
+  position: relative;
+}
+
+.Overlappable {
+  z-index: $z-index--nether !important;
+}

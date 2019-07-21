@@ -1,0 +1,66 @@
+@import "Style";
+
+.CloseButton {
+  @include reset;
+  border: none;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  &:hover svg {
+    fill: $popup-icon-fill--hover;
+  }
+
+  .IconClose {
+    box-sizing: border-box;
+    fill: $popup-icon-fill;
+    transition: .2s ease;
+  }
+
+  .IconClose:hover {
+    fill: $popup-icon-fill--hover;
+  }
+}
+
+.Error {
+  background-color: $color-error !important;
+}
+
+.Overlappable {
+  z-index: $z-index--nether !important;
+}
+
+.Popup {
+  align-content: center;
+  animation-duration: .2s;
+  animation-name: sliding-down;
+  background-color: gray;
+  box-sizing: border-box;
+  color: $popup-color;
+  display: flex;
+  font-family: $font-family--normal;
+  font-size: $font-size--medium;
+  justify-content: space-between;
+  left: 0;
+  opacity: 0.9;
+  padding: 15px 20px;
+  position: fixed;
+  top: $header-container-height;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  z-index: $z-index--uppermost;
+}
+
+.Stretched {
+  left: 0 !important;
+  right: 0 !important;
+}
+
+.Success {
+  background-color: $color-success !important;
+}
+
+.Text {
+  @include reset;
+}

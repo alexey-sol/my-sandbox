@@ -1,0 +1,21 @@
+@import "Style";
+
+.Footer {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+
+.FooterLink {
+  @include reset;
+  color: $footer-link-color;
+  text-align: center;
+
+  &:hover {
+    border-bottom: 1px solid $footer-link-color--hover;
+    color: $footer-link-color--hover;
+    transition: .1s ease;
+  }
+}

@@ -1,0 +1,7 @@
+@import "Style";
+
+.HeaderNav {
+  @include reset;
+  display: flex;
+  height: 100%;
+}

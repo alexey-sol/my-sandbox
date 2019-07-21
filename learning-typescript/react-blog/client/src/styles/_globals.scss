@@ -1,0 +1,39 @@
+::-moz-selection {
+  background-color: $selection-bg;
+}
+
+::selection {
+  background-color: $selection-bg;
+}
+
+// I think, it would be better to place this stuff in the relative CSS modules.
+
+// If the user's screen is turned out to be narrower than the grid width.
+@media (max-width: $grid-width) { // below than 1260px
+  .FooterContainer,
+  .HeaderContainer,
+  .MainContainer {
+    grid-template-columns: 100% !important;
+  }
+}
+
+// 576px?
+
+// At this point, all the elements which are not essential, can be hidden.
+@media (max-width: 992px) {
+  .Hideable {
+    display: none !important;
+  }
+}
+
+// Below this point, the grid stops to get narrower.
+@media (max-width: $grid-width--min) { // below than 411px
+  .FooterContainer,
+  .HeaderContainer,
+  .MainContainer {
+    grid-template-columns: $grid-width--min !important;
+  }
+}
+
+// [1]. These numbers are taken from here:
+// https://getbootstrap.com/docs/4.3/layout/overview/#responsive-breakpoints

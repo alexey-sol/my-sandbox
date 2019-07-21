@@ -1,0 +1,29 @@
+@import "Style";
+
+.Select {
+  @include reset;
+  background-color: $select-bg;
+  border: 1px solid $select-border;
+  box-sizing: border-box;
+  color: $select-color;
+  font-family: $font-family--normal;
+  font-size: $font-size--small;
+  outline: none;
+  padding: 1px 10px;
+  text-align: center;
+  text-align-last: center;
+  transition: .1s ease;
+  width: 100%;
+
+  &:hover {
+    border-color: $input-border--focus;
+  }
+
+  &:focus{
+    border-color: $select-border--focus;
+  }
+}
+
+.Select option {
+  border: 1px solid $select-border;
+}

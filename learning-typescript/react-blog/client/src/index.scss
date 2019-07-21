@@ -1,0 +1,17 @@
+@import "Style";
+
+html {
+  height: 100%;
+  overflow-y: scroll;
+}
+
+body {
+  @include reset;
+  box-sizing: border-box;
+  height: 100%;
+  position: relative;
+}
+
+#root {
+  height: 100%;
+}

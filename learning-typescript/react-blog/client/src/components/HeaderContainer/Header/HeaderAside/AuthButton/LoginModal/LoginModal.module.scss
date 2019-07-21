@@ -1,0 +1,64 @@
+@import "Style";
+
+.Button {
+  @include reset;
+  border: 1px solid $login-modal-button-border;
+  box-sizing: border-box;
+  color: $login-modal-color;
+  cursor: pointer;
+  font-family: $font-family--normal;
+  font-size: $font-size--medium;
+  padding: 5px 0;
+  transition: .1s ease;
+  width: 100%;
+
+  &:not(:first-of-type) {
+    border-top: none;
+  }
+
+  &:hover {
+    border-color: $login-modal-button-border--hover;
+    color: $login-modal-button-color--hover;
+  }
+}
+
+.Container {
+  box-sizing: border-box;
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  padding: 0 40px;
+}
+
+.Content {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+
+  .Intro {
+    box-sizing: border-box;
+    color: $login-modal-color;
+    font-family: $font-family--normal;
+    font-size: $font-size--medium;
+    text-align: center;
+  }
+  
+  .Option {
+    box-sizing: border-box;
+  }
+  
+  .OptionsList {
+    @include reset;
+    box-sizing: border-box;
+    list-style-type: none;
+    padding-top: 20px;
+  }
+}
+
+.Title {
+  color: $login-modal-color;
+  font-family: $font-family--normal;
+  font-size: $font-size--larger;
+}

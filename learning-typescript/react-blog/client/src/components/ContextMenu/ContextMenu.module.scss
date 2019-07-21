@@ -1,0 +1,52 @@
+@import "Style";
+
+$arrow-size: 12px;
+$border-width: 1px;
+$gap: 4px;
+$menu-width: 100px;
+
+.ContextMenu {
+  @include reset;
+  animation-duration: .2s;
+  animation-name: fading-in;
+  background-color: $context-menu-bg;
+  border: $border-width solid $context-menu-border;
+  box-sizing: border-box;
+  color: $context-menu-color;
+  font-family: $font-family--caption;
+  font-size: $font-size--small;
+  left: (-$menu-width / 2) + ($header-container-height / 2);
+  list-style-type: none;
+  padding: 10px;
+  position: absolute;
+  text-align: center;
+  top: $header-container-height + $gap + $arrow-size;
+  width: $menu-width;
+
+  &:after {
+    border-color: transparent transparent $context-menu-bg transparent;
+    border-style: solid;
+    border-width: $arrow-size;
+    left: 50%;
+    margin-left: -$arrow-size;
+    top: -($arrow-size - $border-width) * 2; // it should also overlap border
+    content: "";
+    position: absolute;
+  }
+}
+
+.ContextMenu a {
+  @include reset;
+}
+
+.ContextMenu a:hover {
+  color: $context-menu-color--hover;
+}
+
+.ContextMenu li {
+  overflow: hidden;
+}
+
+.ContextMenu li:not(:last-of-type) {
+  padding-bottom: 12px;
+}

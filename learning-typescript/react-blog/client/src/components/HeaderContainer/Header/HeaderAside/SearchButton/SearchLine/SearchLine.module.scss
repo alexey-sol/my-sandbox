@@ -1,0 +1,30 @@
+@import "Style";
+
+.SearchInput {
+  @include reset;
+  @include input-placeholder("&::-moz-placeholder");
+  @include input-placeholder("&::-ms-placeholder");
+  @include input-placeholder("&::-webkit-input-placeholder");
+  @include input-placeholder("&::placeholder");
+  border-left: 2px solid $search-line-border;
+  box-sizing: border-box;
+  color: $search-line-color;
+  font-family: $font-family--caption;
+  font-size: $font-size--small;
+  height: 100%;
+  padding: 0 8px;
+  width: 100%;
+}
+
+.SearchLine {
+  animation-duration: 0.4s;
+  animation-name: sliding-left;
+  background-color: $search-line-bg;
+  box-sizing: border-box;
+  height: 100%;
+  right: $search-button-size * 2;
+  padding: 14px 0;
+  position: absolute;
+  width: $search-line-width;
+  z-index: -1;
+}

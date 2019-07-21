@@ -1,0 +1,6 @@
+*.log
+**/*.snap
+**/__snapshots__
+.env
+bundle.*
+node_modules

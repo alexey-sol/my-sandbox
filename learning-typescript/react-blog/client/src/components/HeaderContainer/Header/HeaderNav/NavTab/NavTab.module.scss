@@ -1,0 +1,44 @@
+@import "Style";
+
+.active:after {
+  animation-duration: .4s;
+  animation-name: fading-in;
+  background-color: $nav-link-bg--active-after;
+  bottom: 0;
+  box-sizing: border-box;
+  content: "";
+  display: block;
+  height: 4px;
+  left: 0;
+  position: absolute;
+  right: 0;
+}
+
+.NavLink {
+  @include reset;
+  box-sizing: border-box;
+  font-family: $font-family--caption;
+  font-size: $font-size--medium;
+  height: 100%;
+  line-height: $header-container-height;
+  padding: 0 15px;
+  position: relative;
+}
+
+.NavTab {
+  align-items: center;
+  box-sizing: border-box;
+  color: $nav-tab-color;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  transition: .2s ease;
+
+  &:hover {
+    background-color: $nav-tab-bg--hover;
+  }
+}
+
+// Why is text color defined in "NavTab" while font properties are set in
+// "NavLink"? I had to split them to avoid some excess animations on loading
+// caused by "transition" in "NavTab".

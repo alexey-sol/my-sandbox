@@ -1,0 +1,58 @@
+@import "Style";
+
+.Controls {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.Field {
+  box-sizing: border-box;
+  display: flex;
+}
+
+.FieldInput {
+  box-sizing: border-box;
+  display: flex;
+  height: 100%;
+  width: 200px;
+}
+
+.FieldName {
+  box-sizing: border-box;
+  color: $profile-field-color;
+  font-family: $font-family--normal;
+  font-size: $font-size--medium;
+  height: 100%;
+  line-height: $line-height--large;
+  overflow: hidden;
+  width: 150px;
+}
+
+.ProfilePage {
+  box-sizing: border-box;
+  display: flex;
+}
+
+.UserPicture {
+  border: 1px solid $input-border;
+  box-sizing: border-box;
+  height: $user-picture-size--large;
+  width: $user-picture-size--large;
+}
+
+::-webkit-input-placeholder {
+  color: $placeholder-color;
+}
+
+::-moz-placeholder {
+  color: $placeholder-color;
+}
+
+:-ms-input-placeholder {
+  color: $placeholder-color;
+}
+
+:-moz-placeholder {
+  color: $placeholder-color;
+}

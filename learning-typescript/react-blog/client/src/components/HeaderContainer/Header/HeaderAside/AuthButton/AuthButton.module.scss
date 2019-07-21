@@ -1,0 +1,33 @@
+@import "Style";
+
+.AuthButton {
+  @include reset;
+  align-items: center;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: flex;
+  height: $header-container-height;
+  justify-content: center;
+  width: $header-container-height;
+
+  &:hover svg {
+    fill: $icon-fill--hover;
+  }
+}
+
+.Icon {
+  animation-duration: .4s;
+  animation-name: fading-in;
+  box-sizing: border-box;
+  fill: $icon-fill;
+  transition: .2s ease;
+}
+
+.UserPicture {
+  animation-duration: .4s;
+  animation-name: fading-in;
+  border-radius: 100%;
+  box-sizing: border-box;
+  height: $user-picture-size--small;
+  width: $user-picture-size--small;
+}

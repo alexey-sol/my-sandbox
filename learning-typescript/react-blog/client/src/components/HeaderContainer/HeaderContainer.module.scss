@@ -1,0 +1,15 @@
+@import "Style";
+
+.HeaderContainer {
+  align-items: center;
+  background-color: $header-container-bg;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 10px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: $grid-width;
+  grid-template-rows: $header-container-height;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  z-index: $z-index--middle;
+}

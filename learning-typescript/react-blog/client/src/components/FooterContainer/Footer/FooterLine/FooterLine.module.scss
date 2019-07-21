@@ -1,0 +1,21 @@
+@import "Style";
+
+.CenteredText {
+  text-align: center !important;
+}
+
+.DarkTheme {
+  color: $footer-line-color--dark !important;
+}
+
+.FooterLine {
+  box-sizing: border-box;
+  color: $footer-color;
+  font-family: $font-family--caption;
+  font-size: $font-size--small;
+  line-height: $line-height--medium;
+}
+
+.FooterLine:not(:first-of-type) {
+  padding-top: 20px;
+}

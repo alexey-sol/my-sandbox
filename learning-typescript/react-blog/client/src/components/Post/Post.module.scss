@@ -1,0 +1,104 @@
+@import "Style";
+
+.Body {
+  box-sizing: border-box;
+  color: $post-color;
+  display: flex;
+  flex-direction: column;
+  font-family: $font-family--normal;
+  font-size: $font-size--medium;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  .Content {
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .Pictures {
+    box-sizing: border-box;
+    display: flex;
+    max-height: 200px;
+    min-height: 200px;
+    padding: 10px;
+  }
+
+  // Content created via TinyMCE.
+  p:first-of-type,
+  ul:first-of-type {
+    margin-top: 0;
+  }
+
+  p:last-of-type,
+  ul:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.Expose {
+  box-sizing: border-box;
+  color: $post-color;
+  font-family: $font-family--normal;
+  font-size: $font-size--small;
+  text-align: right;
+}
+
+.Header {
+  box-sizing: border-box;
+  font-family: $font-family--caption;
+  font-size: $font-size--larger;
+  padding: 15px 0;
+}
+
+.Info {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  min-height: $user-picture-size--small;
+
+  .Date {
+    box-sizing: border-box;
+    color: $post-color;
+    font-family: $font-family--normal;
+    font-size: $font-size--medium;
+    line-height: $line-height--largest;
+  }
+}
+
+.Post {
+  background-color: $post-bg;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+
+  a {
+    @include reset;
+    border-bottom: 1px solid $post-link-border;
+    box-sizing: border-box;
+    color: $post-link-color;
+    padding: 0 2px;
+    transition: .1s ease;
+  }
+
+  a:hover {
+    color: $post-link-color--hover;
+  }
+}
+
+.Post:not(:first-of-type) {
+  margin-top: 20px;
+}
+
+.Tags {
+  box-sizing: border-box;
+  font-family: $font-family--normal;
+  font-size: $font-size--medium;
+}
+
+.Preview {
+  .Content {
+    max-height: 400px;
+  }
+}

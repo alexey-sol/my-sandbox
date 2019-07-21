@@ -1,0 +1,14 @@
+@import "Style";
+
+.Paragraph {
+  @include reset;
+  box-sizing: border-box;
+  color: $paragraph-color;
+  font-family: $font-family--normal;
+  font-size: $font-size--medium;
+  overflow-wrap: break-word;
+}
+
+.Paragraph:not(:first-child) {
+  padding-top: 15px;
+}

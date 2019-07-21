@@ -1,0 +1,7 @@
+@mixin input-placeholder($selector) {
+  #{ $selector } {
+    color: $search-line-placeholder-color;
+    font-family: $font-family--caption;
+    font-size: $font-size--small;
+  }
+}

@@ -1,0 +1,13 @@
+@import "Style";
+
+.FooterContainer {
+  background-color: $footer-container-bg;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: $grid-width;
+  grid-template-rows: $footer-container-height;
+  justify-content: center;
+  overflow-x: hidden;
+  position: relative;
+  z-index: $z-index--middle;
+}

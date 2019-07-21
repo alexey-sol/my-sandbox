@@ -1,0 +1,19 @@
+@import "Style";
+
+.Link {
+  @include reset;
+  background-color: $link-bg;
+  border-bottom: 1px solid $link-border;
+  box-sizing: border-box;
+  color: $link-color;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  padding: 0 2px;
+  transition: .1s ease;
+
+  &:hover {
+    background-color: $link-bg--hover;
+    border-bottom: 1px solid $link-border--hover;
+  }
+}

@@ -1,0 +1,32 @@
+@import "Style";
+
+.Button {
+  @include reset;
+  background-color: $button-bg;
+  border: 1px solid $button-border;
+  box-sizing: border-box;
+  color: $button-color;
+  font-family: $font-family--normal;
+  font-size: $font-size--medium;
+  padding: 7px 15px;
+  transition: .2s ease;
+}
+
+.Button:active {
+  background-color: $button-bg--active;
+}
+
+.Button:disabled {
+  background-color: $button-bg--disabled !important;
+  border-color: $button-border--disabled !important;
+  color: $button-color--disabled !important;
+}
+
+.Button:hover,
+.Button:focus {
+  background-color: $button-bg--hover;
+}
+
+.Stretched {
+  width: 100% !important;
+}

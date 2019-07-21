@@ -1,0 +1,10 @@
+@import "Style";
+
+.Caption {
+  @include reset;
+  box-sizing: border-box;
+  color: $caption-color;
+  font-family: $font-family--caption;
+  font-size: $font-size--largest;
+  line-height: $line-height--largest;
+}

@@ -1,0 +1,19 @@
+@import "Style";
+
+.Logo {
+  @include reset;
+  background-color: $logo-bg;
+  box-sizing: border-box;
+  color: $logo-color;
+  cursor: pointer;
+  font-family: $font-family--logo;
+  font-size: $font-size--largest;
+  line-height: $line-height--largest;
+  text-align: center;
+  user-select: none;
+  width: $header-container-height;
+
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "target": "ES5",
+    "module": "commonJS",
+    "lib": [ "es7", "dom" ],
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "strict": true,
+    "alwaysStrict": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "jsx": "react",
+    "baseUrl": "./",
+    "paths": {
+      "Client/*": ["client/src/*"],
+      "Components/*": ["client/src/components/*"],
+      "Server/*": ["server/src/*"],
+      "Style": ["client/src/styles/style.scss"],
+      "Types/*": ["common/src/types/*"],
+      "Utils/*": ["common/src/utils/*"]
+    }
+  },
+  "include": [
+    "./common/src/**/*",
+    "./client/src/**/*",
+    "./server/src/**/*"
+  ],
+  "exclude" : [
+    "node_modules"
+  ]
+}

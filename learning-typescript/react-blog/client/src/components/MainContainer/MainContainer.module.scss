@@ -1,0 +1,10 @@
+@import "Style";
+
+.MainContainer {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: $grid-width;
+  justify-content: center;
+  margin-top: $header-container-height;
+  overflow-x: hidden;
+}

@@ -1,0 +1,113 @@
+$font-family--logo: "Bree Serif", serif;
+$font-family--caption: "Roboto", "Helvetica", "Arial", sans-serif;
+$font-family--normal: "Roboto", "Helvetica", "Arial", sans-serif;
+
+$font-size--smallest: 12px;
+$font-size--smaller: 14px;
+$font-size--small: 16px;
+$font-size--medium: 18px;
+$font-size--large: 20px;
+$font-size--larger: 28px;
+$font-size--largest: 36px;
+
+$line-height--medium: 22px;
+$line-height--large: 30px;
+$line-height--largest: 40px;
+
+$z-index--uppermost: 4; // popups, modals, tooltips
+$z-index--upper: 3;
+$z-index--middle: 2; // headline, footline
+$z-index--nether: 1; // some popups which can be overlapped by other elements
+$z-index--nethermost: 0; // regular
+
+$gray--darkest: #141414;
+$gray--darken: #6c6c6c;
+$gray--dark: #9d9d9d;
+$gray: #bcbcbc;
+$gray--light: #e1e1e1;
+$gray--lighten: #efeeea;
+$gray--lightest: #f9f8f5;
+
+$color-main: #eb663a;
+$color-secondary: #2d3e4c;
+
+$color-error: #f8d7da;
+$color-success: #d4edda;
+
+$app-bg: $gray--lightest;
+$button-color: $gray--darken;
+$button-color--disabled: $gray;
+$button-bg: #ebfafe;
+$button-bg--active: #ebfafe;
+$button-bg--disabled: $gray--lightest;
+$button-bg--hover: #bbeffd;
+$button-border: #bcc8cb;
+$button-border--disabled: $gray--light;
+$caption-color: $color-secondary;
+$context-menu-bg: white;
+$context-menu-border: $gray--light;
+$context-menu-color: $gray--darken;
+$context-menu-color--hover: $gray--dark;
+$footer-color: $gray--lightest;
+$footer-container-bg: $color-secondary;
+$footer-container-height: 160px;
+$footer-line-color--dark: $gray--dark;
+$footer-link-color: $gray--light;
+$footer-link-color--hover: $gray;
+$grid-width: 1260px;
+$grid-width--min: 411px;
+$header-container-bg: white;
+$header-container-height: 50px;
+$icon-bg--hover: #ebfafe;
+$icon-fill: $gray--darkest;
+$icon-fill--hover: $color-main;
+$input--nok: #e50000;
+$input--ok: lightgreen;
+$input-bg: white;
+$input-border: $gray--light;
+$input-border--focus: $gray;
+$input-color: $gray--dark;
+$link-bg: #ebfafe;
+$link-bg--hover: #bbeffd;
+$link-border: #bcc8cb;
+$link-border--hover: $gray--darken;
+$link-color: $gray--darken;
+$loading-roller-color: $color-main;
+$login-modal-button-border: $gray--light;
+$login-modal-button-border--hover: $gray--lighten;
+$login-modal-button-color--hover: $gray--dark;
+$login-modal-color: $gray--darkest;
+$logo-bg: $color-main;
+$logo-color: white;
+$modal-bg: white;
+$modal-bg--alt: $gray--lightest;
+$modal-border: $gray;
+$modal-container-bg: rgba(0, 0, 0, 0.3);
+$nav-link-bg--active-after: $color-main;
+$nav-tab-bg--hover: #fff6f3;
+$nav-tab-color: $gray--darkest;
+$paragraph-color: $gray--darken;
+$placeholder-color: $gray--light;
+$popup-bg--success: #d4edda;
+$popup-color: $gray--darken;
+$popup-icon-fill: $gray--darken;
+$popup-icon-fill--hover: $gray--darkest;
+$post-bg: $gray--lighten;
+$post-color: $gray--darken;
+$post-link-border: $gray;
+$post-link-color: $gray--darkest;
+$post-link-color--hover: $gray--dark;
+$profile-field-color: $gray--darken;
+$search-button-size: $header-container-height;
+$search-line-bg: white;
+$search-line-border: $color-main;
+$search-line-color: $gray--darken;
+$search-line-placeholder-color: $gray--light;
+$search-line-width: 250px;
+$select-bg: white;
+$select-border: $gray--light;
+$select-border--focus: $gray;
+$select-color: $gray--dark;
+$selection-bg: #bbeffd;
+$user-picture-size--large: 200px;
+$user-picture-size--small: 42px;
