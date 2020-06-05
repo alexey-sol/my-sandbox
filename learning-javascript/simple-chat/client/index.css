@@ -1,0 +1,18 @@
+html {
+  height: 100%;
+  overflow-y: scroll;
+}
+
+body {
+  box-sizing: border-box;
+  color: #141414;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: 18px;
+  height: 100%;
+  margin: 0;
+  position: relative;
+}
+
+#root {
+  height: 100%;
+}

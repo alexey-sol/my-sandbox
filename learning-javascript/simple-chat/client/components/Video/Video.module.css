@@ -1,0 +1,20 @@
+.Container {
+  position: relative;
+  width: 640px;
+}
+
+.Description {
+  color: white;
+  cursor: default;
+  font-size: 20px;
+  font-weight: bold;
+  left: 20px;
+  position: absolute;
+  top: 20px;
+}
+
+.Video {
+  box-sizing: border-box;
+  max-width: 100%;
+  width: 640px;
+}

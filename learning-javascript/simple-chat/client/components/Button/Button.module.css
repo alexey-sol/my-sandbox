@@ -1,0 +1,22 @@
+.Button {
+  background-color: white;
+  border: 1px solid #9d9d9d;
+  box-sizing: border-box;
+  color: #141414;
+  cursor: pointer;
+  outline: none;
+  padding: 8px 10px;
+}
+
+.Button:active {
+  background-color: #bbeffd;
+}
+
+.Button:disabled {
+  opacity: 0.3;
+}
+
+.Button:hover:enabled {
+  background-color: #ebfafe;
+  transition: .2s ease;
+}

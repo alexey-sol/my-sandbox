@@ -1,0 +1,17 @@
+.Input {
+  background-color: white;
+  border: 1px solid #9d9d9d;
+  box-sizing: border-box;
+  color: #141414;
+  outline: none;
+  padding: 8px 10px;
+}
+
+.Input:active {
+  border-color: #141414;
+}
+
+.Input:hover {
+  border-color: #141414;
+  transition: .2s ease;
+}
