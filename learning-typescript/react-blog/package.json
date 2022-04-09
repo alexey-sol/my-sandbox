@@ -112,7 +112,7 @@
     "html-truncate": "^1.2.2",
     "joi": "^14.3.1",
     "module-alias": "^2.2.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "mongoose": "^5.4.5",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
