@@ -1,7 +1,9 @@
 ## Geek Regime - коллективный блог
 https://github.com/alexey-sol/geek-regime
 
-Незаконченный долгострой, где отрабатываю все интересные штуки, почерпнутые на работе, из курсов и статей. По функционалу ориентируюсь на Habr. UI реализую на TypeScript, React, Redux Toolkit и Styled Components. Бэкенд состоит из ряда микросервисов, которые написаны на Java и Kotlin со Spring Boot, а gateway сервис (точка входа) - на Node.js с NestJS. Управлять всей этой пачкой сервисов помогает Docker Compose: https://github.com/alexey-sol/geek-regime/tree/main/launcher
+Незаконченный долгострой, где отрабатываю все интересные штуки, почерпнутые на работе, из курсов и статей. По функционалу ориентируюсь на Habr. UI реализую на TypeScript, React, Redux Toolkit и Styled Components. Бэкенд состоит из ряда микросервисов, которые написаны на Java и Kotlin со Spring Boot, а gateway сервис (точка входа) - на Node.js с NestJS. Управлять всей этой пачкой сервисов помогает Docker Compose: https://github.com/alexey-sol/geek-regime/tree/main/launcher.
+
+Общий функционал вынесен в отдельные зависимости. Для JVM приложений - в api-commons, для JS - в ряд NPM пакетов (js-commons, js-configs, js-ui-kit).
 
 ## Nuxt.js Multiroom Chat - текстовый чат с комнатами
 https://github.com/alexey-sol/nuxtjs-multiroom-chat
