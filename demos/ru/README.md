@@ -1,24 +1,17 @@
 ## Geek Regime - коллективный блог
-* Демо: http://geek-regime.germanywestcentral.cloudapp.azure.com/
-* Код: https://github.com/alexey-sol/geek-regime
+https://github.com/alexey-sol/geek-regime
 
-Это фулстековый проект. Долгострой, над которым работал больше года: это была "тренировочная площадка", на которой я отрабатывал все интересные штуки, почерпнутые на работе, из курсов и статей. Была тонна рефакторинга, большую часть фич реализовал "from scratch" своими силами. Например, есть самописная ORM (подглядывал в Sequelize и Loopback 3 при реализации), слой для работы с БД. Помимо совсем базовых штук она поддерживает, скажем, [include фильтры](https://github.com/alexey-sol/geek-regime/blob/master/server/src/utils/sql/ModelSqlGenerator/FindAll.ts#L44). Под капотом они джойнят указанные таблицы и, таким образом, помогают [модели](https://github.com/alexey-sol/geek-regime/blob/master/server/src/models/User/User.ts#L40) возвращать нужные поля в отдельном объекте (`user.profile`). Из других штук, написанных с нуля: авторизация (в т.ч. oauth стратегии) и кэширование при помощи клиента Redis.
-
-Клиент поддерживает отзывчивый дизайн, стили [построены на флексах и гридах](https://github.com/alexey-sol/geek-regime/blob/master/client/src/components/posts/PostDetails/PostDetails.module.scss). Также постарался выжать по максимуму из Redux мидлвейров, как наставлял некто Nir Kaufman. Скажем, мидлвейр-normalizer приводит полученные из API данные к нужному формату прежде чем они попадут в редюсер, а мидлвейр-enricher помогает дополнить payload какими-то полезными полями вроде timestamp'ов. В рамках же проекта паттерн помогает регулировать массивы юзеров и постов в сторе. Скажем, удаляю пост, бэк возвращает "успех" и id удаленного поста. Диспатчится экшн, enricher его хватает, берет из стора текущий массив постов, удаляет из него указанный пост, затем прикладывает подправленный массив к payload'у. После экшн попадает в редюсер, которому достаточно взять обновленный массив постов и подменить им текущий в сторе. Такая логика позволяет значительно [разгрузить редюсер](https://github.com/alexey-sol/geek-regime/blob/master/client/src/redux/posts/posts.reducer.js). А UI [выложен функциональными компонентами](https://github.com/alexey-sol/geek-regime/blob/master/client/src/components/layout/SearchPostInput/SearchPostInput.component.jsx#L20) и активно использует хуки.
-
-По технологиям, бэкенд написал на TypeScript + Node.js + Express.js, в качестве БД выбрал Postgres. Архитектурно следовал MVC, но внедрил доп. "сервисную" прослойку между контроллером и моделью для бизнес-логики; плюс вью редуцированный, т.к. API возвращает данные в JSON формате. Фронтенд написал на JavaScript + React + Redux с сагами. Тестами покрыто далеко не 100% кодовой базы, но они есть. Фронт полагается на Jest + Enzyme (когда начинал работу, React Testing Library еще не был в таком тренде), бэк - [Mocha + Chai](https://github.com/alexey-sol/geek-regime/blob/master/server/src/models/User/User.test.ts). Все компоненты завернул в докер-контейнеры (управляются они при помощи Docker Compose с разбивкой на среды).
-
-Развернул все это дело на виртуальной машине MS Azure (первоначально разворачивал на EC2 инстансе, но на AWS free tier закончился). Также приладил какой-никакой [CI/CD через GitHub Actions](https://github.com/alexey-sol/geek-regime/blob/master/.github/workflows/cd.yml): пуш в ветку триггерит тестирование проекта и последующий деплой на машину.
+Незаконченный долгострой, где отрабатываю все интересные штуки, почерпнутые на работе, из курсов и статей. По функционалу ориентируюсь на Habr. UI реализую на TypeScript, React, Redux Toolkit и Styled Components. Бэкенд состоит из ряда микросервисов, которые написаны на Java и Kotlin со Spring Boot, а gateway сервис (точка входа) - на Node.js с NestJS. Управлять всей этой пачкой сервисов помогает Docker Compose: https://github.com/alexey-sol/geek-regime/tree/main/launcher
 
 ## Nuxt.js Multiroom Chat - текстовый чат с комнатами
-* Демо: https://nuxtjs-multiroom-chat.herokuapp.com/
-* Код: https://github.com/alexey-sol/nuxtjs-multiroom-chat
+https://github.com/alexey-sol/nuxtjs-multiroom-chat
 
 Текстовый чат на Nuxt.js - написал, когда любопытства ради решил изучить Vue.js. Сообщение между клиентом и сервером налажено по вебсокету, через слой Socket IO. Нарисовать UI помогла библиотека Element UI.
 Комнаты можно создавать, джойниться в т.ч. по URL. Когда из комнаты выходит последний юзер, она самоуничтожается - так что осторожнее (а кроме этого срок годности у комнат не ограничен; ну, еще постоянного хранилища нет, все сидит в памяти на бэкенде).
 
-## Slack Cut'n'Nasty - упрощенный клон Slack
-* Код: https://github.com/alexey-sol/slack-cut-n-nasty
+## Whatnotarium - (yet another) коллективный блог
+https://github.com/alexey-sol/whatnotarium
 
-Демо нет: проект еще в весьма сыром состоянии. Начал его, чтобы опробовать на практике несколько новых технологий. Это будет клон Slack: упрощенный, но с основной функциональностью вроде воркспейсов, тредов в каналах и т.д.
-Для клиент-серверного взаимодействия выбрал GraphQL. Бэкенд построен на Nest.js, а общение с базой (Postgres) [происходит через TypeORM](https://github.com/alexey-sol/slack-cut-n-nasty/blob/master/backend/src/user/user.service.ts#L11). Фронтенд основан на React и Redux Toolkit (официальная надстройка над Redux, которая значительно упрощает работу с ним). И бэк, и фронт написаны на TypeScript. А все компоненты проекта завернуты в докер-контейнеры.
+Здесь отрабатывал навыки пару лет назад. Тоже своего рода клон Habr. Написан на JS стеке. Бэкенд: TypeScript + Node.js + Express.js, в качестве БД выбрал Postgres. Фронтенд: JavaScript + React + Redux с сагами. Все компоненты завернул в докер-контейнеры (управляются они при помощи Docker Compose с разбивкой на среды).
+
+Прим.: изначально проект назывался Geek Regime, но это название позже я вручил проекту-"перезапуску", который идет выше 1-м пунктом.
