@@ -1,8 +1,1 @@
-*.log
-**/*.snap
-**/__snapshots__
-.env
-bundle.*
-node_modules
-learning-typescript/**/*.js
-learning-typescript/**/*.mjs
+.idea
