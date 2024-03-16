@@ -1,26 +1,35 @@
-import { type Task } from './types';
+import {
+  type Card,
+  type TaskStatus,
+} from './types';
 import {
   createSlice,
   type PayloadAction,
 } from '@reduxjs/toolkit';
 
 export type BoardState = {
-  tasks: Task[],
+  cards: Record<TaskStatus, Card[]>,
 };
 
-const initialState: BoardState = { tasks: [] };
+const initialState: BoardState = {
+  cards: {
+    Done: [],
+    'In Progress': [],
+    Planned: [],
+  },
+};
 
 export const boardSlice = createSlice({
   initialState,
   name: 'board',
   reducers: {
-    addTask: (state, action: PayloadAction<Task>) => {
-      const task = action.payload;
-      state.tasks.push(task);
+    addCard: (state, action: PayloadAction<Card>) => {
+      const card = action.payload;
+      state.cards[card.status].push(card);
     },
   },
 });
 
-export const { addTask } = boardSlice.actions;
+export const { addCard } = boardSlice.actions;
 
 export const boardReducer = boardSlice.reducer;

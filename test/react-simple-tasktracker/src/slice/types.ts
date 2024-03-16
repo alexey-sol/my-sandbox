@@ -1,6 +1,7 @@
 export type TaskStatus = 'Planned' | 'In Progress' | 'Done';
 
-export type Task = {
+export type Card = {
+  id: string,
   status: TaskStatus,
-  title: string,
+  task: string,
 };
