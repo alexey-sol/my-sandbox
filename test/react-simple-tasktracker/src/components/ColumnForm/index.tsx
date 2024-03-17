@@ -1,7 +1,6 @@
 import { useAppDispatch } from '../../app/store/hooks';
 import { useColumnContext } from '../../contexts/ColumnContext';
 import { addCard } from '../../slice';
-import { generateId } from '../../utils/helpers/generators';
 import {
   type ChangeEventHandler,
   type FormEventHandler,
@@ -28,9 +27,8 @@ export const ColumnForm = () => {
 
   const handleAddCard = () => {
     dispatch(addCard({
-      id: generateId(),
-      status: taskStatus,
-      task,
+      data: { task },
+      meta: { status: taskStatus },
     }));
   };
 
