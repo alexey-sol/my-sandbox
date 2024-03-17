@@ -46,12 +46,12 @@ export const BoardColumn: FC = () => {
 
   return (
     <li className={styles.boardColumn}>
-      <p>{taskStatus}</p>
+      <h3>{taskStatus}</h3>
       <ColumnList />
       <SaveCardForm
         onInputChange={handleTaskChange}
         onSubmit={onSubmit}
-        submitButtonTitle='+Add'
+        submitButtonTitle='+ Add'
         value={task}
       />
     </li>

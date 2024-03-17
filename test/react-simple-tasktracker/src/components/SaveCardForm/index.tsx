@@ -40,12 +40,13 @@ export const SaveCardForm: FC<SaveCardFormProps> = ({
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className={styles.form} onSubmit={handleSubmit}>
       <input
         className={styles.input}
         maxLength={INPUT_MAX_LENGTH}
         onChange={handleInputChange}
         placeholder={INPUT_PLACEHOLDER}
+        title={value}
         value={value}
       />
       <button className={styles.button} type='submit'>{submitButtonTitle}</button>

@@ -1,5 +1,12 @@
 .boardColumn {
-  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  box-sizing: border-box;
+  min-width: 300px;
+  width: 500px;
+  height: fit-content;
+  padding: 1rem;
   background-color: white;
-  border-radius: 10%;
+  border-radius: 0.5rem;
 }

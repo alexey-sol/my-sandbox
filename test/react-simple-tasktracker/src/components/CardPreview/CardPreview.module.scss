@@ -1,6 +1,10 @@
 .cardPreview {
-  padding: 10px;
-  background-color: lightgray;
-  border-radius: 10%;
+  padding: 0.5rem;
+  background-color: PapayaWhip;
+  border-radius: 0.25rem;
   cursor: pointer;
+
+  &:hover {
+    background-color: Moccasin;
+  }
 }
