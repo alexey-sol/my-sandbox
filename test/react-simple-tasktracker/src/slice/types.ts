@@ -1,15 +1,11 @@
-type HasId = {
-  id: string,
-};
+import {
+  type Card,
+  type HasId,
+  type TaskStatus,
+} from '@/models';
 
 type HasTaskStatus = {
   status: TaskStatus,
-};
-
-export type TaskStatus = 'Planned' | 'In Progress' | 'Done';
-
-export type Card = HasId & {
-  task: string,
 };
 
 export type AddCardProps = {

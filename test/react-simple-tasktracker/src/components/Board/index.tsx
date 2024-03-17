@@ -1,7 +1,7 @@
-import { ColumnContextProvider } from '../../contexts/ColumnContext';
-import { type TaskStatus } from '../../slice/types';
 import { BoardColumn } from '../BoardColumn';
 import styles from './Board.module.scss';
+import { ColumnContextProvider } from '@/contexts/ColumnContext';
+import { type TaskStatus } from '@/models';
 import { type FC } from 'react';
 
 const COLUMN_TITLES: TaskStatus[] = [

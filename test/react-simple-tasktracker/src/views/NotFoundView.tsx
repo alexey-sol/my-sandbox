@@ -1,5 +1,7 @@
-const NotFound = () => (
+import { type FC } from 'react';
+
+const NotFoundView: FC = () => (
   <section>Not found</section>
 );
 
-export default NotFound;
+export default NotFoundView;

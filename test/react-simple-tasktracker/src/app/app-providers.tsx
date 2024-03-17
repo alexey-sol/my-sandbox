@@ -24,7 +24,7 @@ export const withRouter: WithProvider = (component) => () => (
   </BrowserRouter>
 );
 
-export const withFallback: WithProvider = (component) => () => (
+export const withChecks: WithProvider = (component) => () => (
   <StrictMode>
     {component()}
   </StrictMode>
@@ -33,5 +33,5 @@ export const withFallback: WithProvider = (component) => () => (
 export const withProviders = compose<FC>(
   withStore,
   withRouter,
-  withFallback,
+  withChecks,
 );

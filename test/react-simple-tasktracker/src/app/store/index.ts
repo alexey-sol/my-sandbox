@@ -1,4 +1,4 @@
-import { boardReducer } from '../../slice';
+import { boardReducer } from '@/slice';
 import {
   combineReducers,
   configureStore,

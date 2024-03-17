@@ -1,14 +1,12 @@
+import * as cn from './const';
 import styles from './SaveCardForm.module.scss';
+import { isValidInput } from './utils';
 import {
   type ChangeEventHandler,
   type FC,
   type FormEventHandler,
+  memo,
 } from 'react';
-
-const INPUT_MAX_LENGTH = 255;
-const INPUT_PLACEHOLDER = 'Task title goes here';
-const DEFAULT_SUBMIT_BUTTON_TITLE = 'Save';
-const INVALID_FORM_MESSAGE = 'Task message must not be empty or too long';
 
 type SaveCardFormProps = {
   readonly onInputChange: (value: string) => void,
@@ -17,25 +15,23 @@ type SaveCardFormProps = {
   readonly value?: string,
 };
 
-export const SaveCardForm: FC<SaveCardFormProps> = ({
+export const SaveCardForm: FC<SaveCardFormProps> = memo(({
   onInputChange,
   onSubmit,
-  submitButtonTitle = DEFAULT_SUBMIT_BUTTON_TITLE,
+  submitButtonTitle = cn.DEFAULT_SUBMIT_BUTTON_TITLE,
   value = '',
 }) => {
   const handleInputChange: ChangeEventHandler<HTMLInputElement> = ({ target }) => {
     onInputChange(target.value);
   };
 
-  const isValidForm = () => value.length > 0 && value.length <= INPUT_MAX_LENGTH;
-
   const handleSubmit: FormEventHandler = (event) => {
     event.preventDefault();
 
-    if (isValidForm()) {
+    if (isValidInput(value)) {
       onSubmit();
     } else {
-      console.error(INVALID_FORM_MESSAGE);
+      console.error(cn.INVALID_FORM_MESSAGE); // eslint-disable-line no-console -- Good enough for now
     }
   };
 
@@ -43,13 +39,15 @@ export const SaveCardForm: FC<SaveCardFormProps> = ({
     <form className={styles.form} onSubmit={handleSubmit}>
       <input
         className={styles.input}
-        maxLength={INPUT_MAX_LENGTH}
+        maxLength={cn.INPUT_MAX_LENGTH}
         onChange={handleInputChange}
-        placeholder={INPUT_PLACEHOLDER}
+        placeholder={cn.INPUT_PLACEHOLDER}
         title={value}
         value={value}
       />
-      <button className={styles.button} type='submit'>{submitButtonTitle}</button>
+      <button className={styles.button} type='submit'>
+        {submitButtonTitle}
+      </button>
     </form>
   );
-};
+});

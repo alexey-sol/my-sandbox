@@ -1,10 +1,12 @@
 import { generateId } from '../utils/helpers/generators';
 import {
   type AddCardProps,
-  type Card,
-  type TaskStatus,
   type UpdateCardProps,
 } from './types';
+import {
+  type Card,
+  type TaskStatus,
+} from '@/models';
 import {
   createSlice,
   type PayloadAction,
@@ -14,8 +16,6 @@ export type BoardState = {
   cards: Record<TaskStatus, Card[]>,
   mapTaskIdToStatus: Record<string, TaskStatus>,
 };
-
-const INITIAL_INDEX = 0;
 
 const initialState: BoardState = {
   cards: {
@@ -49,6 +49,7 @@ export const boardSlice = createSlice({
         data,
         meta,
       } = action.payload;
+
       const currentStatus = state.mapTaskIdToStatus[meta.id];
       const currentIndex = state.cards[currentStatus].findIndex(({ id }) => id === meta.id);
       const currentData = state.cards[currentStatus][currentIndex] ?? {};
@@ -58,13 +59,11 @@ export const boardSlice = createSlice({
         ...data,
       };
 
-      state.cards[currentStatus] = state.cards[currentStatus].filter(({ id }) => id !== meta.id);
-
+      const hasCardsInColumn = state.cards[meta.status].length > 0;
       const index = meta.index ?? currentIndex;
-      const resultIndex = state.cards[meta.status].length > 0 ?
-        index + 1 :
-        INITIAL_INDEX;
+      const resultIndex = hasCardsInColumn ? index : 0;
 
+      state.cards[currentStatus] = state.cards[currentStatus].filter(({ id }) => id !== meta.id);
       state.cards[meta.status].splice(resultIndex, 0, updatedCard);
       state.mapTaskIdToStatus[meta.id] = meta.status;
     },

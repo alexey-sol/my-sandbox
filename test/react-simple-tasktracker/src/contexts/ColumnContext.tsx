@@ -1,5 +1,5 @@
-import { type TaskStatus } from '../slice/types';
-import { getUseContextOrThrowError } from '../utils/helpers/context';
+import { type TaskStatus } from '@/models';
+import { getUseContextOrThrowError } from '@/utils/helpers/context';
 import {
   createContext,
   type FC,
