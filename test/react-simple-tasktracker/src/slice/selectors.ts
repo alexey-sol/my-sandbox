@@ -4,4 +4,6 @@ import {
   type TaskStatus,
 } from '@/models';
 
-export const selectAllCardsByStatus = ({ board }: RootState, status: TaskStatus): Card[] => board?.cards[status] ?? [];
+const DEFAULT_CARDS: Card[] = [];
+
+export const selectAllCardsByStatus = ({ board }: RootState, status: TaskStatus): Card[] => board.cards[status] ?? DEFAULT_CARDS;

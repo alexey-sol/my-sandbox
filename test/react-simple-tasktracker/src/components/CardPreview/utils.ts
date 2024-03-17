@@ -25,11 +25,9 @@ export const useCardPreviewData = ({ card }: UseCardPreviewDataProps) => {
 
   const onTaskChange = useCallback((value: string) => {
     setTask(value);
-  }, []);
 
-  const onTaskSubmit = useCallback(() => {
     dispatch(updateCard({
-      data: { task },
+      data: { task: value },
       meta: {
         id: card.id,
         status: taskStatus,
@@ -56,7 +54,6 @@ export const useCardPreviewData = ({ card }: UseCardPreviewDataProps) => {
   return {
     dragRef,
     onTaskChange,
-    onTaskSubmit,
     task,
   };
 };

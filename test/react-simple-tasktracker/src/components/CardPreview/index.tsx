@@ -1,4 +1,4 @@
-import { SaveCardForm } from '../SaveCardForm';
+import { UpdateCardForm } from '../SaveCardForm';
 import styles from './CardPreview.module.scss';
 import {
   useCardPreviewData,
@@ -13,15 +13,13 @@ export const CardPreview: FC<UseCardPreviewDataProps> = memo((props) => {
   const {
     dragRef,
     onTaskChange,
-    onTaskSubmit,
     task,
   } = useCardPreviewData(props);
 
   return (
     <li className={styles.cardPreview} ref={dragRef}>
-      <SaveCardForm
-        onInputChange={onTaskChange}
-        onSubmit={onTaskSubmit}
+      <UpdateCardForm
+        onChange={onTaskChange}
         value={task}
       />
     </li>

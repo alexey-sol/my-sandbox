@@ -53,15 +53,12 @@ export const boardSlice = createSlice({
       const currentStatus = state.mapTaskIdToStatus[meta.id];
       const currentIndex = state.cards[currentStatus].findIndex(({ id }) => id === meta.id);
       const currentData = state.cards[currentStatus][currentIndex] ?? {};
+      const resultIndex = meta.index ?? currentIndex;
 
       const updatedCard = {
         ...currentData,
         ...data,
       };
-
-      const hasCardsInColumn = state.cards[meta.status].length > 0;
-      const index = meta.index ?? currentIndex;
-      const resultIndex = hasCardsInColumn ? index : 0;
 
       state.cards[currentStatus] = state.cards[currentStatus].filter(({ id }) => id !== meta.id);
       state.cards[meta.status].splice(resultIndex, 0, updatedCard);

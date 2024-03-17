@@ -1,5 +1,5 @@
 import { ColumnList } from '../ColumnList';
-import { SaveCardForm } from '../SaveCardForm';
+import { AddCardForm } from '../SaveCardForm';
 import styles from './BoardColumn.module.scss';
 import { useBoardColumnData } from './utils';
 import {
@@ -21,8 +21,8 @@ export const BoardColumn: FC = memo(() => {
     <li className={styles.boardColumn}>
       <h3>{taskStatus}</h3>
       <ColumnList />
-      <SaveCardForm
-        onInputChange={handleTaskChange}
+      <AddCardForm
+        onChange={handleTaskChange}
         onSubmit={handleSubmit}
         submitButtonTitle={ADD_CARD_BUTTON_TITLE}
         value={task}
