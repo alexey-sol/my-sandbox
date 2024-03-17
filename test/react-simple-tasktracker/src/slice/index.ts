@@ -60,11 +60,12 @@ export const boardSlice = createSlice({
 
       state.cards[currentStatus] = state.cards[currentStatus].filter(({ id }) => id !== meta.id);
 
-      const newIndex = state.cards[meta.status].length > 0 ?
-        meta.index + 1 :
+      const index = meta.index ?? currentIndex;
+      const resultIndex = state.cards[meta.status].length > 0 ?
+        index + 1 :
         INITIAL_INDEX;
 
-      state.cards[meta.status].splice(newIndex, 0, updatedCard);
+      state.cards[meta.status].splice(resultIndex, 0, updatedCard);
       state.mapTaskIdToStatus[meta.id] = meta.status;
     },
   },

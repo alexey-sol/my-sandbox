@@ -20,6 +20,6 @@ export type AddCardProps = {
 export type UpdateCardProps = {
   data?: Partial<Pick<Card, 'task'>>,
   meta: HasId & HasTaskStatus & {
-    index: number,
+    index?: number,
   },
 };
