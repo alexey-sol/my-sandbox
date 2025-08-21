@@ -1,23 +1,39 @@
 ## Geek Regime - коллективный блог
-Код: https://github.com/alexey-sol/geek-regime
 
-Незаконченный долгострой, где отрабатываю все интересные штуки, почерпнутые на работе, из курсов и статей. По функционалу ориентируюсь на Habr.
+Код: https://github.com/alexey-sol/geek-regime \
+Демо: http://82.202.140.249
 
-UI реализую на TypeScript, React, Styled Components, Redux Toolkit и RTK Query с кэшированием и оптимистичными апдейтами (например, [вот здесь](https://github.com/alexey-sol/geek-regime/blob/main/client-web/src/features/posts/services/api/api.ts) описан API постов). Часть кода, который теоретически может переиспользоваться, вынесен в NPM пакеты (к примеру, компоненты и UI'ные конфиги сидят в [UI kit пакете](https://github.com/alexey-sol/geek-regime/blob/main/js-ui-kit/package.json) со Storybook).
+Проект не оригинальный: это коллективный блог, в каком-то смысле низкобюджетный клон Хабра. Долгострой, на котором я отрабатывал все интересные штуки, что узнал из статей, курсов и в процессе работы. По сути это монорепозиторий.
 
-Бэкенд состоит из ряда микросервисов, которые написаны в основном на Java и один на Kotlin - все со Spring Boot. Есть API Gateway сервис - он реализуется на Node.js с NestJS (перенаправляет запросы на "внутренние" сервисы плюс [заправляет безопасностью](https://github.com/alexey-sol/geek-regime/blob/main/api-gateway/src/auth/controllers/v1.ts)). Есть также один сервис агрегации, который борется с проблемой бесконтрольных взаимодействий между сервисами; в данном случае он ходит в сервисы постов и пользователей и [отдает наружу посты с их авторами](https://github.com/alexey-sol/geek-regime/blob/main/api-aggregator/src/main/java/com/github/alexeysol/geekregime/apiaggregator/features/posts/controllers/v1/PostController.java). Переиспользуемый функционал вынесен в отдельную зависимость - api-commons, которая пушится в реестр Docker Hub и [вытягивается оттуда](https://github.com/alexey-sol/geek-regime/blob/main/launcher/builder/jvm/Dockerfile) при сборке конкретного приложения.
+[Фронтенд](https://github.com/alexey-sol/geek-regime/tree/main/client-web) реализован на TypeScript, React, Styled Components и RTK Query с кэшированием и оптимистичными апдейтами. Собирается при помощи Webpack 5. Поддерживает i18n (переключение языков русский/английский).
 
-Управлять всей этой пачкой сервисов [помогает Docker Compose](https://github.com/alexey-sol/geek-regime/tree/main/launcher).
+Часть кода вынесена в [набор библиотек](https://github.com/alexey-sol/geek-regime/tree/main/js-commons), объединенных в рамках NPM Workspaces. Публикуются эти библиотеки в NPM реестре. Среди них есть, например, самописный UI kit, который собирается при помощи Vite и запускается на Storybook. Хотя он собирается только в ESM, другие пакеты (`configs` и `utils`) собираются [и в ESM, и в CJS](https://github.com/alexey-sol/geek-regime/blob/main/js-commons/packages/configs/package.json#L16).
+
+Бэкенд разбит на несколько сервисов. Написаны они в основном на Java, есть еще немного Kotlin и Node. Некоторые из сервисов:
+- `api-gateway` - входная точка для клиентского приложения. Проксирует запрос в нужный внутренний сервис, также заведует аутентификацией (OAuth реализован в нем; также он выписывает и проверяет JWT токены). Написан на Node, NestJS.
+- `api-aggregator` - агрегирует данные. Например, если нужно отдать статью, он обращается в `api-posts` (собственно за статьей) и `api-users` (за инфо об авторе), объединяет данные и возвращает. Решает проблему "болтливых сервисов" (проще структура коммуникации между сервисами). Написан на Java, Spring Boot.
+
+Переиспользуемый функционал для JVM сервисов тоже вынесен в библиотеку, `api-commons`, которая публикуется в реестр Docker Hub и [вытягивается оттуда](https://github.com/alexey-sol/geek-regime/blob/main/launcher/builder/jvm/Dockerfile) при сборке конкретного сервиса.
+
+Еще несколько интересных вещей:
+- Данные хранятся в Postgres.
+- DTO описаны в [OpenAPI спецификациях](https://github.com/alexey-sol/geek-regime/blob/main/api-commons/src/main/resources/api-schemas-v1/post.yml). Есть кодогенерация моделей как для бэкенда, так и для фронтенда.
+- Есть также [доморощенный CI/CD](https://github.com/alexey-sol/geek-regime/blob/main/.github/workflows/cd.yml) на GitHub Actions. Минимальная функциональность, чтобы прогнать тесты при пуше в нужную ветку и развернуть приложение на сервере.
+- Развернут проект на ВМ Cloud.ru Evolution. Из Cloud.ru инфраструктуры использую еще объектное хранилище S3 для хранения изображений (пока только аватарок пользователей; позже собираюсь добавить загрузку картинок для постов). Для взаимодействия с S3 использую AWS SDK.
+- Все компоненты проекта запускаются в Docker контейнерах и [управляются при помощи Docker Compose](https://github.com/alexey-sol/geek-regime/tree/main/launcher).
+
+## React Kanban Board - таск-трекер доска
+Код: https://github.com/alexey-sol/react-kanban-board \
+Демо: http://82.202.140.249:15500
+
+Стек: TypeScript, React, Redux Toolkit, Vite. Бэка нет, все на клиенте. Состояние сохраняется в local storage через `redux-persist`.
+
+Таски можно перетаскивать при помощи drag'n'drop (этой функциональностью заведует библиотека `react-dnd`). Можно перетаскивать и сами столбы и добавлять новые, а также удалять (в таком случае связанные с удаленным столбцом таски следуют за ним в мир иной тоже).
 
 ## Nuxt.js Multiroom Chat - текстовый чат с комнатами
-Код: https://github.com/alexey-sol/nuxtjs-multiroom-chat
+Код: https://github.com/alexey-sol/nuxtjs-multiroom-chat \
+Демо: http://82.202.140.249:15501
 
-Текстовый чат на Nuxt.js - написал, когда любопытства ради решил изучить Vue.js. Сообщение между клиентом и сервером налажено по вебсокету, через слой Socket IO. Нарисовать UI помогла библиотека Element UI.
-Комнаты можно создавать, джойниться в т.ч. по URL. Когда из комнаты выходит последний юзер, она самоуничтожается - так что осторожнее (а кроме этого срок годности у комнат не ограничен; ну, еще постоянного хранилища нет, все сидит в памяти на бэкенде).
+Старый проект. Текстовый чат на Nuxt.js 2 (фулстековый фреймворк для Vue, как Next.js для React). Сообщение между клиентом и сервером налажено по вебсокету, через слой Socket IO. UI реализован при помощи библиотеки Element UI (старый аналог Material UI для Vue).
 
-## Whatnotarium - (yet another) коллективный блог
-Код: https://github.com/alexey-sol/whatnotarium
-
-Здесь отрабатывал навыки пару лет назад. Своего рода клон Habr. Написан на JS стеке. Бэкенд: TypeScript + Node.js + Express.js, в качестве БД выбрал Postgres. Фронтенд: JavaScript + React + Redux с сагами. Все компоненты завернул в докер-контейнеры (управляются они при помощи Docker Compose с разбивкой на среды).
-
-Прим.: изначально проект назывался Geek Regime, позже это название перекочевало в проект-"перезапуск", который идет выше 1-м пунктом.
+Комнаты можно создавать, входить в т.ч. по URL. Когда из комнаты выходит последний юзер, она самоуничтожается - так что осторожнее. Срок годности у комнат не ограничен, единственное, постоянного хранилища нет, все хранится в памяти на бэкенде.
