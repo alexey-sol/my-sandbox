@@ -94,7 +94,7 @@
     "tslint": "^5.15.0",
     "typescript": "^3.2.4",
     "typings-for-css-modules-loader": "^1.7.0",
-    "webpack": "^4.29.0",
+    "webpack": "^5.104.1",
     "webpack-cli": "^3.2.1"
   },
   "dependencies": {
